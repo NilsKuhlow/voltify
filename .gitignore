@@ -5,3 +5,9 @@ desktop.ini
 .idea/
 *.log
 node_modules/
+
+# Edit-Tool / IDE Backup-Sicherungen vom Filesystem-Hook
+*_bak_edit_*.*
+*.bak
+*.orig
+
