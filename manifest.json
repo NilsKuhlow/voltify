@@ -1,0 +1,21 @@
+{
+  "name": "Voltify – Lernen für Elektriker",
+  "short_name": "Voltify",
+  "description": "Spaced-Repetition-Lernen für Elektriker. Lehrling und Meister.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#0a0e27",
+  "theme_color": "#0a0e27",
+  "orientation": "portrait",
+  "lang": "de",
+  "categories": ["education", "productivity"],
+  "icons": [
+    {
+      "src": "icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}
