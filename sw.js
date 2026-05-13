@@ -1,4 +1,4 @@
-const CACHE = 'voltify-v4';
+const CACHE = 'voltify-v5';
 const ASSETS = [
   './',
   './index.html',
@@ -6,7 +6,12 @@ const ASSETS = [
   './app.js',
   './data.js',
   './manifest.json',
-  './icon.svg'
+  './icon.svg',
+  './icons/icon-192.png',
+  './icons/icon-512.png',
+  './icons/apple-touch-180.png',
+  './icons/apple-touch-152.png',
+  './icons/apple-touch-167.png'
 ];
 
 self.addEventListener('install', (e) => {

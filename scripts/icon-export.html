@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<title>Voltify – Icon Export</title>
+<style>
+  body { font-family: -apple-system, "Segoe UI", system-ui, sans-serif;
+         background: #0a0e27; color: #f0f4ff; padding: 20px; max-width: 720px; margin: 0 auto; }
+  h1 { color: #00d4ff; }
+  button { background: #00d4ff; color: #001428; border: none; padding: 12px 20px;
+           font-weight: 700; border-radius: 8px; cursor: pointer; font-size: 1rem; }
+  button:hover { filter: brightness(1.1); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+          gap: 12px; margin-top: 20px; }
+  .card { background: #1a2150; border-radius: 8px; padding: 12px; text-align: center; }
+  .card img { width: 100%; max-width: 120px; border-radius: 8px; background: #0a0e27;
+              image-rendering: -webkit-optimize-contrast; }
+  .card a { display: block; margin-top: 8px; color: #00d4ff; text-decoration: none;
+            font-size: 0.85rem; font-weight: 600; }
+  .meta { font-size: 0.75rem; color: #a8b3d4; margin-top: 4px; }
+  .input { display: flex; gap: 8px; align-items: center; margin: 12px 0; }
+  input[type="text"] { flex: 1; padding: 8px 12px; background: #232b5c; color: white;
+                       border: 1px solid #444; border-radius: 6px; font: inherit; }
+  .info { font-size: 0.85rem; color: #a8b3d4; line-height: 1.5; margin-top: 16px; }
+</style>
+</head>
+<body>
+  <h1>⚡ Voltify Icon Export</h1>
+  <p>Generiert PNG-Icons in allen für iOS / Android / PWA benötigten Größen aus
+     dem SVG-Master <code>../icon.svg</code>. Klick auf einen Download-Link, um
+     die jeweilige Größe zu speichern.</p>
+
+  <div class="input">
+    <label for="src">SVG-Quelle:</label>
+    <input type="text" id="src" value="../icon.svg">
+    <button id="generate">Generieren</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <p class="info">
+    <strong>Maskable Icon:</strong> Für Android Adaptive Icons müssen wichtige
+    Bildteile innerhalb der „safe area" (40 % vom Rand bzw. zentriertes 80 %-Quadrat)
+    liegen. Bei Bedarf zweite SVG mit mehr Padding erstellen und mit
+    <code>purpose: "maskable"</code> ins Manifest aufnehmen.
+  </p>
+</body>
+<script>
+const SIZES = [
+  { name: 'icon-1024.png', size: 1024, note: 'Apple App Store' },
+  { name: 'icon-512.png',  size: 512,  note: 'Android, PWA' },
+  { name: 'icon-192.png',  size: 192,  note: 'PWA, Android' },
+  { name: 'apple-touch-180.png', size: 180, note: 'iPhone' },
+  { name: 'apple-touch-167.png', size: 167, note: 'iPad Pro' },
+  { name: 'apple-touch-152.png', size: 152, note: 'iPad' },
+  { name: 'apple-touch-120.png', size: 120, note: 'iPhone @2x' },
+  { name: 'icon-144.png',  size: 144, note: 'Android xxhdpi' },
+  { name: 'icon-96.png',   size: 96,  note: 'Android xhdpi' },
+  { name: 'icon-72.png',   size: 72,  note: 'Android hdpi' },
+  { name: 'icon-48.png',   size: 48,  note: 'Android mdpi' },
+  { name: 'favicon-32.png',size: 32,  note: 'Browser-Tab' },
+  { name: 'favicon-16.png',size: 16,  note: 'Browser-Tab' }
+];
+
+async function svgToPng(svgText, size) {
+  const blob = new Blob([svgText], { type: 'image/svg+xml' });
+  const url = URL.createObjectURL(blob);
+  try {
+    const img = await new Promise((res, rej) => {
+      const i = new Image();
+      i.onload = () => res(i);
+      i.onerror = rej;
+      i.src = url;
+    });
+    const c = document.createElement('canvas');
+    c.width = size; c.height = size;
+    const ctx = c.getContext('2d');
+    ctx.imageSmoothingEnabled = true;
+    ctx.imageSmoothingQuality = 'high';
+    ctx.drawImage(img, 0, 0, size, size);
+    return c.toDataURL('image/png');
+  } finally {
+    URL.revokeObjectURL(url);
+  }
+}
+
+async function generate() {
+  const src = document.getElementById('src').value;
+  const r = await fetch(src);
+  if (!r.ok) { alert('SVG konnte nicht geladen werden: ' + r.status); return; }
+  const svg = await r.text();
+  const grid = document.getElementById('grid');
+  grid.innerHTML = '<p>Generiere…</p>';
+  const cards = [];
+  for (const s of SIZES) {
+    const data = await svgToPng(svg, s.size);
+    cards.push(`
+      <div class="card">
+        <img src="${data}" alt="${s.size}px">
+        <a href="${data}" download="${s.name}">${s.name} ⬇</a>
+        <div class="meta">${s.size}×${s.size} · ${s.note}</div>
+      </div>
+    `);
+  }
+  grid.innerHTML = cards.join('');
+}
+
+document.getElementById('generate').addEventListener('click', generate);
+window.addEventListener('load', () => setTimeout(generate, 100));
+</script>
+</html>
