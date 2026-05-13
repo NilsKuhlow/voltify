@@ -2003,5 +2003,247 @@ window.QUESTIONS = [
     options: ['Die Geschwindigkeit muss den schlechteren Sichtverhältnissen angepasst werden', 'Das Abblendlicht (Fahrlicht; Tagfahrlicht) sollte eher zu früh als zu spät eingeschaltet werden', 'Man sollte möglichst nicht in die Scheinwerfer entgegenkommender Fahrzeuge blicken', 'In der Dämmerung reicht das Standlicht'],
     correct: [0, 1, 2],
     explain: 'Richtig: A) Die Geschwindigkeit muss den schlechteren Sichtverhältnissen angepasst werden · B) Das Abblendlicht (Fahrlicht; Tagfahrlicht) sollte eher zu früh als zu spät eingeschaltet werden · C) Man sollte möglichst nicht in die Scheinwerfer entgegenkommender Fahrzeuge blicken'
+  },
+
+  // ====== EIGENE FRAGEN MIT QUELLENANGABEN (DGUV / VDE / DIN) ======
+  {
+    id: 'lg51', path: 'lehrling-grund', category: 'Schaltzeichen',
+    question: 'Wie wird ein ohmscher Widerstand im Schaltplan nach DIN EN 60617 dargestellt?',
+    options: ['Rechteck', 'Zickzack-Linie', 'Kreis mit X', 'Dreieck'],
+    correct: 0,
+    explain: 'Nach DIN EN 60617 (IEC) wird der Widerstand als Rechteck dargestellt. Die Zickzack-Linie ist die ältere amerikanische Darstellung (ANSI).',
+    source: 'DIN EN 60617 (Schaltzeichen)'
+  },
+  {
+    id: 'lg52', path: 'lehrling-grund', category: 'Einheiten',
+    question: 'Wie heißt der Kehrwert des elektrischen Widerstands und welche Einheit hat er?',
+    options: ['Konduktanz / Siemens (S)', 'Kapazität / Farad (F)', 'Suszeptanz / Henry (H)', 'Reaktanz / Ohm (Ω)'],
+    correct: 0,
+    explain: 'Der elektrische Leitwert G = 1/R hat die Einheit Siemens (S). 1 S = 1 A/V.',
+    source: 'Grundbegriffe Elektrotechnik (DIN 1304)'
+  },
+  {
+    id: 'lg53', path: 'lehrling-grund', category: 'Berechnung',
+    question: 'Welche Spannung fällt an einem 10-Ω-Widerstand bei einem Strom von 2 A ab?',
+    options: ['5 V', '12 V', '20 V', '0,2 V'],
+    correct: 2,
+    explain: 'U = R · I = 10 Ω · 2 A = 20 V (Ohmsches Gesetz).',
+    source: 'Ohmsches Gesetz'
+  },
+  {
+    id: 'lg54', path: 'lehrling-grund', category: 'Drehstrom',
+    question: 'Wie verhält sich die verkettete Spannung zur Sternspannung im symmetrischen Drehstromnetz?',
+    options: ['U_v = U_st (gleich)', 'U_v = √3 · U_st', 'U_v = 2 · U_st', 'U_v = 3 · U_st'],
+    correct: 1,
+    explain: 'U_verkettet = √3 · U_Stern. 230 V · √3 ≈ 400 V – daher 230/400 V im Niederspannungsnetz.',
+    source: 'DIN VDE 0100-100 / Drehstromtechnik'
+  },
+  {
+    id: 'lg55', path: 'lehrling-grund', category: 'Wechselstrom',
+    question: 'Wie heißt der Wechselstromwiderstand eines idealen Kondensators?',
+    options: ['Resistanz', 'Kapazitive Reaktanz X_C', 'Konduktanz', 'Suszeptanz'],
+    correct: 1,
+    explain: 'Kapazitive Reaktanz X_C = 1 / (2π·f·C). Mit steigender Frequenz sinkt X_C.',
+    source: 'Wechselstromtechnik (Grundlagen)'
+  },
+  {
+    id: 'lg56', path: 'lehrling-grund', category: 'Aderfarben',
+    question: 'Welche Aderfarbe hat üblicherweise der Außenleiter L2?',
+    options: ['braun', 'schwarz', 'grau', 'blau'],
+    correct: 1,
+    explain: 'Harmonisierte Norm DIN VDE 0293-308: L1 braun, L2 schwarz, L3 grau, N blau, PE grün-gelb.',
+    source: 'DIN VDE 0293-308 (Aderkennzeichnung)'
+  },
+  {
+    id: 'lg57', path: 'lehrling-grund', category: 'Schwingkreis',
+    question: 'Welche Bedingung gilt für Resonanz in einem RLC-Reihenschaltkreis?',
+    options: ['X_L = X_C', 'R = X_L', 'R = X_C', 'L = C'],
+    correct: 0,
+    explain: 'Bei Resonanz heben sich induktive und kapazitive Reaktanz auf (X_L = X_C). Der Stromkreis verhält sich rein ohmsch, Strom maximal.',
+    source: 'Schwingkreislehre'
+  },
+  {
+    id: 'lg58', path: 'lehrling-grund', category: 'Maschinen',
+    question: 'Was passiert mit der Sekundärspannung eines Trafos, wenn die Primärwindungszahl bei gleicher Sekundärwindungszahl verdoppelt wird?',
+    options: ['Verdoppelt sich', 'Halbiert sich', 'Bleibt gleich', 'Vervierfacht sich'],
+    correct: 1,
+    explain: 'U2 = U1 · N2/N1. Doppelte N1 → halbe U2 (gleiche U1 und N2 vorausgesetzt).',
+    source: 'Transformator-Grundgleichung'
+  },
+  {
+    id: 'lg59', path: 'lehrling-grund', category: 'Berechnung',
+    question: 'Wie verändert sich die Leistung an einem ohmschen Widerstand bei Verdopplung der Spannung?',
+    options: ['Bleibt gleich', 'Verdoppelt sich', 'Verdreifacht sich', 'Vervierfacht sich'],
+    correct: 3,
+    explain: 'P = U²/R. Doppelte Spannung → vierfache Leistung. Wichtig bei Spannungsanpassungen und Heizleistungen.',
+    source: 'Leistungsformel'
+  },
+  {
+    id: 'lg60', path: 'lehrling-grund', category: 'Stromkreisfehler',
+    question: 'Was ist ein Körperschluss?',
+    options: ['Verbindung zwischen zwei Außenleitern', 'Verbindung zwischen Außenleiter und Erde', 'Fehlerhafte elektrische Verbindung zwischen aktivem Teil und einem Körper (leitfähigem Gehäuse)', 'Strom durch den menschlichen Körper'],
+    correct: 2,
+    explain: 'Körperschluss: aktive Spannung erreicht das eigentlich spannungslose Gehäuse. Schutz: PE + RCD.',
+    source: 'Stromkreis-Fehlerarten'
+  },
+  {
+    id: 'lg61', path: 'lehrling-grund', category: 'Stromkreisfehler',
+    question: 'Was ist ein Erdschluss?',
+    options: ['Verbindung zwischen zwei Außenleitern', 'Verbindung zwischen aktivem Teil und Erde (z. B. über defekte Isolation)', 'Verbindung zwischen N und PE', 'Fehlender Schutzleiter'],
+    correct: 1,
+    explain: 'Erdschluss = Strom-führender Teil bekommt Verbindung zur Erde, z. B. durchgescheuerte Leitung. Bei TT-/TN-Netz löst der RCD aus.',
+    source: 'Stromkreis-Fehlerarten'
+  },
+  {
+    id: 'lg62', path: 'lehrling-grund', category: 'Stromkreisfehler',
+    question: 'Was ist ein Kurzschluss im engeren Sinne?',
+    options: ['Niederohmige Verbindung zwischen zwei aktiven Leitern', 'Hoher Widerstand im Stromkreis', 'Verbindung Phase-Erde', 'Stromfluss durch den Körper'],
+    correct: 0,
+    explain: 'Kurzschluss = sehr niederohmige Verbindung zwischen aktiven Leitern. Sehr hoher Strom – LS-Schalter löst sofort aus.',
+    source: 'DIN VDE 0100-430 (Schutz bei Überstrom)'
+  },
+  {
+    id: 'lg63', path: 'lehrling-grund', category: 'Berechnung',
+    question: 'Wie berechnet man den Spannungsfall in einer einphasigen Leitung?',
+    options: ['Δu = (2 · l · I · ρ) / A', 'Δu = (l · I) / A', 'Δu = R / I', 'Δu = U · I'],
+    correct: 0,
+    explain: 'Δu = 2 · l · I · ρ / A. Faktor 2 für Hin- und Rückleiter. Bei symmetrischem Drehstrom: Faktor √3 statt 2.',
+    source: 'DIN VDE 0100-520 (Spannungsfall)'
+  },
+  {
+    id: 'lg64', path: 'lehrling-grund', category: 'Photovoltaik',
+    question: 'Welche elektrische Größe gibt ein PV-Modul typischerweise unter Standard-Test-Conditions (STC) im Datenblatt an?',
+    options: ['Maximale Leistung P_mpp am Maximum Power Point', 'Wirkungsgrad als einzige Angabe', 'Nur die Spannung', 'Nur den Strom'],
+    correct: 0,
+    explain: 'STC: 1000 W/m², 25 °C, AM 1,5. Hauptangaben sind P_mpp, U_mpp, I_mpp sowie Leerlaufspannung U_OC und Kurzschlussstrom I_SC.',
+    source: 'IEC 61215 (PV-Modul-Prüfung)'
+  },
+  {
+    id: 'lg65', path: 'lehrling-grund', category: 'Wechselstrom',
+    question: 'Was bedeutet ein cos φ von 0,8 (induktiv)?',
+    options: ['80 % Wirkungsgrad', 'Wirkleistung beträgt 80 % der Scheinleistung', '80 % des Stroms fließen', '80 % der Spannung'],
+    correct: 1,
+    explain: 'cos φ = P/S. Bei cos φ = 0,8 ind. ist 80 % Wirkleistung, 60 % Blindleistung. Niedriger cos φ erhöht Verluste – Kompensationspflicht ab gewisser Größe.',
+    source: 'Wechselstromtechnik / EnergieWG'
+  },
+  {
+    id: 'lv54', path: 'lehrling-vde', category: 'Normen',
+    question: 'Welche Spannungsbereiche umfasst die DIN VDE 0100 (Reihe)?',
+    options: ['Bis 230 V', 'Bis 400 V', 'Bis AC 1000 V / DC 1500 V', 'Bis 30 kV'],
+    correct: 2,
+    explain: 'VDE 0100 gilt für das Errichten von Niederspannungsanlagen bis 1000 V AC bzw. 1500 V DC. Darüber gelten andere Normen (VDE 0101 etc.).',
+    source: 'DIN VDE 0100-100 (Geltungsbereich)'
+  },
+  {
+    id: 'lv55', path: 'lehrling-vde', category: 'Vorschriften',
+    question: 'Was ist die Hauptaufgabe der Unfallverhütungsvorschrift DGUV V1?',
+    options: ['Regelt Lohnfortzahlung', 'Definiert allgemeine Pflichten zur Prävention im Betrieb (Unternehmer und Versicherte)', 'Regelt nur elektrische Anlagen', 'Regelt nur das Bauwesen'],
+    correct: 1,
+    explain: 'DGUV V1 = "Grundsätze der Prävention". Allgemeine Pflichten von Unternehmer und Versicherten zu Sicherheit und Gesundheitsschutz.',
+    source: 'DGUV Vorschrift 1 (Grundsätze der Prävention)'
+  },
+  {
+    id: 'lv56', path: 'lehrling-vde', category: 'Erste Hilfe',
+    question: 'Welcher erste Schritt ist bei einem Stromunfall zwingend?',
+    options: ['Verletzten direkt anfassen', 'Stromkreis abschalten oder Verletzten mit isolierendem Gegenstand vom Stromkreis trennen (Eigensicherung beachten)', 'Sofort die Atmung kontrollieren', 'Direkt 112 anrufen, ohne andere Maßnahmen'],
+    correct: 1,
+    explain: 'Erst freischalten oder mit isolierendem Gegenstand trennen, sonst gefährdet sich der Helfer selbst. Dann Notruf 112, Bewusstsein/Atmung prüfen, ggf. Reanimation.',
+    source: 'DGUV Information 204-022 (Erste Hilfe)'
+  },
+  {
+    id: 'lv57', path: 'lehrling-vde', category: 'Prüfung',
+    question: 'Welches Prüfintervall ist für ortsfeste elektrische Anlagen in Wohngebäuden empfohlen?',
+    options: ['Jährlich', 'Alle 4 Jahre', 'Alle 10 Jahre', 'Nur bei Verdacht'],
+    correct: 1,
+    explain: 'Wohngebäude: Empfehlung alle 4 Jahre nach DGUV V3 / TRBS. Im gewerblichen Bereich nach Gefährdungsbeurteilung (oft 1–4 Jahre).',
+    source: 'DGUV V3 / TRBS 1201'
+  },
+  {
+    id: 'lv58', path: 'lehrling-vde', category: 'Schutzklassen',
+    question: 'Welches Symbol kennzeichnet ein Gerät der Schutzklasse I?',
+    options: ['Doppelquadrat', 'Erdungssymbol', 'Tropfsymbol', 'IP-Code'],
+    correct: 1,
+    explain: 'Schutzklasse I = Erdungs-Symbol. Schutzklasse II = Doppelquadrat (zwei ineinander liegende Quadrate). Schutzklasse III = Raute mit III.',
+    source: 'DIN EN 61140 / VDE 0140-1'
+  },
+  {
+    id: 'lv59', path: 'lehrling-vde', category: 'Messtechnik',
+    question: 'Welches Messmittel ist für die Feststellung der Spannungsfreiheit nach DGUV V3 zwingend?',
+    options: ['Beliebiges Multimeter', 'Zweipoliger Spannungsprüfer nach DIN EN 61243-3, regelmäßig geprüft', 'Einpoliger Phasenprüfer-Schraubendreher', 'Berührungsloser NCV-Tester'],
+    correct: 1,
+    explain: 'Zweipoliger Spannungsprüfer nach DIN EN 61243-3 ist Pflicht. Phasenprüfer-Schraubendreher ist NICHT zulässig zur Spannungsfreiheits-Feststellung!',
+    source: 'DIN EN 61243-3 / DGUV V3 § 6'
+  },
+  {
+    id: 'lv60', path: 'lehrling-vde', category: 'Installation',
+    question: 'Wie viele Endstromkreise werden für eine 3-Zimmer-Wohnung nach DIN 18015-2 typischerweise mindestens vorgesehen?',
+    options: ['1', '3', '5 (zzgl. Sonderstromkreise)', '12'],
+    correct: 2,
+    explain: 'DIN 18015-2 staffelt nach Wohnungsgröße. 3-Zi-Wohnung kommt typisch auf etwa 5 Endstromkreise zzgl. Sonderausstattung (Herd, Waschmaschine, Geschirrspüler).',
+    source: 'DIN 18015-2 (Wohnungsbau Mindestausstattung)'
+  },
+  {
+    id: 'lv61', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
+    question: 'Welcher maximale Schleifenwiderstand ist für einen LS-Schalter B16 (5-fache Auslösung, 230 V) zulässig?',
+    options: ['ca. 0,3 Ω', 'ca. 1,4 Ω', 'ca. 2,87 Ω', 'ca. 14 Ω'],
+    correct: 2,
+    explain: 'Z_S ≤ U_0 / I_a. Mit U_0 = 230 V, I_a = 5 · 16 A = 80 A → Z_S ≤ 230/80 = 2,875 Ω. Wird im Schleifenmess-Test geprüft.',
+    source: 'DIN VDE 0100-410 § 411 / TAB'
+  },
+  {
+    id: 'lv62', path: 'lehrling-vde', category: 'Sicherheit',
+    question: 'Welche persönliche Schutzausrüstung ist beim Arbeiten unter Spannung zwingend?',
+    options: ['Nur Sicherheitsschuhe', 'Nur Schutzbrille', 'Isolierte Werkzeuge, Isolierhandschuhe der passenden Spannungsklasse, Gesichtsschutz, isolierende Standfläche', 'Atemschutzmaske'],
+    correct: 2,
+    explain: 'Arbeiten unter Spannung erfordert vollständige PSA: Isolierhandschuhe (z. B. Klasse 0 für 1000 V), isoliertes Werkzeug (IEC 60900), Gesichtsschutz, isolierende Standfläche/Matte. Vorher Gefährdungsbeurteilung und schriftliche Anweisung.',
+    source: 'DGUV V3 § 8 / DIN EN 60903'
+  },
+  {
+    id: 'lv63', path: 'lehrling-vde', category: 'Photovoltaik',
+    question: 'Wer muss vor der Inbetriebnahme einer netzgekoppelten PV-Anlage informiert werden?',
+    options: ['Nur das Finanzamt', 'Der Netzbetreiber (Anmeldung gemäß VDE-AR-N 4105 bzw. 4100)', 'Nur die Bundesnetzagentur', 'Niemand bei Anlagen unter 30 kWp'],
+    correct: 1,
+    explain: 'Vor Inbetriebnahme jeder netzgekoppelten PV-Anlage Anmeldung beim Netzbetreiber gemäß VDE-AR-N 4105 (NS-Einspeisung). Zusätzlich Marktstammdatenregister-Eintrag bei der Bundesnetzagentur innerhalb 1 Monats.',
+    source: 'VDE-AR-N 4105 / MaStRV § 5'
+  },
+  {
+    id: 'm46', path: 'meister', category: 'Steuern',
+    question: 'Bis zu welchem Vorjahresumsatz greift seit 2025 die Kleinunternehmerregelung (§ 19 UStG)?',
+    options: ['17.500 €', '22.000 €', '25.000 €', '50.000 €'],
+    correct: 2,
+    explain: 'Seit 2025: Vorjahresumsatz ≤ 25.000 € UND laufendes Jahr voraussichtlich ≤ 100.000 €. Dann darf USt nicht ausgewiesen werden, kein Vorsteuerabzug.',
+    source: '§ 19 UStG (Stand 2025)'
+  },
+  {
+    id: 'm47', path: 'meister', category: 'Versicherungen',
+    question: 'Welche Versicherung ist für Handwerksbetriebe gesetzlich zwingend?',
+    options: ['Berufshaftpflicht', 'Berufsgenossenschaftliche Pflichtversicherung (BG ETEM für Elektroberufe)', 'Rechtsschutzversicherung', 'Cyber-Versicherung'],
+    correct: 1,
+    explain: 'Mitgliedschaft in der zuständigen Berufsgenossenschaft ist gesetzliche Pflicht (§ 121 SGB VII). Für Elektrotechnik: BG ETEM. Beiträge nach Lohnsumme und Gefahrklasse.',
+    source: '§ 121 SGB VII / BG ETEM'
+  },
+  {
+    id: 'm48', path: 'meister', category: 'AdA – Pädagogik',
+    question: 'Aus welchen Teilen besteht die AdA-Prüfung nach AEVO?',
+    options: ['Nur schriftliche Prüfung', 'Nur praktische Prüfung', 'Schriftlicher Teil (Multiple Choice + offene Fragen) und praktischer Teil (Präsentation oder Ausbildungssituation + Fachgespräch)', 'Keine Prüfung erforderlich'],
+    correct: 2,
+    explain: 'AEVO § 4: schriftlicher und praktischer Teil. Praktisch: Präsentation oder Durchführung einer Ausbildungssituation (15 min) + Fachgespräch (15 min). Beide Teile mind. ausreichend.',
+    source: 'AEVO § 4'
+  },
+  {
+    id: 'm49', path: 'meister', category: 'Recht – BGB',
+    question: 'Wer haftet bei einem Sachschaden, der durch Pflichtverletzung im Werkvertrag entsteht?',
+    options: ['Immer der Unternehmer (verschuldensunabhängig)', 'Der Unternehmer bei Verschulden (Vorsatz oder Fahrlässigkeit – wird vermutet)', 'Immer der Auftraggeber', 'Nur ein Subunternehmer'],
+    correct: 1,
+    explain: '§ 280 BGB: Schadensersatz bei Pflichtverletzung, wenn Verschulden vorliegt. Verschulden wird vermutet – der Unternehmer muss sich entlasten. Umfasst Vorsatz und (auch leichte) Fahrlässigkeit.',
+    source: '§ 280 BGB / § 634 BGB'
+  },
+  {
+    id: 'm50', path: 'meister', category: 'Kalkulation',
+    question: 'Welcher Material-Gemeinkostenzuschlag wird im Elektrohandwerk üblicherweise angesetzt?',
+    options: ['0 %', '10–15 %', '50–60 %', '100 %'],
+    correct: 1,
+    explain: 'Üblich sind 10–15 % Materialgemeinkosten-Zuschlag auf den Materialeinkaufspreis. Plus Gewinn-/Wagniszuschlag (5–10 %). Endpreis ≈ EK · 1,2–1,3 für Material.',
+    source: 'Handwerks-Kalkulation (HwK-Empfehlungen)'
   }
 ];

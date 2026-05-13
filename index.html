@@ -30,6 +30,7 @@
         <div class="hero">
           <p class="hero-greeting" id="greeting">Bereit zu lernen?</p>
           <h1 class="hero-title">Was lernst du heute?</h1>
+          <p class="exam-countdown hidden" id="exam-countdown" aria-live="polite"></p>
           <div class="hero-stats">
             <div class="stat">
               <span class="stat-value" id="stat-streak">0</span>
@@ -50,8 +51,131 @@
 
         <div class="action-stack">
           <button class="btn primary big" data-nav="quiz-mix">Zufallsmix starten</button>
+          <button class="btn ghost" data-nav="exam-setup">Prüfungssimulator</button>
+          <button class="btn ghost" data-nav="browse">Alle Fragen durchsuchen</button>
           <button class="btn ghost" data-nav="stats">Detail-Statistik</button>
         </div>
+      </main>
+    </section>
+
+    <!-- PRÜFUNGSSIMULATOR – SETUP -->
+    <section class="screen" data-screen="exam-setup">
+      <header class="topbar">
+        <button class="icon-btn" data-nav="home" aria-label="Zurück">←</button>
+        <h2 class="page-title">Prüfungssimulator</h2>
+        <div></div>
+      </header>
+      <main class="content">
+        <p class="prose-intro">
+          Im Simulator-Modus bekommst du <strong>kein Feedback</strong>
+          während der Prüfung. Erst am Ende siehst du, wie viele Fragen
+          du richtig hattest – wie in einer echten Prüfung.
+        </p>
+        <div class="settings-list">
+          <div class="setting-row">
+            <div class="setting-text">
+              <h3>Themengebiet</h3>
+              <p class="setting-hint">Welcher Bereich soll geprüft werden</p>
+            </div>
+            <select id="exam-path" aria-label="Themengebiet">
+              <option value="">Alle</option>
+              <option value="lehrling-grund">Grundlagen</option>
+              <option value="lehrling-vde">VDE & Sicherheit</option>
+              <option value="meister">Meister</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div class="setting-text">
+              <h3>Anzahl Fragen</h3>
+              <p class="setting-hint">Aus dem Pool zufällig gezogen</p>
+            </div>
+            <select id="exam-count" aria-label="Anzahl Fragen">
+              <option value="10">10</option>
+              <option value="20">20</option>
+              <option value="30" selected>30</option>
+              <option value="60">60</option>
+              <option value="90">90</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div class="setting-text">
+              <h3>Zeitlimit</h3>
+              <p class="setting-hint">Insgesamt für alle Fragen</p>
+            </div>
+            <select id="exam-time" aria-label="Zeitlimit">
+              <option value="0">Kein Limit</option>
+              <option value="15">15 Minuten</option>
+              <option value="30" selected>30 Minuten</option>
+              <option value="45">45 Minuten</option>
+              <option value="60">60 Minuten</option>
+              <option value="90">90 Minuten</option>
+            </select>
+          </div>
+        </div>
+        <button class="btn primary big" id="exam-start">Simulator starten</button>
+      </main>
+    </section>
+
+    <!-- PRÜFUNGS-ERGEBNIS -->
+    <section class="screen" data-screen="exam-result">
+      <header class="topbar">
+        <div></div>
+        <h2 class="page-title">Prüfungsergebnis</h2>
+        <button class="icon-btn" data-nav="home" aria-label="Schließen">✕</button>
+      </header>
+      <main class="content">
+        <div class="exam-summary">
+          <div class="exam-grade" id="exam-grade">–</div>
+          <p class="exam-subtitle" id="exam-subtitle"></p>
+          <div class="results-grid">
+            <div class="result-card">
+              <span class="result-value" id="exam-correct">0</span>
+              <span class="result-label">Richtig</span>
+            </div>
+            <div class="result-card">
+              <span class="result-value" id="exam-wrong">0</span>
+              <span class="result-label">Falsch</span>
+            </div>
+            <div class="result-card">
+              <span class="result-value" id="exam-percent">0%</span>
+              <span class="result-label">Quote</span>
+            </div>
+          </div>
+        </div>
+        <h3 class="exam-detail-title">Detail</h3>
+        <div class="exam-detail-list" id="exam-detail-list"></div>
+        <div class="action-stack">
+          <button class="btn primary big" data-nav="exam-setup">Neue Prüfung</button>
+          <button class="btn ghost" data-nav="home">Zur Übersicht</button>
+        </div>
+      </main>
+    </section>
+
+    <!-- BROWSE / SUCHE -->
+    <section class="screen" data-screen="browse">
+      <header class="topbar">
+        <button class="icon-btn" data-nav="home" aria-label="Zurück">←</button>
+        <h2 class="page-title">Fragen durchsuchen</h2>
+        <div></div>
+      </header>
+      <main class="content">
+        <input type="search" id="browse-search" class="browse-search"
+               placeholder="In allen Fragen suchen…"
+               aria-label="Fragen durchsuchen">
+        <div class="filter-chips" role="group" aria-label="Filter">
+          <button class="chip active" data-filter-path="">Alle Pfade</button>
+          <button class="chip" data-filter-path="lehrling-grund">Grundlagen</button>
+          <button class="chip" data-filter-path="lehrling-vde">VDE & Sicherheit</button>
+          <button class="chip" data-filter-path="meister">Meister</button>
+        </div>
+        <div class="filter-chips" role="group" aria-label="Status-Filter">
+          <button class="chip active" data-filter-status="all">Alle</button>
+          <button class="chip" data-filter-status="bookmarked">Nur markierte ★</button>
+          <button class="chip" data-filter-status="due">Fällig heute</button>
+          <button class="chip" data-filter-status="weak">Box 1–2</button>
+        </div>
+        <p class="browse-meta" id="browse-meta">– Fragen –</p>
+        <div class="browse-list" id="browse-list"></div>
       </main>
     </section>
 
@@ -65,18 +189,27 @@
           </div>
           <span class="progress-text" id="progress-text">0 / 0</span>
         </div>
+        <span class="exam-timer hidden" id="exam-timer" aria-live="polite"
+              aria-label="Verbleibende Zeit">--:--</span>
       </header>
       <main class="content quiz-content">
         <div class="card" id="quiz-card">
           <div class="card-meta">
             <span class="badge" id="card-category">Kategorie</span>
-            <span class="card-level" id="card-level" aria-label="Lernstand">★☆☆☆☆</span>
+            <div class="card-meta-right">
+              <button class="bookmark-btn" id="bookmark-btn" type="button"
+                      aria-label="Karte merken" aria-pressed="false">
+                <span id="bookmark-icon" aria-hidden="true">☆</span>
+              </button>
+              <span class="card-level" id="card-level" aria-label="Lernstand">★☆☆☆☆</span>
+            </div>
           </div>
           <h2 class="card-question" id="card-question">Frage</h2>
           <div class="card-options" id="card-options"></div>
           <div class="card-feedback hidden" id="card-feedback">
             <div class="feedback-header" id="feedback-header"></div>
             <p class="feedback-explain" id="feedback-explain"></p>
+            <p class="feedback-source hidden" id="feedback-source"></p>
             <button class="btn primary big" id="next-btn">Weiter</button>
           </div>
         </div>
@@ -167,6 +300,27 @@
               <input type="checkbox" id="setting-shuffle" checked>
               <span class="slider"></span>
             </label>
+          </div>
+          <div class="setting-row">
+            <div class="setting-text">
+              <h3>Lehrjahr</h3>
+              <p class="setting-hint">Wo stehst du? Beeinflusst künftige Empfehlungen.</p>
+            </div>
+            <select id="setting-grade" aria-label="Lehrjahr">
+              <option value="">– keine Angabe –</option>
+              <option value="1">1. Lehrjahr</option>
+              <option value="2">2. Lehrjahr</option>
+              <option value="3">3. Lehrjahr</option>
+              <option value="4">4. Lehrjahr</option>
+              <option value="5">Meister</option>
+            </select>
+          </div>
+          <div class="setting-row">
+            <div class="setting-text">
+              <h3>Prüfungsdatum</h3>
+              <p class="setting-hint">Optional. Zeigt den Countdown auf der Startseite.</p>
+            </div>
+            <input type="date" id="setting-exam-date" class="setting-date" aria-label="Prüfungsdatum">
           </div>
           <div class="setting-row">
             <div class="setting-text">
@@ -351,22 +505,52 @@
       </main>
     </section>
 
-    <!-- ERST-START-HINWEIS (Modal-ähnlich, einmalig) -->
+    <!-- ERST-START-WIZARD (Modal, mehrstufig, einmalig) -->
     <div id="first-visit" class="first-visit hidden" role="dialog"
          aria-modal="true" aria-labelledby="first-visit-title">
       <div class="first-visit-card">
-        <div class="first-visit-icon" aria-hidden="true">⚡</div>
-        <h2 id="first-visit-title">Willkommen bei Voltify</h2>
-        <p>
-          Voltify speichert deinen Lernfortschritt
-          <strong>nur lokal in diesem Browser</strong> – kein Account,
-          kein Server, keine Werbung. Wenn du den Browser-Speicher
-          leerst, sind die Daten weg.
-        </p>
-        <p class="small muted">
-          Mehr dazu unter <em>Einstellungen → Datenschutz</em>.
-        </p>
-        <button class="btn primary big" id="first-visit-ok">Verstanden, los geht's</button>
+        <!-- STEP 1: Welcome / Datenschutz -->
+        <div class="visit-step" data-step="1">
+          <div class="first-visit-icon" aria-hidden="true">⚡</div>
+          <h2 id="first-visit-title">Willkommen bei Voltify</h2>
+          <p>
+            Voltify speichert deinen Lernfortschritt
+            <strong>nur lokal in diesem Browser</strong> – kein Account,
+            kein Server, keine Werbung. Wenn du den Browser-Speicher
+            leerst, sind die Daten weg.
+          </p>
+          <p class="small muted">
+            Mehr dazu unter <em>Einstellungen → Datenschutz</em>.
+          </p>
+          <button class="btn primary big" id="visit-next-1">Weiter</button>
+        </div>
+
+        <!-- STEP 2: Lehrjahr -->
+        <div class="visit-step hidden" data-step="2">
+          <h2>Wo stehst du?</h2>
+          <p class="small muted">
+            Damit wir dir später die passenden Inhalte zeigen können.
+          </p>
+          <div class="grade-grid">
+            <button class="grade-option" type="button" data-grade="1">1. Lehrjahr</button>
+            <button class="grade-option" type="button" data-grade="2">2. Lehrjahr</button>
+            <button class="grade-option" type="button" data-grade="3">3. Lehrjahr</button>
+            <button class="grade-option" type="button" data-grade="4">4. Lehrjahr</button>
+            <button class="grade-option" type="button" data-grade="5">Meister</button>
+            <button class="grade-option ghost" type="button" data-grade="0">Überspringen</button>
+          </div>
+        </div>
+
+        <!-- STEP 3: Prüfungsdatum -->
+        <div class="visit-step hidden" data-step="3">
+          <h2>Wann ist deine Prüfung?</h2>
+          <p class="small muted">
+            Optional – wir zeigen dir dann auf der Startseite den Countdown.
+          </p>
+          <input type="date" id="exam-date-input" class="date-input" aria-label="Prüfungsdatum">
+          <button class="btn primary big" id="visit-finish">Los geht's</button>
+          <button class="btn ghost" id="visit-skip-date">Später eintragen</button>
+        </div>
       </div>
     </div>
   </div>
