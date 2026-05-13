@@ -1,0 +1,19 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["TEAMIDXXXX.de.nilskuhlow.voltify"],
+        "components": [
+          {
+            "/": "/voltify/*",
+            "comment": "Alle Voltify-Pfade ins App-Routing leiten"
+          }
+        ]
+      }
+    ]
+  },
+  "webcredentials": {
+    "apps": ["TEAMIDXXXX.de.nilskuhlow.voltify"]
+  }
+}
