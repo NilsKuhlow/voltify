@@ -172,13 +172,24 @@
     const optionsEl = document.getElementById('card-options');
     optionsEl.innerHTML = '';
 
-    const letters = ['A', 'B', 'C', 'D', 'E', 'F'];
+    const letters = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H'];
     const indices = q.options.map((_, i) => i);
     const order = state.settings.shuffle ? shuffle(indices) : indices;
 
+    const isMulti = Array.isArray(q.correct);
+    const correctSet = new Set(isMulti ? q.correct : [q.correct]);
+    const selected = new Set();
+
+    if (isMulti) {
+      const hint = document.createElement('div');
+      hint.className = 'multi-hint';
+      hint.textContent = `Mehrfachauswahl · ${correctSet.size} Antworten richtig`;
+      optionsEl.appendChild(hint);
+    }
+
     order.forEach((origIdx, displayIdx) => {
       const btn = document.createElement('button');
-      btn.className = 'option';
+      btn.className = 'option' + (isMulti ? ' multi' : '');
       btn.type = 'button';
       const mark = document.createElement('span');
       mark.className = 'option-mark';
@@ -189,17 +200,43 @@
       btn.appendChild(mark);
       btn.appendChild(text);
       btn.dataset.origIdx = origIdx;
-      btn.addEventListener('click', () => answerQuestion(origIdx, btn));
+      if (isMulti) {
+        btn.addEventListener('click', () => {
+          if (selected.has(origIdx)) {
+            selected.delete(origIdx);
+            btn.classList.remove('selected');
+          } else {
+            selected.add(origIdx);
+            btn.classList.add('selected');
+          }
+          const cb = document.getElementById('multi-check');
+          if (cb) cb.disabled = selected.size === 0;
+        });
+      } else {
+        btn.addEventListener('click', () => answerQuestion(new Set([origIdx]), btn, correctSet));
+      }
       optionsEl.appendChild(btn);
     });
+
+    if (isMulti) {
+      const checkBtn = document.createElement('button');
+      checkBtn.id = 'multi-check';
+      checkBtn.className = 'btn primary multi-check-btn';
+      checkBtn.type = 'button';
+      checkBtn.textContent = 'Antwort prüfen';
+      checkBtn.disabled = true;
+      checkBtn.addEventListener('click', () => answerQuestion(selected, null, correctSet));
+      optionsEl.appendChild(checkBtn);
+    }
 
     document.getElementById('card-feedback').classList.add('hidden');
   }
 
-  function answerQuestion(chosenIdx, clickedBtn) {
+  function answerQuestion(chosenSet, clickedBtn, correctSet) {
     const q = session.queue[session.currentIdx];
     const card = state.cards[q.id];
-    const correct = chosenIdx === q.correct;
+    const correct = chosenSet.size === correctSet.size &&
+                    [...chosenSet].every((i) => correctSet.has(i));
 
     card.total++;
     card.lastSeen = Date.now();
@@ -220,10 +257,15 @@
 
     document.querySelectorAll('.option').forEach((btn) => {
       btn.disabled = true;
+      btn.classList.remove('selected');
       const idx = parseInt(btn.dataset.origIdx, 10);
-      if (idx === q.correct) btn.classList.add('correct');
-      else if (btn === clickedBtn) btn.classList.add('wrong');
+      if (correctSet.has(idx)) btn.classList.add('correct');
+      else if (chosenSet.has(idx)) btn.classList.add('wrong');
     });
+    const cb = document.getElementById('multi-check');
+    if (cb) cb.remove();
+    const mh = document.querySelector('.multi-hint');
+    if (mh) mh.remove();
 
     const fb = document.getElementById('card-feedback');
     const fbHeader = document.getElementById('feedback-header');
