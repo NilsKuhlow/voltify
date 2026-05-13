@@ -3,6 +3,8 @@
   'use strict';
 
   const STORAGE_KEY = 'voltify-state-v1';
+  const CURRENT_SCHEMA = 1;
+  const FIRST_VISIT_KEY = 'voltify-onboarded';
 
   // Leitner-Box-Intervalle in ms (Index = Box 1..5)
   const DAY = 24 * 60 * 60 * 1000;
@@ -11,6 +13,7 @@
   // ===== STATE =====
   function defaultState() {
     return {
+      schemaVersion: CURRENT_SCHEMA,
       cards: {},
       streak: 0,
       lastSession: null,
@@ -18,11 +21,22 @@
     };
   }
 
+  // Schema-Migration. Bei späteren Schema-Änderungen hier Stufen einfügen:
+  //   if (v < 2) { state = migrateV1ToV2(state); v = 2; }
+  //   if (v < 3) { state = migrateV2ToV3(state); v = 3; }
+  function migrate(state) {
+    if (!state || typeof state !== 'object') return defaultState();
+    // Aktuell keine Migration nötig – Platzhalter für künftige Schemata.
+    state.schemaVersion = CURRENT_SCHEMA;
+    return state;
+  }
+
   function loadState() {
     try {
       const raw = localStorage.getItem(STORAGE_KEY);
       if (raw) {
-        const parsed = JSON.parse(raw);
+        let parsed = JSON.parse(raw);
+        parsed = migrate(parsed);
         return Object.assign(defaultState(), parsed, {
           settings: Object.assign(defaultState().settings, parsed.settings || {})
         });
@@ -112,6 +126,75 @@
     if (h < 17) return 'Guten Tag!';
     if (h < 22) return 'Guten Abend!';
     return 'Spät noch fleißig?';
+  }
+
+  // ===== BACKUP / RESTORE =====
+  function exportState() {
+    try {
+      const raw = localStorage.getItem(STORAGE_KEY) || '{}';
+      const data = {
+        app: 'voltify',
+        schemaVersion: CURRENT_SCHEMA,
+        exportedAt: new Date().toISOString(),
+        state: JSON.parse(raw)
+      };
+      const blob = new Blob([JSON.stringify(data, null, 2)], {
+        type: 'application/json'
+      });
+      const url = URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      const ts = new Date().toISOString().replace(/[:.]/g, '-').slice(0, 19);
+      a.href = url;
+      a.download = `voltify-backup-${ts}.json`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+      URL.revokeObjectURL(url);
+    } catch (e) {
+      alert('Export fehlgeschlagen: ' + e.message);
+    }
+  }
+
+  function importState(file) {
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      try {
+        const parsed = JSON.parse(e.target.result);
+        if (parsed.app !== 'voltify') {
+          throw new Error('Datei ist kein Voltify-Backup.');
+        }
+        if (!parsed.state || typeof parsed.state.cards !== 'object') {
+          throw new Error('Backup-Datei ist unvollständig.');
+        }
+        if (!confirm('Aktuellen Lernfortschritt durch das Backup ersetzen?')) {
+          return;
+        }
+        const migrated = migrate(parsed.state);
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(migrated));
+        alert('Backup wurde eingespielt. Die App wird neu geladen.');
+        location.reload();
+      } catch (err) {
+        alert('Import fehlgeschlagen: ' + err.message);
+      }
+    };
+    reader.onerror = function () {
+      alert('Datei konnte nicht gelesen werden.');
+    };
+    reader.readAsText(file);
+  }
+
+  // ===== ERST-START-HINWEIS =====
+  function maybeShowFirstVisit() {
+    try {
+      if (!localStorage.getItem(FIRST_VISIT_KEY)) {
+        document.getElementById('first-visit').classList.remove('hidden');
+      }
+    } catch (e) {}
+  }
+
+  function dismissFirstVisit() {
+    try { localStorage.setItem(FIRST_VISIT_KEY, '1'); } catch (e) {}
+    document.getElementById('first-visit').classList.add('hidden');
   }
 
   // ===== SESSION =====
@@ -515,6 +598,16 @@
       }
     });
 
+    document.getElementById('export-progress').addEventListener('click', exportState);
+
+    document.getElementById('import-progress').addEventListener('change', (e) => {
+      const file = e.target.files && e.target.files[0];
+      if (file) importState(file);
+      e.target.value = '';
+    });
+
+    document.getElementById('first-visit-ok').addEventListener('click', dismissFirstVisit);
+
     if (window.matchMedia) {
       window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
         if (state.settings.theme === 'auto') applyTheme();
@@ -534,4 +627,5 @@
   applyTheme();
   bind();
   showScreen('home');
+  maybeShowFirstVisit();
 })();

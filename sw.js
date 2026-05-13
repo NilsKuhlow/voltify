@@ -1,4 +1,4 @@
-const CACHE = 'voltify-v2';
+const CACHE = 'voltify-v3';
 const ASSETS = [
   './',
   './index.html',
