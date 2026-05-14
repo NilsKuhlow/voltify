@@ -1302,709 +1302,6 @@ window.QUESTIONS = [
     correct: 1,
     explain: 'HwK = Pflichtmitgliedschaft, regelt Ausbildung, Prüfungen, Eintragung. Innung = freiwilliger Zusammenschluss von Betrieben gleichen Handwerks zur Interessenvertretung.'
   },
-
-  // ====== PU003 – Arbeitssicherheit (Innungs-Testfragen) ======
-  {
-    id: 'pu003-001', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Für wen sind die Unfallverhütungsvorschriften verbindlich?',
-    options: ['Für Unternehmen und versicherte Personen', 'Nur für Unternehmerinnen und Unternehmer', 'Nur für Vorgesetzte', 'Nur für Auszubildende', 'Für alle Einwohner der Bundesrepublik Deutschland'],
-    correct: 0,
-    explain: 'Richtig: A) Für Unternehmen und versicherte Personen'
-  },
-  {
-    id: 'pu003-002', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Rechtskraft haben Unfallverhütungsvorschriften?',
-    options: ['Unfallverhütungsvorschriften sind Empfehlungen', 'Unfallverhütungsvorschriften sind Regeln der Technik', 'Unfallverhütungsvorschriften sind Richtlinien zur Vermeidung von Unfällen', 'Unfallverhütungsvorschriften sind Verordnungen des Staates', 'Unfallverhütungsvorschriften sind autonome Rechtsvorschriften der gesetzlichen Unfallversicherung, die für die Mitgliedsbetriebe verbindlich sind'],
-    correct: 4,
-    explain: 'Richtig: E) Unfallverhütungsvorschriften sind autonome Rechtsvorschriften der gesetzlichen Unfallversicherung, die für die Mitgliedsbetriebe verbindlich sind'
-  },
-  {
-    id: 'pu003-003', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wer ist für die Arbeitssicherheit im Betrieb verantwortlich?',
-    options: ['Sicherheitsfachkräfte', 'Sicherheitsbeauftragte', 'Unternehmerinnen und Unternehmer', 'Betriebsrat', 'Alle Beschäftigten im Betrieb'],
-    correct: 2,
-    explain: 'Richtig: C) Unternehmerinnen und Unternehmer'
-  },
-  {
-    id: 'pu003-004', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Unterweisung von Beschäftigten über die Unfallgefahren im Betrieb',
-    options: ['Unterweisung ist bei der Einstellung notwendig', 'Unterweisung ist nur bei Auszubildenden notwendig', 'Unterweisung sollte nach einigen Jahren wiederholt werden', 'alle Beschäftigten müssen mindestens einmal jährlich unterwiesen werden', 'Auf die Unterweisung kann verzichtet werden, wenn die Unfallverhütungsvorschriften im Betrieb ausliegen'],
-    correct: [0, 3],
-    explain: 'Richtig: A) Unterweisung ist bei der Einstellung notwendig · D) alle Beschäftigten müssen mindestens einmal jährlich unterwiesen werden'
-  },
-  {
-    id: 'pu003-005', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wann ist im Betrieb ein/e Sicherheitsbeauftragte/r zu bestellen?',
-    options: ['In jedem Betrieb muss mindestens ein Sicherheitsbeauftragter bestellt werden', 'Hat der Betrieb eine Sicherheitsfachkraft bestellt, so erübrigt sich der oder die Sicherheitsbeauftragte', 'Sicherheitsbeauftragte müssen ab einer bestimmten, gesetzlich festgelegten Betriebsgröße bestellt werden'],
-    correct: 2,
-    explain: 'Richtig: C) Sicherheitsbeauftragte müssen ab einer bestimmten, gesetzlich festgelegten Betriebsgröße bestellt werden'
-  },
-  {
-    id: 'pu003-006', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Aufgaben hat der oder die Sicherheitsbeauftragte im Betrieb?',
-    options: ['Der oder die Sicherheitsbeauftragte muss die Aufgaben außerhalb der Arbeitszeit wahrnehmen', 'Der oder die Sicherheitsbeauftragte soll die Unternehmerinnen und Unternehmer bei der Durchführung der Unfallverhütung unterstützen', 'Der oder die Sicherheitsbeauftragte ist weisungsbefugt für die Anbringung von Schutzvorrichtungen', 'Der oder die Sicherheitsbeauftragte ist nur für die Organisation der Ersten Hilfe im Betrieb zuständig'],
-    correct: 1,
-    explain: 'Richtig: B) Der oder die Sicherheitsbeauftragte soll die Unternehmerinnen und Unternehmer bei der Durchführung der Unfallverhütung unterstützen'
-  },
-  {
-    id: 'pu003-007', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wann kann der Mitarbeiter bzw. die Mitarbeiterin im Außendienst der Berufsgenossenschaft (Aufsichtsperson nach §18 SGB VII) einen Betrieb besichtigen?',
-    options: ['Nur nach vorheriger Anmeldung beim Unternehmen', 'Das Unternehmen muss die Aufsichtsperson zur Betriebsbesichtigung einladen', 'Der Betriebsrat muss mit der Betriebsbesichtigung einverstanden sein', 'Wenn die Betriebsbesichtigung den Arbeitsablauf beeinträchtigt, so muss die Besichtigung nach der Arbeitszeit stattfinden', 'Die Aufsichtsperson kann den Betrieb jederzeit zu den Betriebs- und Geschäftszeiten besichtigen'],
-    correct: 4,
-    explain: 'Richtig: E) Die Aufsichtsperson kann den Betrieb jederzeit zu den Betriebs- und Geschäftszeiten besichtigen'
-  },
-  {
-    id: 'pu003-008', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was muss ein Beschäftigter bzw. eine Beschäftigte tun, wenn er oder sie im Betrieb sicherheitstechnische Mängel feststellt?',
-    options: ['Die Person beseitigt den Mangel, wenn sie dazu befugt ist. Andernfalls meldet sie den Mangel unverzüglich dem bzw. der Vorgesetzten', 'Die Person unternimmt nichts, da die Mängelbeseitigung Aufgabe des oder der Sicherheitsbeauftragten ist', 'Die Person beendet die begonnene Arbeit und unterrichtet dann den Betriebsrat von dem Mangel', 'Die Person beendet ihre angefangene Arbeit und beseitigt dann den Mangel'],
-    correct: 0,
-    explain: 'Richtig: A) Die Person beseitigt den Mangel, wenn sie dazu befugt ist. Andernfalls meldet sie den Mangel unverzüglich dem bzw. der Vorgesetzten'
-  },
-  {
-    id: 'pu003-009', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Dürfen Schmuckstücke oder ähnliche Gegenstände bei der Arbeit getragen werden?',
-    options: ['Ja, das ist immer zulässig.', 'Ja, wenn die oder der Beschäftigte die Ausbildung beendet hat', 'Ja, wenn diese Gegenstände nicht zu einer Gefährdung führen können', 'Ja, wenn es sich um nichtmetallische Gegenstände handelt', 'Nein'],
-    correct: 2,
-    explain: 'Richtig: C) Ja, wenn diese Gegenstände nicht zu einer Gefährdung führen können'
-  },
-  {
-    id: 'pu003-010', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Dürfen scharfe und spitze Werkzeuge in der Kleidung getragen werden?',
-    options: ['Ja, wenn bei Arbeiten auf erhöhtem Standort der oder die unterhalb Arbeitende einen Schutzhelm trägt', 'Ja, außer bei Arbeiten an unter Spannung stehenden Teilen', 'Ja, wenn der bzw. die Vorgesetzte dies duldet', 'Ja, wenn der bzw. die Beschäftigte volljährig ist', 'Nein, ausgenommen, wenn Schutzmaßnahmen eine Gefährdung während des Tragens ausschließen'],
-    correct: 4,
-    explain: 'Richtig: E) Nein, ausgenommen, wenn Schutzmaßnahmen eine Gefährdung während des Tragens ausschließen'
-  },
-  {
-    id: 'pu003-011', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Eine Führungskraft bemerkt, dass sich ein Mitarbeiter in angetrunkenem Zustand befindet. Was muss die Führungskraft tun?',
-    options: ['Die Führungskraft verwarnt die Person und lässt sie weiterarbeiten', 'Die Führungskraft beachtet diese Tatsache nicht, um das Betriebsklima nicht zu verschlechtern', 'Die Führungskraft schickt die Person nach Hause', 'Die Führungskraft unterbindet die Weiterarbeit und sorgt für einen sicheren Heimweg', 'Die Führungskraft schickt ihn ins nächste Krankenhaus, um eine Blutprobe entnehmen zu lassen'],
-    correct: 3,
-    explain: 'Richtig: D) Die Führungskraft unterbindet die Weiterarbeit und sorgt für einen sicheren Heimweg'
-  },
-  {
-    id: 'pu003-012', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist beim Aufstellen eines Bildschirmgerätes zu beachten?',
-    options: ['Der Bildschirm ist so auszurichten, dass die Blickrichtung der Bedienungsperson in Richtung auf das Fenster geht', 'Der Bildschirm ist so anzuordnen, dass das Tageslicht vom Fenster direkt darauf fällt', 'Der Bildschirm ist im 90°-Winkel quer zum Fenster aufzustellen', 'Die Auswahl und Anordnung der Beleuchtungskörper im Raum soll so sein, dass Reflexionen auf dem Bildschirm vermieden werden', 'Die Oberkanten des Bildschirms sollen nicht höher als in Augenhöhe der Bedienungsperson liegen'],
-    correct: [2, 3, 4],
-    explain: 'Richtig: C) Der Bildschirm ist im 90°-Winkel quer zum Fenster aufzustellen · D) Die Auswahl und Anordnung der Beleuchtungskörper im Raum soll so sein, dass Reflexionen auf dem Bildschirm vermieden werden · E) Die Oberkanten des Bildschirms sollen nicht höher als in Augenhöhe der Bedienungsperson liegen'
-  },
-  {
-    id: 'pu003-013', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was gehört zu den persönlichen Schutzausrüstungen?',
-    options: ['Erste-Hilfe-Material', 'Arbeitskleidung', 'Isoliertes Werkzeug', 'Schutzhelm, Schutzschuhe, Schutzbrille, Gehörschutz', 'Reinigungsmaterial'],
-    correct: 3,
-    explain: 'Richtig: D) Schutzhelm, Schutzschuhe, Schutzbrille, Gehörschutz'
-  },
-  {
-    id: 'pu003-014', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wann sind persönliche Schutzausrüstungen vom Unternehmen zur Verfügung zu stellen und von den Beschäftigten zu benutzen?',
-    options: ['Das ist nicht geregelt, da jeder selbst für seine Sicherheit verantwortlich ist', 'Nur in den durch Gebotszeichen gekennzeichneten Bereichen', 'Wenn sich Unfall- und Gesundheitsgefahren durch technische oder organisatorische Maßnahmen nicht beseitigen lassen', 'Nur wenn Unfall- und Gesundheitsgefahren länger als vier Stunden täglich auftreten', 'Nur wenn es von Vorgesetzten ausdrücklich angeordnet wird'],
-    correct: 2,
-    explain: 'Richtig: C) Wenn sich Unfall- und Gesundheitsgefahren durch technische oder organisatorische Maßnahmen nicht beseitigen lassen'
-  },
-  {
-    id: 'pu003-015', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Bedeutung hat dieses Gebotszeichen?',
-    options: ['Lärmbereich, in dem 85 dB(A), als Tages-Lärmexpositionspegel, erreicht oder überschritten werden', 'Maximale Aufenthaltsdauer von 1 Stunde', 'Hier müssen Gehörschutzmittel benutzt werden'],
-    correct: [0, 2],
-    explain: 'Richtig: A) Lärmbereich, in dem 85 dB(A), als Tages-Lärmexpositionspegel, erreicht oder überschritten werden · C) Hier müssen Gehörschutzmittel benutzt werden'
-  },
-  {
-    id: 'pu003-016', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Beleuchtungsstärke ist an Büroarbeitsplätzen bei künstlicher Beleuchtung notwendig? (Arbeitsstättenregeln ASR A3.4, ASR A6)',
-    options: ['200 Lux', '500 Lux', '1.000 Lux'],
-    correct: 1,
-    explain: 'Richtig: B) 500 Lux'
-  },
-  {
-    id: 'pu003-017', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist bei Verkehrswegen grundsätzlich zu beachten?',
-    options: ['Stolperstellen bis zu einer Höhe von 3 cm brauchen nicht beachtet zu werden', 'Das kurzzeitige Abstellen von Kisten und Kartons auf Verkehrswegen ist erlaubt', 'Für die Beleuchtung von Verkehrswegen ist eine 25-Watt-Glühlampe ausreichend', 'Verkehrswege müssen ausreichend breit, ausreichend beleuchtet, Fußboden rutschhemmend und ohne Stolperstellen sein', 'Verkehrswege auf Baustellen sind von der Beleuchtungsregelung ausgenommen'],
-    correct: 3,
-    explain: 'Richtig: D) Verkehrswege müssen ausreichend breit, ausreichend beleuchtet, Fußboden rutschhemmend und ohne Stolperstellen sein'
-  },
-  {
-    id: 'pu003-018', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie muss ein Notausgang beschaffen sein?',
-    options: ['Ist der Notausgang aus betrieblichen Gründen verschlossen, so ist neben der Tür ein Kasten mit dem Türschlüssel notwendig', 'Notausgänge dürfen maximal 1 Stunde zugestellt werden', 'Vor Notausgängen dürfen nur leichte Gegenstände abgestellt werden', 'Türen im Verlauf von Rettungswegen müssen in Fluchtrichtung aufschlagen', 'Wenn die Notausgänge den Beschäftigten regelmäßig bekannt gemacht werden, ist eine besondere Kennzeichnung überflüssig'],
-    correct: 3,
-    explain: 'Richtig: D) Türen im Verlauf von Rettungswegen müssen in Fluchtrichtung aufschlagen'
-  },
-  {
-    id: 'pu003-019', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie müssen Absturzstellen in einer Produktionshalle gesichert sein (ausgenommen während Bauarbeiten)?',
-    options: ['Bei einer Absturzhöhe von 0,75 m ist ein Handlauf erforderlich', 'Müssen auf einem Lagerboden in 2,50 m Höhe nur gelegentlich Arbeiten ausgeführt werden, so kann auf eine Absturzsicherung verzichtet werden', 'An Arbeitsplätzen und auf Verkehrswegen in einer Höhe von 1,00 m ist ein Geländer von mindestens 0,90 m erforderlich', 'Arbeitsplätze und Verkehrswege, die mehr als 1,00 m über dem Boden liegen, müssen z.B. ein Geländer, bestehend aus Fußleiste, Knieleiste und Handlauf haben, von mindestens 1,00 m Höhe oder 1,10 m Höhe bei einer möglichen Absturzhöhe von mehr als 12 m', 'Bei Fußbodenluken ist eine Absturzsicherung nicht erforderlich, hierbei reichen Hinweisschilder'],
-    correct: 3,
-    explain: 'Richtig: D) Arbeitsplätze und Verkehrswege, die mehr als 1,00 m über dem Boden liegen, müssen z.B. ein Geländer, bestehend aus Fußleiste, Knieleiste und Handlauf haben, von mindestens 1,00 m Höhe oder 1,10 m Höhe bei einer möglichen Absturzhöhe von mehr als 12 m'
-  },
-  {
-    id: 'pu003-020', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Maßnahmen sind zur Sicherstellung der Ersten Hilfe im Betrieb notwendig?',
-    options: ['In Kleinbetrieben, auch bei nur einem oder einer Beschäftigten, muss ein Verbandkasten (C nach DIN 13157) bereitgehalten werden', 'In jedem Betrieb muss eine Anleitung zur Ersten Hilfe bei Unfällen entsprechend den jeweiligen Gefährdungen an geeigneter Stelle ausgehändigt sein', 'In jedem Betrieb müssen für die Erste-Hilfe-Leistung eine entsprechende Zahl von Ersthelfern, mind. jedoch ein Ersthelfer ab zwei anwesenden Beschäftigten, zur Verfügung stehen', 'Über jede Erste-Hilfe-Leistung müssen Aufzeichnungen geführt und mind. 5 Jahre datenschutzgerecht aufbewahrt werden', 'Auch in Kleinbetrieben mit weniger als 50 Beschäftigten muss ein Sanitätsraum vorhanden sein'],
-    correct: [0, 1, 2, 3],
-    explain: 'Richtig: A, B, C, D. Quelle: PU003 (Arbeitssicherheit, Innungs-Testfragen).'
-  },
-  {
-    id: 'pu003-021', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Arbeitsmittel bieten für Arbeiten in der Höhe mehr Sicherheit als Leitern?',
-    options: ['Hubarbeitsbühnen', 'Podeste', 'Feste Holzkisten', 'Gerüste'],
-    correct: [0, 1, 3],
-    explain: 'Richtig: A) Hubarbeitsbühnen · B) Podeste · D) Gerüste'
-  },
-  {
-    id: 'pu003-022', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Merkmale hat eine sichere Stehleiter?',
-    options: ['Die Stehleiter muss einen farbigen, deckenden Schutzanstrich haben', 'Die Stehleiter darf maximal acht Sprossenpaare haben', 'Oberhalb der Scharniere dürfen sich keine Widerlager bilden können und außerdem müssen Spreizsicherungen vorhanden sein', 'Stehleitern müssen auf beiden Holmpaaren mit Stufen versehen sein', 'Stehleitern müssen zum sicheren Aufstellen immer mit Gummi- oder Plastikfüßen versehen sein'],
-    correct: 2,
-    explain: 'Richtig: C) Oberhalb der Scharniere dürfen sich keine Widerlager bilden können und außerdem müssen Spreizsicherungen vorhanden sein'
-  },
-  {
-    id: 'pu003-023', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Bedeutung hat dieses Zeichen bei einer Maschine?',
-    options: ['Internationales Gütesiegel', 'Die Maschine ist in Europa hergestellt', 'Der Hersteller bestätigt in Verbindung mit der Konformitätserklärung, dass die Maschine alle Sicherheitsanforderungen nach der EG-Maschinenrichtlinie erfüllt', 'Hinweis auf Gefahrstellen'],
-    correct: 2,
-    explain: 'Richtig: C) Der Hersteller bestätigt in Verbindung mit der Konformitätserklärung, dass die Maschine alle Sicherheitsanforderungen nach der EG-Maschinenrichtlinie erfüllt'
-  },
-  {
-    id: 'pu003-024', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Mit welcher der nachstehend genannten Maßnahmen lässt sich ein Höchstmaß an Sicherheit erreichen?',
-    options: ['Technische Schutzeinrichtungen', 'Aufstellen von Betriebsanweisungen und ausführlicher Unterweisung der Beschäftigten', 'Tragen von Persönlicher Schutzausrüstung'],
-    correct: 0,
-    explain: 'Richtig: A) Technische Schutzeinrichtungen'
-  },
-  {
-    id: 'pu003-025', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wodurch können schwere Verletzungen beim Arbeiten an Maschinen verursacht werden?',
-    options: ['Durch das Erfasstwerden von rotierenden Teilen', 'Durch Quetsch- und Scherstellen', 'Durch wegfliegende Werkstoffe, Werkstücke oder Späne'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Durch das Erfasstwerden von rotierenden Teilen · B) Durch Quetsch- und Scherstellen · C) Durch wegfliegende Werkstoffe, Werkstücke oder Späne'
-  },
-  {
-    id: 'pu003-026', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie lassen Sich Quetsch- und Scherstellen an Maschinen sichern?',
-    options: ['Durch schwarz-gelben Warnanstrich', 'Durch trennende Schutzeinrichtungen', 'Durch berührungslos wirkende Schutzeinrichtungen', 'Durch Warnschilder', 'Durch rote Warnleuchten'],
-    correct: [1, 2],
-    explain: 'Richtig: B) Durch trennende Schutzeinrichtungen · C) Durch berührungslos wirkende Schutzeinrichtungen'
-  },
-  {
-    id: 'pu003-027', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist bei der Störungsbeseitigung an Maschinen zu beachten?',
-    options: ['Kleine Störungen dürfen bei laufender Maschine behoben werden', 'Die Maschine ist grundsätzlich auszuschalten und gegen Wiedereinschalten zu sichern', 'Gespeicherte Energien sind gefahrlos abzuführen', 'Hochgehaltene Achsen sind zu sichern'],
-    correct: [1, 2, 3],
-    explain: 'Richtig: B) Die Maschine ist grundsätzlich auszuschalten und gegen Wiedereinschalten zu sichern · C) Gespeicherte Energien sind gefahrlos abzuführen · D) Hochgehaltene Achsen sind zu sichern'
-  },
-  {
-    id: 'pu003-028', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Bei welchen Schleifarbeiten am Schleifbock kann auf die Benutzung einer Schutzbrille verzichtet werden?',
-    options: ['Bei kurzzeitigen Schleifarbeiten, z.B. Nachschleifen von Bohrern', 'Beim Schleifen von Werkstücken aus Hartmetall', 'Unabhängig von der Art der Arbeit muss immer eine Schutzbrille getragen werden Infomedien der BG ETEM online bestellen: medien.bgetem.de'],
-    correct: 2,
-    explain: 'Richtig: C) Unabhängig von der Art der Arbeit muss immer eine Schutzbrille getragen werden Infomedien der BG ETEM online bestellen: medien.bgetem.de'
-  },
-  {
-    id: 'pu003-029', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Bedeutung hat dieses Zeichen?',
-    options: ['Warnung vor elektrischer Spannung', 'Hochspannung. Vorsicht Lebensgefahr', 'Nicht schalten. Es wird gearbeitet', 'Vorsicht. Unbefugten Zutritt verboten'],
-    correct: 0,
-    explain: 'Richtig: A) Warnung vor elektrischer Spannung'
-  },
-  {
-    id: 'pu003-030', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Ursache kann ein elektrischer Unfall haben?',
-    options: ['Direkte Stromeinwirkung auf den Organismus', 'Lichtbogeneinwirkung', 'Abstürzen oder Ausrutschen als Folgeunfall einer durch Stromeinwirkung ausgelösten Schreckreaktion'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Direkte Stromeinwirkung auf den Organismus · B) Lichtbogeneinwirkung · C) Abstürzen oder Ausrutschen als Folgeunfall einer durch Stromeinwirkung ausgelösten Schreckreaktion'
-  },
-  {
-    id: 'pu003-031', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Von welchen drei Einflussgrößen hängt die Schwere eines elektrischen Unfalles mit Körperdurchströmung ab?',
-    options: ['Stromstärke', 'Gewöhnung', 'Lebensalter', 'Dauer der Durchströmung', 'Stromweg durch den Körper'],
-    correct: [0, 3, 4],
-    explain: 'Richtig: A) Stromstärke · D) Dauer der Durchströmung · E) Stromweg durch den Körper'
-  },
-  {
-    id: 'pu003-032', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Stromstärke (I) fließt bei Berührung eines unter 230 V Spannung (U) stehenden Anlagenteils über den Menschen, wenn sein Körperwiderstand (R) ca. 1.000 Ω beträgt? (Ohm’sches Gesetz U = I · R)',
-    options: ['ca. 10 mA', 'ca. 50 mA', 'ca. 230 mA', 'ca. 1 A'],
-    correct: 2,
-    explain: 'Richtig: C) ca. 230 mA'
-  },
-  {
-    id: 'pu003-033', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Ist auch ein Niederspannungslichtbogen (bei 230 V) gefährlich?',
-    options: ['Ja', 'Nein'],
-    correct: 0,
-    explain: 'Richtig: A) Ja'
-  },
-  {
-    id: 'pu003-034', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Bedeutung hat das Doppelquadrat auf dem Leistungsschild einer elektrischen Handbohrmaschine?',
-    options: ['Schutzgrad gegen Eindringen von Wasser', 'Staubgeschützte Ausführung', 'Schutzisolierung', 'Derartig gekennzeichnete Betriebsmittel können mit Gleich- oder Wechselstrom betrieben werden'],
-    correct: 2,
-    explain: 'Richtig: C) Schutzisolierung'
-  },
-  {
-    id: 'pu003-035', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Müssen elektrische Anlagen regelmäßig auf ihren ordnungsgemäßen Zustand geprüft werden?',
-    options: ['Nein, eine Überprüfung ist nur nach der Errichtung erforderlich', 'Nein, eine Überprüfung ist nur auf Verlangen der Feuerversicherung notwendig', 'Nein, eine erneute Prüfung ist nur nach einer wesentlichen Veränderung der Anlage notwendig', 'Ja, jede elektrische Anlage muss regelmäßig überprüft werden'],
-    correct: 3,
-    explain: 'Richtig: D) Ja, jede elektrische Anlage muss regelmäßig überprüft werden'
-  },
-  {
-    id: 'pu003-036', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Müssen elektrische Betriebsmittel regelmäßig geprüft werden?',
-    options: ['Nein, eine Prüfung ist nur bei der Herstellung erforderlich', 'Nein, wenn die Betriebsmittel ein VDE-Zeichen tragen, entfallen wiederkehrende Prüfungen', 'Ja, alle elektrischen Betriebsmittel sind in regelmäßigen Zeitabständen zu überprüfen', 'Nein, Geräte mit GS-Zeichen müssen nur nach Reparatur überprüft werden'],
-    correct: 2,
-    explain: 'Richtig: C) Ja, alle elektrischen Betriebsmittel sind in regelmäßigen Zeitabständen zu überprüfen'
-  },
-  {
-    id: 'pu003-037', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was sind die Voraussetzungen für eine Brandentstehung?',
-    options: ['Brennbarer Stoff', 'Zündquelle', 'Sauerstoff (Luft)'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Brennbarer Stoff · B) Zündquelle · C) Sauerstoff (Luft)'
-  },
-  {
-    id: 'pu003-038', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Einrichtungen sind zur Verhütung von Entstehungsbränden bereitzustellen?',
-    options: ['Üblicherweise reicht die vorhandene Wasserleitung aus', 'Abhängig vom Umfang der Brandgefahr und der Betriebsgröße sind Feuerlöscher bereitzustellen und mindestens alle zwei Jahre von einem Sachkundigen zu prüfen', 'In mechanischen und optischen Werkstätten sowie Lagerräumen ist die Installation eines Rauchmelders ausreichend', 'Falls die Werkstätten oder Lagerräume ständig besetzt sind, kann auf die Bereitstellung von Feuerlöscheinrichtungen völlig verzichtet werden', 'Bei Räumen mit geringer Brandgefahr ist der Hinweis auf das Rauchverbot ausreichend'],
-    correct: 1,
-    explain: 'Richtig: B) Abhängig vom Umfang der Brandgefahr und der Betriebsgröße sind Feuerlöscher bereitzustellen und mindestens alle zwei Jahre von einem Sachkundigen zu prüfen'
-  },
-  {
-    id: 'pu003-039', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie lange steht der Löschstrahl eines 6-kg-Pulverlöschers bei voll betätigtem Druckhebel?',
-    options: ['ca. 6 s', 'ca. 20 s', 'ca. 30 s'],
-    correct: 0,
-    explain: 'Richtig: A) ca. 6 s'
-  },
-  {
-    id: 'pu003-040', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie hat sich ein/e Ersthelfer/in bei Brandverletzungen zu verhalten?',
-    options: ['Bei kleinflächigen Verbrennungen betroffene Stelle kühlen (z.B. unterfließendem Kaltwasser für mindestens 15 Minuten)', 'Brandwunden mit Öl, Salben, Talk oder ähnlichem bedecken', 'Für schnelle ärztliche Hilfe sorgen', 'Brandwunden mit keimfreien Brandwunden-Verbandpäckchen bedecken', 'Brandwunden auswaschen und Brandblasen öffnen'],
-    correct: [0, 2, 3],
-    explain: 'Richtig: A) Bei kleinflächigen Verbrennungen betroffene Stelle kühlen (z.B. unterfließendem Kaltwasser für mindestens 15 Minuten) · C) Für schnelle ärztliche Hilfe sorgen · D) Brandwunden mit keimfreien Brandwunden-Verbandpäckchen bedecken'
-  },
-  {
-    id: 'pu003-041', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist der Flammpunkt einer brennbaren Flüssigkeit?',
-    options: ['Temperatur der Zündquelle', 'Konzentration brennbarer Dämpfe in der Raumluft', 'Niedrigste Temperatur, bei der sich brennbare Dämpfe in so einer Menge entwickeln, dass bei Kontakt mit einer Zündquelle sofort eine (kurzzeitige) Entzündung auftritt.', 'Zeitpunkt der Entflammung'],
-    correct: 2,
-    explain: 'Richtig: C) Niedrigste Temperatur, bei der sich brennbare Dämpfe in so einer Menge entwickeln, dass bei Kontakt mit einer Zündquelle sofort eine (kurzzeitige) Entzündung auftritt.'
-  },
-  {
-    id: 'pu003-042', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Mit welchem Gefahrenpiktogramm nach GHS sind entzündbare Flüssigkeiten mit einem Flammpunkt von 55°C gekennzeichnet?',
-    options: ['Kein Gefahrenpiktogramm zugeordnet'],
-    correct: [],
-    explain: 'Richtig: '
-  },
-  {
-    id: 'pu003-043', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist nach der Gefahrstoffverordnung ein Kriterium für eine leichtentzündliche Flüssigkeit?',
-    options: ['Flüssigkeiten mit einem Flammpunkt≥21°C', 'Flüssigkeit darf nicht im Glasbehälter aufbewahrt werden', 'Flammpunkt der Flüssigkeit liegt unter 21°C'],
-    correct: 2,
-    explain: 'Richtig: C) Flammpunkt der Flüssigkeit liegt unter 21°C'
-  },
-  {
-    id: 'pu003-044', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wann ist mit einem Feuer bei brennbaren Flüssigkeiten zu rechnen?',
-    options: ['Bei großer Oberfläche des Aufbewahrungsbehälters', 'Bei geringer Viskosität der brennbaren Flüssigkeit', 'Sofern sich brennbare Dämpfe auf dem Flüssigkeitsspiegel bilden können', 'Nur, wenn sich mehr als 1 Liter brennbare Flüssigkeit im Behälter befindet'],
-    correct: 2,
-    explain: 'Richtig: C) Sofern sich brennbare Dämpfe auf dem Flüssigkeitsspiegel bilden können'
-  },
-  {
-    id: 'pu003-045', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Mindestforderungen sind bei Tätigkeiten mit brennbaren Flüssigkeiten – auch in kleinen Mengen – zu treffen?',
-    options: ['Aufbewahrung in Behältern mit dichtschließendem Deckel', 'Brennbare Flüssigkeiten nur in der für den Fortgang der Arbeit erforderlichen Menge am Arbeitsplatz aufbewahren', 'Feuer, offenes Licht und Rauchen verboten'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Aufbewahrung in Behältern mit dichtschließendem Deckel · B) Brennbare Flüssigkeiten nur in der für den Fortgang der Arbeit erforderlichen Menge am Arbeitsplatz aufbewahren · C) Feuer, offenes Licht und Rauchen verboten'
-  },
-  {
-    id: 'pu003-046', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welcher Behälter ist für den Transport von einigen Litern Aceton zulässig?',
-    options: ['Ein offener, gekennzeichneter Eimer', 'Eine geschlossene, gekennzeichnete Glasflasche', 'Ein geschlossener, gekennzeichneter Metallbehälter'],
-    correct: 2,
-    explain: 'Richtig: C) Ein geschlossener, gekennzeichneter Metallbehälter'
-  },
-  {
-    id: 'pu003-047', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Dürfen brennbare Flüssigkeiten an Arbeitsplätzen aufbewahrt werden?',
-    options: ['Nein, in keinem Fall', 'Ja, sofern die Behälter fest verschlossen und gekennzeichnet sind bis zu einer Menge von 5 kg', 'Ja, sofern die Behälter sicher, z.B. in selbstschließenden und abgesaugten Sicherheitsschränken, bereitgehalten werden'],
-    correct: 2,
-    explain: 'Richtig: C) Ja, sofern die Behälter sicher, z.B. in selbstschließenden und abgesaugten Sicherheitsschränken, bereitgehalten werden'
-  },
-  {
-    id: 'pu003-048', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist eine Explosion?',
-    options: ['Schnell ablaufende chemische Reaktion unter Abgabe von Wärme und Licht', 'Kurzschluss an einer 20 kV-Anlage', 'Blitzschlag', 'Jedes Herumfliegen fester Teile mit großer Kraft', 'Zerreißen eines Dampfkessels'],
-    correct: 0,
-    explain: 'Richtig: A) Schnell ablaufende chemische Reaktion unter Abgabe von Wärme und Licht'
-  },
-  {
-    id: 'pu003-049', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welcher der genannten Explosionsschutzmaßnahmen ist vorrangig anzuwenden?',
-    options: ['Verwendung von Stoffen, die keine explosionsfähigen Gemische bilden können', 'Vermeidung von Zündquellen (z.B. ex-geschützte elektrische Anlage)', 'Natürliche Lüftung des Arbeitsraumes', 'Auswirkungen einer möglichen Explosion gering halten', 'Absaugung der Dämpfe an der Entstehungsstelle'],
-    correct: 0,
-    explain: 'Richtig: A) Verwendung von Stoffen, die keine explosionsfähigen Gemische bilden können'
-  },
-  {
-    id: 'pu003-050', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wann besteht Explosionsgefahr?',
-    options: ['Wenn ein explosionsfähiges Gemisch aus Luft bzw. Sauerstoff und brennbaren Gasen, Dämpfen oder Stäuben auf eine Zündquelle trifft', 'Beim Ausbau einer Fernsehröhre', 'Bei Tätigkeiten mit Sprengstoffen'],
-    correct: [0, 2],
-    explain: 'Richtig: A) Wenn ein explosionsfähiges Gemisch aus Luft bzw. Sauerstoff und brennbaren Gasen, Dämpfen oder Stäuben auf eine Zündquelle trifft · C) Bei Tätigkeiten mit Sprengstoffen'
-  },
-  {
-    id: 'pu003-051', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Ist die Explosionsgefahr am spezifischen Geruch eines Dampfbzw. Gas-Luft-Gemisches zu erkennen?',
-    options: ['Ja', 'Nein'],
-    correct: 1,
-    explain: 'Richtig: B) Nein'
-  },
-  {
-    id: 'pu003-052', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was versteht man unter der Zündtemperatur?',
-    options: ['Temperatur, bei der eine Flüssigkeit leicht entzündliche Dämpfe bildet', 'Temperatur zur Zeit der Explosion', 'Niedrigste Temperatur einer heißen Oberfläche, an der sich ein brennbarer Stoff selbst entzündet.'],
-    correct: 2,
-    explain: 'Richtig: C) Niedrigste Temperatur einer heißen Oberfläche, an der sich ein brennbarer Stoff selbst entzündet.'
-  },
-  {
-    id: 'pu003-053', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Durch welche Zündquellen kann ein explosionsfähiges Gemisch gezündet werden?',
-    options: ['Elektrische Schaltfunken', 'Brennende Zigarette', 'Statische Elektrizität', 'Oberflächenwärme', 'Reibungswärme', 'Schweißperlen'],
-    correct: [0, 1, 2, 3, 4, 5],
-    explain: 'Richtig: A) Elektrische Schaltfunken · B) Brennende Zigarette · C) Statische Elektrizität · D) Oberflächenwärme · E) Reibungswärme · F) Schweißperlen'
-  },
-  {
-    id: 'pu003-054', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was besagen die Zündgrenzen?',
-    options: ['Innerhalb der Zündgrenzen ist eine Explosion möglich', 'Eine Explosion ist innerhalb und oberhalb der Zündgrenzen möglich', 'Eine Explosion ist nur unterhalb der unteren Zündgrenze möglich'],
-    correct: 0,
-    explain: 'Richtig: A) Innerhalb der Zündgrenzen ist eine Explosion möglich'
-  },
-  {
-    id: 'pu003-055', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche der nachstehend aufgeführten brennbaren Flüssigkeiten können bereits bei Raumtemperatur bis 21°C explosionsfähige Gemische bilden?',
-    options: ['Benzin', 'Heizöl', 'Petroleum', 'Alkohol', 'Nitroverdünnung', 'Terpentinersatz', 'Kunstharzlacke', 'Aceton'],
-    correct: [0, 3, 4, 6, 7],
-    explain: 'Richtig: A) Benzin · D) Alkohol · E) Nitroverdünnung · G) Kunstharzlacke · H) Aceton'
-  },
-  {
-    id: 'pu003-056', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Sind brennbare Dämpfe schwerer oder leichter als Luft?',
-    options: ['Schwerer', 'Leichter'],
-    correct: 0,
-    explain: 'Richtig: A) Schwerer'
-  },
-  {
-    id: 'pu003-057', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Gase sind schwerer als Luft?',
-    options: ['Acetylen', 'Propan', 'Wasserstoff', 'Erdgas'],
-    correct: 1,
-    explain: 'Richtig: B) Propan'
-  },
-  {
-    id: 'pu003-058', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wieviel Kraftstoff reicht aus, um in einem 200-Liter-Fass ein explosionsfähiges Dampf-Luftgemisch zu erzeugen?',
-    options: ['ca. 1 Schnapsglas voll', 'ca. 1 Tasse voll', 'ca. 1 Liter'],
-    correct: 0,
-    explain: 'Richtig: A) ca. 1 Schnapsglas voll'
-  },
-  {
-    id: 'pu003-059', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Warum sind leere Behälter, in denen sich brennbare Flüssigkeiten befanden, aus den Arbeitsräumen zu entfernen?',
-    options: ['Leere Behälter beanspruchen einen erheblichen Platzbedarf', 'Weil selbst kleine Restmengen leicht entzündlicher Flüssigkeiten im Behälter ein explosionsfähiges Gemisch bilden können', 'Sofern die Behälter oben offen sind, besteht keine Gefahr'],
-    correct: 1,
-    explain: 'Richtig: B) Weil selbst kleine Restmengen leicht entzündlicher Flüssigkeiten im Behälter ein explosionsfähiges Gemisch bilden können'
-  },
-  {
-    id: 'pu003-060', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Das abgebildete Symbol bedeutet „explosionsgefährlich“. Welche Stoffe müssen mit diesem Symbol gekennzeichnet sein?',
-    options: ['Leichtentzündliche Flüssigkeiten', 'Sprengstoffe', 'Brenngase in Gasflaschen'],
-    correct: 1,
-    explain: 'Richtig: B) Sprengstoffe'
-  },
-  {
-    id: 'pu003-061', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Die Gefahrstoffverordnung gilt für:',
-    options: ['Stoffe und Zubereitungen mit unangenehmem Geruch', 'Stoffe und Zubereitungen mit gefährlichen Eigenschaften (z.B. giftig, ätzend, reizend, explosionsgefährlich, brandfördernd, entzündlich, krebserzeugend und umweltgefährlich)', 'Sprengstoffe', 'Tätigkeiten mit Gefahrstoffen im Haushalt Weitere Informationen: Informationen zu Themen der Arbeitssicherheit finden Sie online unter Themen von A bis Z: www.bgetem.de,Webcode: 13802834'],
-    correct: 1,
-    explain: 'Richtig: B) Stoffe und Zubereitungen mit gefährlichen Eigenschaften (z.B. giftig, ätzend, reizend, explosionsgefährlich, brandfördernd, entzündlich, krebserzeugend und umweltgefährlich)'
-  },
-  {
-    id: 'pu003-062', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Gefahrenklassen werden durch die einzelnen Gefahrenpiktogramme symbolisiert?',
-    options: ['Entzündbar', 'Oxidierend (Entzündend) wirkend', 'Explosiv', 'Entzündbar', 'Oxidierend (Entzündend) wirkend', 'Explosiv', 'Akute Toxizität, Kat. 4', 'Ätzend, Kat. 1 i) Akute Toxizität, Kat. 1–3 j) Reizend, Kat. 2 k) Gewässergefährdend l) Akute Toxizität, Kat. 1–3 m) Reizend, Kat. 2 n) Krebserzeugend, Kat. 1–2 o) Akute Toxizität, Kat. 1–3 p) Unter Druck stehende Gase q) Gewässergefährdend r) Ätzend, Kat. 1 s) Akute Toxizität, Kat. 1–3 t) Krebserzeugend, Kat. 1–2 u) Ätzend, Kat. 1'],
-    correct: [1, 3, 7],
-    explain: 'Richtig: B, D, H. Quelle: PU003 (Arbeitssicherheit, Innungs-Testfragen).'
-  },
-  {
-    id: 'pu003-063', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Auf welchem Weg können Gefahrstoffe in den Körper gelangen?',
-    options: ['Über die Verdauungsorgane (Mund, Magen und Darm)', 'Über die Atemwege', 'Durch die Haut'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Über die Verdauungsorgane (Mund, Magen und Darm) · B) Über die Atemwege · C) Durch die Haut'
-  },
-  {
-    id: 'pu003-064', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was versteht man unter Hautresorption?',
-    options: ['Gefahr von Hautreizungen', 'Aufnahme von Gefahrstoffen durch die Haut', 'Gefahr von Hautallergien', 'Hautzerstörung'],
-    correct: 1,
-    explain: 'Richtig: B) Aufnahme von Gefahrstoffen durch die Haut'
-  },
-  {
-    id: 'pu003-065', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'In welcher Form können Gefahrstoffe auftreten?',
-    options: ['Als Gase', 'Als Dämpfe', 'Als Nebel', 'Als Rauche', 'In flüssiger Form', 'In fester Form', 'Als Stäube', 'Als Pasten'],
-    correct: [0, 1, 2, 3, 4, 5],
-    explain: 'Richtig: A) Als Gase · B) Als Dämpfe · C) Als Nebel · D) Als Rauche · E) In flüssiger Form · F) In fester Form'
-  },
-  {
-    id: 'pu003-066', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Angaben enthält ein Sicherheitsdatenblatt?',
-    options: ['Es enthält u.a. Hinweise für die sichere Lagerung, Handhabung, Transport von Gefahrstoffen', 'Es enthält die genaue chemische Zusammensetzung des Produkts', 'Es enthält Angaben u.a. über Erste Hilfe, Entsorgung, Maßnahmen bei Unfällen und Bränden sowie zur Toxikologie und Ökologie'],
-    correct: [0, 2],
-    explain: 'Richtig: A) Es enthält u.a. Hinweise für die sichere Lagerung, Handhabung, Transport von Gefahrstoffen · C) Es enthält Angaben u.a. über Erste Hilfe, Entsorgung, Maßnahmen bei Unfällen und Bränden sowie zur Toxikologie und Ökologie'
-  },
-  {
-    id: 'pu003-067', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Gefahren können bei Tätigkeiten mit Gefahrstoffen auftreten?',
-    options: ['Wasserverunreinigung, Luft- und Bodenverschmutzung', 'Schädigung der Gesundheit, in schweren Fällen Tod', 'Brand- und Explosionsgefahr'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Wasserverunreinigung, Luft- und Bodenverschmutzung · B) Schädigung der Gesundheit, in schweren Fällen Tod · C) Brand- und Explosionsgefahr'
-  },
-  {
-    id: 'pu003-068', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welcher Sachverhalt ist Anlass einer betriebsärztlichen und/oder sicherheitstechnischen Beratung im Betrieb?',
-    options: ['Außerberuflich entstandene Erkrankung eines Mitarbeiters, die durch im Betrieb erforderliche Schichtarbeit ungünstig beeinflusst werden kann (z.B. Zuckerkrankheit)', 'Feststellung von Beratungsbedarf durch einen Unternehmer, der das so genannte alternative Betreuungsmodell („Unternehmermodell“) gewählt hat', 'Überdurchschnittlich hohe Raten an Arbeitsunfähigkeit in einem Arbeitsbereich', 'Gehäufte Klagen von Beschäftigten über Gesundheitsstörungen in einem Arbeitsbereich', 'Beobachtung von anhaltender Arbeitsüberlastung von Beschäftigten'],
-    correct: [0, 1, 2, 3, 4],
-    explain: 'Richtig: A, B, C, D, E. Quelle: PU003 (Arbeitssicherheit, Innungs-Testfragen).'
-  },
-  {
-    id: 'pu003-069', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Maßnahmen sind vor Beginn der Tätigkeit mit Gefahrstoffen durchzuführen?',
-    options: ['Gefährdungsermittlung und -beurteilung', 'Ermitteln, ob ein Stoff mit einem geringeren gesundheitlichen Risiko eingesetzt werden kann', 'Unterweisung der Beschäftigten', 'Aufstellung spezieller Betriebsanweisungen', 'Unbedenklichkeitserklärung vom Hausarzt der Beschäftigten, die Umgang mit dem Gefahrstoff haben, einholen'],
-    correct: [0, 1, 2, 3],
-    explain: 'Richtig: A) Gefährdungsermittlung und -beurteilung · B) Ermitteln, ob ein Stoff mit einem geringeren gesundheitlichen Risiko eingesetzt werden kann · C) Unterweisung der Beschäftigten · D) Aufstellung spezieller Betriebsanweisungen'
-  },
-  {
-    id: 'pu003-070', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Schutzmaßnahme ist bei Tätigkeiten mit Gefahrstoffen vorrangig?',
-    options: ['Absaugung an der Entstehungsstelle', 'Tragen Persönlicher Schutzausrüstungen', 'Tätigkeit zeitlich begrenzen', 'Einsatz von Stoffen oder Zubereitungen mit geringerem gesundheitlichen Risiko', 'Betriebsanweisungen'],
-    correct: 3,
-    explain: 'Richtig: D) Einsatz von Stoffen oder Zubereitungen mit geringerem gesundheitlichen Risiko'
-  },
-  {
-    id: 'pu003-071', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Kann Milch bei Tätigkeiten mit Gefahrstoffen als „Gegengift“ wirken?',
-    options: ['Ja', 'Nein'],
-    correct: 1,
-    explain: 'Richtig: B) Nein'
-  },
-  {
-    id: 'pu003-072', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie sind Behälter mit Gefahrstoffen nach der Gefahrstoffverordnung zu kennzeichnen?',
-    options: ['Art und Weise bleibt dem Einführer/Hersteller überlassen', 'Die Kennzeichnung umfasst folgende Angaben: Stoffbezeichnung, Gefahrensymbole, Gefahrenbezeichnungen, Gefahrenhinweise, Sicherheitsratschläge, Name und vollständige Anschrift einschließlich der Telefonnummer des Herstellers/Einführers, zusätzliche Angaben, EG-Nr.', 'Kleine Behälter (<0,25 l) sind mit Stoffbezeichnung und Gefahrensymbol zu kennzeichnen', 'Wenn die Kennzeichnung nach der Gefahrengutverordnung „Straße“ mit Gefahrzetteln erfolgt, kann die Kennzeichnung nach der Gefahrstoffverordnung entfallen', 'Nur giftige, ätzende und leichtentzündliche Gefahrstoffe sind mit Stoffbezeichnung, Gefahrsymbolen, Gefahrenhinweisen und Sicherheitsratschlägen zu kennzeichnen'],
-    correct: 1,
-    explain: 'Richtig: B) Die Kennzeichnung umfasst folgende Angaben: Stoffbezeichnung, Gefahrensymbole, Gefahrenbezeichnungen, Gefahrenhinweise, Sicherheitsratschläge, Name und vollständige Anschrift einschließlich der Telefonnummer des Herstellers/Einführers, zusätzliche Angaben, EG-Nr.'
-  },
-  {
-    id: 'pu003-073', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Anforderungen müssen Behälter mit Gefahrstoffen erfüllen?',
-    options: ['Es dürfen nur Behälter aus Glas verwendet werden', 'Behälter müssen eindeutig gekennzeichnet sein', 'Behälter müssen nach Form und Aussehen ein Verwechseln mit Gefäßen für Lebensmitteln ausschließen', 'Die Kennzeichnung muss deutlich erkennbar und haltbar sowie in deutscher Sprache abgefasst sein', 'Behälter müssen verschließbar sein'],
-    correct: [1, 2, 3, 4],
-    explain: 'Richtig: B) Behälter müssen eindeutig gekennzeichnet sein · C) Behälter müssen nach Form und Aussehen ein Verwechseln mit Gefäßen für Lebensmitteln ausschließen · D) Die Kennzeichnung muss deutlich erkennbar und haltbar sowie in deutscher Sprache abgefasst sein · E) Behälter müssen verschließbar sein'
-  },
-  {
-    id: 'pu003-074', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie sollen gesundheitsschädliche Dämpfe abgeführt werden, die schwerer als Luft sind?',
-    options: ['Über eine Abzugshaube nach oben', 'Über eine Rand- bzw. nach unten wirkende Absauganlage', 'Über einen ausreichend dimensionierten Fensterventilator, der den gesamten Arbeitsraum entlüftet'],
-    correct: 1,
-    explain: 'Richtig: B) Über eine Rand- bzw. nach unten wirkende Absauganlage'
-  },
-  {
-    id: 'pu003-075', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche persönliche Schutzausrüstung ist gegen das Einatmen gesundheitsschädlicher Gase und Dämpfe zu verwenden?',
-    options: ['ein Mund-Nasenschutz aus flüssigkeitsdichtem Material', 'eine Filtermaske mit dem entsprechenden Filter', 'eine FFP2-Maske mit CE-Kennzeichen Aktuelle Infos zur Arbeitssicherheit für Profis: profi.bgetem.de'],
-    correct: 1,
-    explain: 'Richtig: B) eine Filtermaske mit dem entsprechenden Filter'
-  },
-  {
-    id: 'pu003-076', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie kann die Haut vor einer Schädigung durch Gefahrstoffe geschützt werden?',
-    options: ['Durch Tragen geeigneter Schutzkleidung, wie Schürze, Gummistiefel und Gesichtsschutz', 'Durch Tragen geeigneter Schutzhandschuhe, die eine Durchdringung mit dem Gefahrstoff ausreichend lange verhindern', 'Durch regelmäßigen Gebrauch entfettender Hautreinigungsmittel', 'Durch Anwendung geeigneter Hautschutzmittel und Hautpflegemittel gemäß Hautschutzplan', 'Durch Anwendung von cortisonhaltigen Salben über Nacht, die zu einer Abheilung von Hautschädigungen führt'],
-    correct: [0, 1, 3],
-    explain: 'Richtig: A) Durch Tragen geeigneter Schutzkleidung, wie Schürze, Gummistiefel und Gesichtsschutz · B) Durch Tragen geeigneter Schutzhandschuhe, die eine Durchdringung mit dem Gefahrstoff ausreichend lange verhindern · D) Durch Anwendung geeigneter Hautschutzmittel und Hautpflegemittel gemäß Hautschutzplan'
-  },
-  {
-    id: 'pu003-077', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie wird Säure verdünnt?',
-    options: ['Die Säure wird ins Wasser gegossen', 'Wasser wird in die Säure gegossen', 'Säure darf prinzipiell nicht verdünnt werden'],
-    correct: 0,
-    explain: 'Richtig: A) Die Säure wird ins Wasser gegossen'
-  },
-  {
-    id: 'pu003-078', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist beim Hautschutz zu beachten?',
-    options: ['Es müssen auf den Gefahrstoff und die Tätigkeit abgestimmt Hautschutz-, Hautreinigungs- und Hautpflegemittel zur Verfügung stehen', 'Gegen einen Gefahrstoff reicht auch nur eine Hautschutzsalbe', 'Der Hautschutzplan ist ausschließlich für Beschäftigte ab dem 40. Lebensjahr zu beachten', 'Nur bei „kranker“ Haut ist die Anwendung von Hautschutzpräparaten sinnvoll'],
-    correct: 0,
-    explain: 'Richtig: A) Es müssen auf den Gefahrstoff und die Tätigkeit abgestimmt Hautschutz-, Hautreinigungs- und Hautpflegemittel zur Verfügung stehen'
-  },
-  {
-    id: 'pu003-079', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Bei welchen Tätigkeiten muss der Arbeitgeber den Beschäftigten eine arbeitsmedizinische Vorsorge anbieten (Angebotsvorsorge)?',
-    options: ['Bei Feuchtarbeit von arbeitstäglich mindestens 2 Stunden', 'Bei Nachtschichtarbeit', 'Bei Arbeit an Bildschirmarbeitsplätzen in nicht unwesentlichem Umfang', 'Bei Tätigkeiten mit Exposition gegen krebserzeugende Arbeitsstoffe (K1 und K2)', 'Bei dienstlichen Fahrten mit einem Firmenfahrzeug'],
-    correct: [0, 1, 2, 3],
-    explain: 'Richtig: A) Bei Feuchtarbeit von arbeitstäglich mindestens 2 Stunden · B) Bei Nachtschichtarbeit · C) Bei Arbeit an Bildschirmarbeitsplätzen in nicht unwesentlichem Umfang · D) Bei Tätigkeiten mit Exposition gegen krebserzeugende Arbeitsstoffe (K1 und K2)'
-  },
-  {
-    id: 'pu003-080', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Erste-Hilfe-Maßnahmen sind bei Augenverätzungen durch Säure anzuwenden?',
-    options: ['Verletzten in dunklen Raum bringen und Feuerwehr verständigen', 'Schmerzstillende Mittel verabreichen', 'Auge weit geöffnet halten (ggf. durch Helfer) und mehrere Minuten unter fließendem Wasser oder mit geeigneter Augenspülflüssigkeit (Augendusche) spülen, anschließend sofort augenärztliche Behandlung'],
-    correct: 2,
-    explain: 'Richtig: C) Auge weit geöffnet halten (ggf. durch Helfer) und mehrere Minuten unter fließendem Wasser oder mit geeigneter Augenspülflüssigkeit (Augendusche) spülen, anschließend sofort augenärztliche Behandlung'
-  },
-  {
-    id: 'pu003-081', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche der genannten Gefahren können bei Tätigkeiten mit Kaltreinigern auftreten?',
-    options: ['Kaltreiniger können brennbar sein, ihre Dämpfe im Gemisch mit Luft explosionsfähig', 'Sofern Kaltreiniger Chlorkohlenwasserstoff oder Fluorkohlenwasserstoffe enthalten, können sich diese an heißen Oberflächen oder offenen Flammen (brennender Zigaretten) zersetzen. Dabei bilden sich sehr giftige und korrosive Zersetzungsprodukte', 'Durch Zersetzung sauer gewordener Kaltreiniger können diese mit fein verteilten Leichtmetallen (Späne oder Staub) heftig reagieren', 'Das Einatmen der Dämpfe von Kaltreinigern kann zu Übelkeit, Kopfschmerzen, rauschähnlichen Zuständen, Bewusstlosigkeit und in besonders schweren Fällen sogar zum Tod führen', 'Zur Reinigung elektrischer Kontakte dürfen Kaltreiniger nicht benutzt werden, da sich dadurch der Übergangswiderstand erhöht'],
-    correct: [0, 1, 2, 3],
-    explain: 'Richtig: A, B, C, D. Quelle: PU003 (Arbeitssicherheit, Innungs-Testfragen).'
-  },
-  {
-    id: 'pu003-082', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche der genannten Schutzmaßnahmen sind bei Tätigkeiten mit Kaltreinigern zu beachten?',
-    options: ['In Räumen und Arbeitsplätzen, in denen Kaltreiniger eingesetzt oder gelagert werden, ist auf eine gute Lüftung zu achten', 'Nicht rauchen, keinen Alkohol trinken', 'Das Abfüllen und das Aufbewahren von Kaltreinigern in Getränkeflaschen ist verboten', 'Einatmen der Dämpfe vermeiden', 'Bei Tätigkeiten mit Kaltreinigern sind immer Gehörschutzmittel zu benutzen'],
-    correct: [0, 1, 2, 3],
-    explain: 'Richtig: A) In Räumen und Arbeitsplätzen, in denen Kaltreiniger eingesetzt oder gelagert werden, ist auf eine gute Lüftung zu achten · B) Nicht rauchen, keinen Alkohol trinken · C) Das Abfüllen und das Aufbewahren von Kaltreinigern in Getränkeflaschen ist verboten · D) Einatmen der Dämpfe vermeiden'
-  },
-  {
-    id: 'pu003-083', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist bei Tätigkeiten mit Methylmethacrylat zu beachten?',
-    options: ['Den Arbeitsraum sehr gut be- und entlüften, besonders in Bodennähe (rel. Dampfdichte: 3,45 – Luft: 1)', 'Methylmethacrylat reizt Augen, Haut und Schleimhäute und kann Hautallergien verursachen. Berührung vermeiden', 'Dämpfe an der Entstehungsstelle absaugen (Arbeitsplatzgrenzwert: 50 ppm einhalten)', 'Bei der Lagerung Behälter dicht geschlossen halten', 'Essen, Trinken und Aufbewahrung von Lebensmitteln im Arbeitsraum vermeiden', 'Explosionsgefahr, Rauch und Umgang mit Zündquellen verbieten'],
-    correct: [0, 1, 2, 3, 4, 5],
-    explain: 'Richtig: A, B, C, D, E, F. Quelle: PU003 (Arbeitssicherheit, Innungs-Testfragen).'
-  },
-  {
-    id: 'pu003-084', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Bei dem Sicherheitszeichen mit dem Gabelstapler handelt es sich um ein',
-    options: ['Verbotszeichen', 'Warnzeichen', 'Gebotszeichen', 'Rettungszeichen', 'Hinweiszeichen'],
-    correct: 1,
-    explain: 'Richtig: B) Warnzeichen'
-  },
-  {
-    id: 'pu003-085', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Mit welchen Symbolen ist ein Arbeitsplatz zu kennzeichnen, an dem mitflüssigen,ätzenden Gefahrstoffen umgegangen wird?',
-    options: [],
-    correct: [],
-    explain: 'Richtig: '
-  },
-  {
-    id: 'pu003-086', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Sie sind in geselliger Runde mit Freunden beisammen und wollen mit dem Auto nach Hause fahren. Wie verhalten Sie sich in dieser Situation?',
-    options: ['Ich trinke nur alkoholfreie Getränke, da bereits geringe Alkoholmengen im Blut das Fahrvermögen beeinträchtigen können', 'Bevor ich gehe, trinke ich eine Tasse starken Kaffee; dann bin ich wieder fährtüchtig', 'Ich trinke nur soviel, dass ich unter 0,5 ‰ bleibe, denn unter dieser Grenze bin ich noch in jedem Fall fahrtüchtig', 'Ich organisiere vorher meine Heimfahrt und lasse mich von einem Bekannten bzw. Verwandten abholen; notfalls lasse ich mich von einem Taxi fahren'],
-    correct: [0, 3],
-    explain: 'Richtig: A) Ich trinke nur alkoholfreie Getränke, da bereits geringe Alkoholmengen im Blut das Fahrvermögen beeinträchtigen können · D) Ich organisiere vorher meine Heimfahrt und lasse mich von einem Bekannten bzw. Verwandten abholen; notfalls lasse ich mich von einem Taxi fahren'
-  },
-  {
-    id: 'pu003-087', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist zu tun, um beim Fahren mit einem Auto immer eine gute Sicht zu haben?',
-    options: ['In regelmäßigen Zeitabständen alle Scheiben sorgfältig außen und innen schlierenfrei säubern', 'Scheibenwischergummis mindestens alle 6 Monate erneuern', 'Bei Schneefall vor Fahrtantritt den Schnee nicht nur von allen Scheiben, sondern auch von anderen Flächen am Fahrzeug, wie z.B. Motorhaube, Dach, Stoßfänger, Lampen, Blinker usw. beseitigen'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A, B, C. Quelle: PU003 (Arbeitssicherheit, Innungs-Testfragen).'
-  },
-  {
-    id: 'pu003-088', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist beim Fahren im Regen zu beachten?',
-    options: ['Gefahr von Aquaplaning (Aufschwimmen der Reifen)', 'Bei neuen Reifen ist keine Beeinträchtigung des Fahrverhaltens zu erwarten', 'Auf nasser Straße verlängert sich der Bremsweg beträchtlich – daher halte ich größeren Abstand'],
-    correct: [0, 2],
-    explain: 'Richtig: A) Gefahr von Aquaplaning (Aufschwimmen der Reifen) · C) Auf nasser Straße verlängert sich der Bremsweg beträchtlich – daher halte ich größeren Abstand'
-  },
-  {
-    id: 'pu003-089', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welche Verpflichtung besteht nach einem Unfall mit Personenschaden?',
-    options: ['Die Unfallstelle durch Warnblinkanlage und Warndreieck zu sichern', 'Erste-Hilfe-Maßnahmen für die Verletzten veranlassen', 'Hilfe herbeizurufen (Polizei, Rettungsdienst)', 'Fotos und Maßskizze vom Unfallort anzufertigen'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Die Unfallstelle durch Warnblinkanlage und Warndreieck zu sichern · B) Erste-Hilfe-Maßnahmen für die Verletzten veranlassen · C) Hilfe herbeizurufen (Polizei, Rettungsdienst)'
-  },
-  {
-    id: 'pu003-090', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Die Profiltiefe der Winterreifen an einem Auto beträgt weniger als 2 mm. Was ist vom Fahrer zu beachten?',
-    options: ['Das Fahrzeug darf mit Reifen bis zur gesetzlichen Grenze von 1,6 mm Profiltiefe gefahren werden', 'Die Reifen sollten umgehend erneuert werden, da unter 4 mm Profiltiefe die Sicherheit erheblich beeinträchtigt ist', 'Wenn das Auto nur im Stadtverkehr benutzt wird, soll die Profiltiefe mindestens 1 mm betragen'],
-    correct: [0, 1],
-    explain: 'Richtig: A) Das Fahrzeug darf mit Reifen bis zur gesetzlichen Grenze von 1,6 mm Profiltiefe gefahren werden · B) Die Reifen sollten umgehend erneuert werden, da unter 4 mm Profiltiefe die Sicherheit erheblich beeinträchtigt ist'
-  },
-  {
-    id: 'pu003-091', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Der Luftdruck in den Reifen hat wesentlichen Einfluss auf die Verkehrssicherheit des Fahrzeuges und die Lebensdauer der Reifen, deshalb…',
-    options: ['den Luftdruck mindestens alle 14 Tage bei kalten Reifen kontrollieren', 'nichts selbst veranlassen, weil das Fahrzeug regelmäßig zur Inspektion ist', 'vor längeren Autobahnfahrten, zumal mit voller Beladung, den Luftdruck um 0,2 bis 0,3 bar erhöhen', 'den Luftdruck nur dann kontrollieren, wenn ein Reifen zu wenig Luft hat'],
-    correct: [0, 2],
-    explain: 'Richtig: A) den Luftdruck mindestens alle 14 Tage bei kalten Reifen kontrollieren · C) vor längeren Autobahnfahrten, zumal mit voller Beladung, den Luftdruck um 0,2 bis 0,3 bar erhöhen'
-  },
-  {
-    id: 'pu003-092', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Mit einem Mofa fährt man',
-    options: ['immer mit Licht', 'immer mit Helm und heller (Schutz-)Kleidung', 'nur dann auf Radwegen, wenn sie für Mofas zugelassen sind', 'nur bei Tageslicht'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) immer mit Licht · B) immer mit Helm und heller (Schutz-)Kleidung · C) nur dann auf Radwegen, wenn sie für Mofas zugelassen sind'
-  },
-  {
-    id: 'pu003-093', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie bemisst sich innerhalb geschlossener Ortschaften der Mindestabstand zum vorausfahrenden Fahrzeug sein?',
-    options: ['generell mindestens 10 m', 'Abstand ist gleich der Länge des vorausfahrenden Fahrzeugs', 'Abstand entspricht der in 1 Sekunde gefahrenen Wegstrecke'],
-    correct: 2,
-    explain: 'Richtig: C) Abstand entspricht der in 1 Sekunde gefahrenen Wegstrecke'
-  },
-  {
-    id: 'pu003-094', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welches Verhalten ist im Stau auf der Autobahn richtig?',
-    options: ['Immer auf die Spur wechseln, die sich bewegt – damit sich der Stau schneller auflöst', 'Eine Gasse für Rettungsfahrzeuge freilassen (zwischen der linken Fahrbahn und der rechts daneben liegenden Spur)', 'Auf einer Spur bleiben, weil der Spurwechsel keinen Zeitgewinn bringt, aber Sicherheit kosten kann'],
-    correct: [1, 2],
-    explain: 'Richtig: B) Eine Gasse für Rettungsfahrzeuge freilassen (zwischen der linken Fahrbahn und der rechts daneben liegenden Spur) · C) Auf einer Spur bleiben, weil der Spurwechsel keinen Zeitgewinn bringt, aber Sicherheit kosten kann'
-  },
-  {
-    id: 'pu003-095', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie lang ist der Anhalteweg („Reaktionsweg + Bremsweg“) eines mit 50 km/h fahrenden PKW auf trockener Straße?',
-    options: ['ca. 10 m', 'mindestens 30 m', 'ca. 80 m'],
-    correct: 1,
-    explain: 'Richtig: B) mindestens 30 m'
-  },
-  {
-    id: 'pu003-096', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Welches Verhalten von Motorradfahrern ist hinsichtlich der Erkennbarkeit gegenüber anderen Verkehrsteilnehmern notwendig?',
-    options: ['Auffällige, mehrfarbige Schutzbekleidung und hellfarbigen Motorrad Schutzhelm zu tragen, ist empfehlenswert', 'Mindestens mit Abblendlicht fahren', 'Immer damit rechnen, von anderen nicht gesehen zu werden und daher stets bremsbereit sein'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Auffällige, mehrfarbige Schutzbekleidung und hellfarbigen Motorrad Schutzhelm zu tragen, ist empfehlenswert · B) Mindestens mit Abblendlicht fahren · C) Immer damit rechnen, von anderen nicht gesehen zu werden und daher stets bremsbereit sein'
-  },
-  {
-    id: 'pu003-097', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie kann ein Autofahrer beim Aussteigen die Kollision mit einem auf der Fahrerseite vorbeifahrenden Radfahrer vermeiden?',
-    options: ['Vor dem Aussteigen Schulterblick, ob ein Fahrzeug von hinten kommt, als Fahrer Tür mit der rechten Hand öffnen (sog. „Holländischer Griff“)', 'Ein Blick in den Rückspiegel genügt', 'Vorher Handbremse anziehen, Zündschlüssel abziehen, Lenkradschloss einrasten lassen', 'Nur nach der Gehwegseite aussteigen'],
-    correct: [0, 2],
-    explain: 'Richtig: A) Vor dem Aussteigen Schulterblick, ob ein Fahrzeug von hinten kommt, als Fahrer Tür mit der rechten Hand öffnen (sog. „Holländischer Griff“) · C) Vorher Handbremse anziehen, Zündschlüssel abziehen, Lenkradschloss einrasten lassen'
-  },
-  {
-    id: 'pu003-098', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Bei erheblicher Sichtbehinderung durch Regen ist welche Beleuchtung einzuschalten?',
-    options: ['Fernlicht', 'Abblendlicht (Fahrlicht)', 'Standlicht', 'gar keine', 'Tagfahrlicht'],
-    correct: [1, 4],
-    explain: 'Richtig: B) Abblendlicht (Fahrlicht) · E) Tagfahrlicht'
-  },
-  {
-    id: 'pu003-099', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Wie verhalten sich Fußgänger bei Schnee und Eis richtig?',
-    options: ['Erst losgehen, nachdem alle Wege geräumt und gestreut sind', 'Rutschhemmendes, festes Schuhwerk tragen', 'In der Dämmerung helle Kleidung tragen'],
-    correct: [1, 2],
-    explain: 'Richtig: B) Rutschhemmendes, festes Schuhwerk tragen · C) In der Dämmerung helle Kleidung tragen'
-  },
-  {
-    id: 'pu003-100', path: 'lehrling-vde', category: 'Arbeitssicherheit',
-    question: 'Was ist beim Fahren in der Dämmerung und bei Dunkelheit zu beachten?',
-    options: ['Die Geschwindigkeit muss den schlechteren Sichtverhältnissen angepasst werden', 'Das Abblendlicht (Fahrlicht; Tagfahrlicht) sollte eher zu früh als zu spät eingeschaltet werden', 'Man sollte möglichst nicht in die Scheinwerfer entgegenkommender Fahrzeuge blicken', 'In der Dämmerung reicht das Standlicht'],
-    correct: [0, 1, 2],
-    explain: 'Richtig: A) Die Geschwindigkeit muss den schlechteren Sichtverhältnissen angepasst werden · B) Das Abblendlicht (Fahrlicht; Tagfahrlicht) sollte eher zu früh als zu spät eingeschaltet werden · C) Man sollte möglichst nicht in die Scheinwerfer entgegenkommender Fahrzeuge blicken'
-  },
-
   // ====== EIGENE FRAGEN MIT QUELLENANGABEN (DGUV / VDE / DIN) ======
   {
     id: 'lg51', path: 'lehrling-grund', category: 'Schaltzeichen',
@@ -2245,5 +1542,807 @@ window.QUESTIONS = [
     correct: 1,
     explain: 'Üblich sind 10–15 % Materialgemeinkosten-Zuschlag auf den Materialeinkaufspreis. Plus Gewinn-/Wagniszuschlag (5–10 %). Endpreis ≈ EK · 1,2–1,3 für Material.',
     source: 'Handwerks-Kalkulation (HwK-Empfehlungen)'
+  },
+
+  // ====== ARBEITSSICHERHEIT (Ersatz für PU003 – eigene Formulierungen mit Quellen) ======
+  {
+    id: 'as001', path: 'lehrling-vde', category: 'Arbeitsschutz-Recht',
+    question: 'Welcher Personenkreis ist an die Unfallverhütungsvorschriften (DGUV) gebunden?',
+    options: ['Nur die Geschäftsführung', 'Unternehmer und alle bei ihnen Versicherten (Beschäftigte)', 'Nur Sicherheitsbeauftragte', 'Nur Auszubildende während der Berufsschule'],
+    correct: 1,
+    explain: 'Nach § 15 SGB VII gelten die UVV der Berufsgenossenschaft sowohl für Unternehmer als auch für alle Versicherten gleichermaßen. Verstöße können bußgeldbewehrt sein.',
+    source: '§ 15 SGB VII / DGUV Vorschrift 1'
+  },
+  {
+    id: 'as002', path: 'lehrling-vde', category: 'Arbeitsschutz-Recht',
+    question: 'Welchen Rechtscharakter haben Unfallverhütungsvorschriften?',
+    options: ['Reine Empfehlungen ohne Verbindlichkeit', 'Allgemeine Regeln der Technik', 'Autonomes Satzungsrecht der Berufsgenossenschaft mit verbindlicher Wirkung', 'Privatrechtliche Vereinbarungen'],
+    correct: 2,
+    explain: 'UVV werden von der jeweiligen Berufsgenossenschaft als autonomes Satzungsrecht (§ 15 SGB VII) erlassen. Sie sind für die Mitglieder verbindlich – also rechtlich vergleichbar mit Verordnungen.',
+    source: '§ 15 SGB VII'
+  },
+  {
+    id: 'as003', path: 'lehrling-vde', category: 'Arbeitsschutz-Recht',
+    question: 'Wer trägt im Betrieb die Hauptverantwortung für die Arbeitssicherheit?',
+    options: ['Die Sicherheitsfachkraft', 'Der Betriebsrat', 'Der Unternehmer (Arbeitgeber)', 'Jeder Beschäftigte für sich allein'],
+    correct: 2,
+    explain: 'ArbSchG § 3 und DGUV V1 § 2: Die Verantwortung liegt zunächst beim Unternehmer. Er kann Aufgaben delegieren, die Verantwortung bleibt jedoch bei ihm.',
+    source: 'ArbSchG § 3 / DGUV V1 § 2'
+  },
+  {
+    id: 'as004', path: 'lehrling-vde', category: 'Unterweisung',
+    question: 'Wie häufig muss jeder Beschäftigte über Unfall- und Gesundheitsgefahren unterwiesen werden?',
+    options: ['Einmal beim Eintritt – das reicht für die Dauer des Arbeitsverhältnisses', 'Mindestens einmal jährlich, zusätzlich bei jeder neuen Tätigkeit oder Änderung', 'Nur bei einem Unfall im Betrieb', 'Alle 5 Jahre'],
+    correct: 1,
+    explain: 'DGUV V1 § 4 i. V. m. ArbSchG § 12: Unterweisung mindestens jährlich. Auszubildende: halbjährlich. Zusätzlich bei Einstellung, Tätigkeitswechsel, neuer Technik, nach Unfällen.',
+    source: 'DGUV V1 § 4 / ArbSchG § 12'
+  },
+  {
+    id: 'as005', path: 'lehrling-vde', category: 'Sicherheitsbeauftragte',
+    question: 'Ab welcher Beschäftigtenzahl muss in einem Betrieb mindestens ein Sicherheitsbeauftragter bestellt werden?',
+    options: ['Ab 5 Beschäftigten', 'Ab 20 Beschäftigten regelmäßig', 'Erst ab 100 Beschäftigten', 'Es gibt keine zahlenmäßige Schwelle'],
+    correct: 1,
+    explain: '§ 22 SGB VII i. V. m. DGUV V1 § 20: Bei mehr als 20 Beschäftigten ist mindestens ein Sicherheitsbeauftragter zu bestellen. Die genaue Zahl richtet sich nach der Gefährdungslage.',
+    source: '§ 22 SGB VII / DGUV V1 § 20'
+  },
+  {
+    id: 'as006', path: 'lehrling-vde', category: 'Sicherheitsbeauftragte',
+    question: 'Welche Hauptaufgabe haben Sicherheitsbeauftragte?',
+    options: ['Sie haben Weisungsbefugnis gegenüber allen Beschäftigten', 'Sie unterstützen den Unternehmer beratend bei der Verhütung von Arbeitsunfällen', 'Sie sind ausschließlich für Erste Hilfe zuständig', 'Sie ersetzen die Sicherheitsfachkraft'],
+    correct: 1,
+    explain: 'Sicherheitsbeauftragte sind ehrenamtlich tätig, beraten und unterstützen den Unternehmer und ihre Kollegen in Sicherheitsfragen. Sie haben keine Weisungsbefugnis und keine eigene Verantwortung im Sinne des ArbSchG.',
+    source: 'DGUV V1 § 20 / DGUV Information 211-042'
+  },
+  {
+    id: 'as007', path: 'lehrling-vde', category: 'BG-Aufsicht',
+    question: 'Wann darf eine Aufsichtsperson der Berufsgenossenschaft (§ 18 SGB VII) einen Betrieb betreten?',
+    options: ['Nur nach schriftlicher Voranmeldung', 'Nur wenn der Betriebsrat einverstanden ist', 'Während der Geschäfts- und Betriebszeiten ohne Voranmeldung', 'Nur außerhalb der Arbeitszeit'],
+    correct: 2,
+    explain: '§ 19 SGB VII: Aufsichtspersonen der Unfallversicherungsträger sind befugt, jederzeit während der Geschäfts- und Betriebszeiten Betriebsstätten zu betreten und zu besichtigen.',
+    source: '§ 19 SGB VII'
+  },
+  {
+    id: 'as008', path: 'lehrling-vde', category: 'Arbeitsschutz-Praxis',
+    question: 'Was sollte ein Beschäftigter tun, wenn er einen sicherheitstechnischen Mangel erkennt?',
+    options: ['Den Mangel sofort selbst beheben, sofern er dazu befugt ist – sonst unverzüglich der Vorgesetzten Person melden', 'Erst die laufende Arbeit beenden und dann den Betriebsrat informieren', 'Abwarten bis zur nächsten Sicherheitsbegehung', 'Nichts tun, da der Sicherheitsbeauftragte dafür allein zuständig ist'],
+    correct: 0,
+    explain: 'ArbSchG § 16 und DGUV V1 § 16 verpflichten Beschäftigte, jede Gefahr unverzüglich zu beseitigen oder zu melden. Schweigen kann Mithaftung bedeuten.',
+    source: 'ArbSchG § 16 / DGUV V1 § 16'
+  },
+  {
+    id: 'as009', path: 'lehrling-vde', category: 'Arbeitskleidung',
+    question: 'Sind Schmuckstücke wie Ringe, Halsketten oder Armbänder bei der Arbeit am offenen elektrischen Stromkreis zulässig?',
+    options: ['Ja, wenn sie aus Edelmetall sind', 'Nur Eheringe sind erlaubt', 'Nein – wegen Verfangungs- und Kurzschlussgefahr abzulegen', 'Nur wenn sie unter Handschuhen verschwinden'],
+    correct: 2,
+    explain: 'DGUV V3 / DIN VDE 0105-100: Vor Arbeiten an unter Spannung stehenden Teilen sind metallische Gegenstände (Schmuck, Uhr, Brille mit Metallrand) abzulegen, da sie Lichtbögen oder Hängenbleiben verursachen können.',
+    source: 'DIN VDE 0105-100 / DGUV V3 § 4'
+  },
+  {
+    id: 'as010', path: 'lehrling-vde', category: 'Arbeitskleidung',
+    question: 'Spitze oder scharfkantige Werkzeuge dürfen lose in der Hosentasche getragen werden, weil…',
+    options: ['…sie immer griffbereit sind', '…dies nur bei kurzen Tätigkeiten verboten ist', '…eine schützende Werkzeughülle bzw. Werkzeugtasche ausreicht', 'Falsch – sie sind grundsätzlich nur in geeigneten Werkzeughaltern oder Taschen mit Schutz zu tragen'],
+    correct: 3,
+    explain: 'Lose getragene scharfe Werkzeuge können bei Stürzen schwere Stich- oder Schnittverletzungen verursachen. Geeignete Köcher, Halter oder Taschen sind Pflicht.',
+    source: 'DGUV Information 209-082'
+  },
+  {
+    id: 'as011', path: 'lehrling-vde', category: 'Alkohol-Drogen',
+    question: 'Eine Vorgesetzte stellt fest, dass ein Beschäftigter alkoholisiert zur Arbeit erscheint. Welche Pflicht hat sie?',
+    options: ['Sie muss ihn nach Hause schicken / die Arbeit untersagen, da er sich und andere gefährdet', 'Sie darf weiterarbeiten lassen, solange keine Maschine bedient wird', 'Nur Personalakte vermerken, kein weiteres Handeln', 'Nichts – Privatsache des Beschäftigten'],
+    correct: 0,
+    explain: 'DGUV V1 § 7 verbietet, sich durch berauschende Mittel in einen Zustand zu versetzen, in dem man sich oder andere gefährden kann. Vorgesetzte müssen handeln (Beschäftigungsverbot, sicherer Heimweg).',
+    source: 'DGUV V1 § 7'
+  },
+  {
+    id: 'as012', path: 'lehrling-vde', category: 'Bildschirmarbeit',
+    question: 'Wie sollte ein Bildschirmarbeitsplatz idealerweise zum Fenster ausgerichtet sein?',
+    options: ['Mit Blickrichtung direkt zum Fenster', 'Mit dem Rücken zum Fenster', 'Im rechten Winkel (etwa 90°) zum Fenster, um Blendung und Spiegelung zu vermeiden', 'Egal, solange ein Blendschutz vorhanden ist'],
+    correct: 2,
+    explain: 'ArbStättV Anhang 6 und DGUV Information 215-410: Bildschirme im 90°-Winkel zur Fensterfront aufstellen. So entstehen keine Reflexionen und keine Blendung gegen das Tageslicht.',
+    source: 'DGUV Information 215-410 / ASR A1.6'
+  },
+  {
+    id: 'as013', path: 'lehrling-vde', category: 'PSA',
+    question: 'Welche der folgenden Ausrüstungsteile zählen typischerweise NICHT zur PSA?',
+    options: ['Sicherheitsschuhe S3', 'Schutzhelm', 'Gehörschutz', 'Werkzeugkasten mit Schraubendrehern'],
+    correct: 3,
+    explain: 'PSA = persönliche Schutzausrüstung. Werkzeuge sind keine PSA, sondern Arbeitsmittel. PSA-Beispiele: Helm, Schutzbrille, Gehörschutz, Sicherheitsschuhe, isolierende Handschuhe.',
+    source: 'PSA-BV / DGUV Regel 112-189'
+  },
+  {
+    id: 'as014', path: 'lehrling-vde', category: 'PSA',
+    question: 'Wer muss persönliche Schutzausrüstung kostenfrei bereitstellen, wer muss sie tragen?',
+    options: ['Beschäftigte zahlen selbst, müssen aber nicht tragen', 'Arbeitgeber stellt sie bereit, Beschäftigte sind verpflichtet zu benutzen', 'Nur in besonderen Branchen verpflichtend', 'Beides freiwillig'],
+    correct: 1,
+    explain: 'ArbSchG § 3 / PSA-BV § 2: Der Arbeitgeber stellt PSA kostenfrei bereit. Beschäftigte sind nach § 15 ArbSchG verpflichtet, sie bestimmungsgemäß zu benutzen.',
+    source: 'PSA-BV § 2 / ArbSchG § 3'
+  },
+  {
+    id: 'as015', path: 'lehrling-vde', category: 'Sicherheitskennzeichen',
+    question: 'Ein blaues, rundes Sicherheitszeichen ist nach ASR A1.3 grundsätzlich ein …',
+    options: ['Verbotszeichen', 'Gebotszeichen', 'Warnzeichen', 'Rettungszeichen'],
+    correct: 1,
+    explain: 'ASR A1.3: rund + blau = Gebot (z. B. „Schutzhelm tragen"). Rot rund mit Querbalken = Verbot. Gelbes Dreieck = Warnung. Grünes Rechteck = Rettung. Rotes Rechteck = Brandschutz.',
+    source: 'ASR A1.3'
+  },
+  {
+    id: 'as016', path: 'lehrling-vde', category: 'Beleuchtung',
+    question: 'Welche Beleuchtungsstärke wird für Büroarbeitsplätze nach ASR A3.4 mindestens gefordert?',
+    options: ['100 lx', '300 lx', '500 lx', '750 lx'],
+    correct: 2,
+    explain: 'ASR A3.4 / DIN EN 12464-1: Büroarbeitsplatz mind. 500 lx. Bei Bildschirmarbeit höhere Anforderungen je nach Tätigkeit. Verkehrswege i. d. R. ≥ 50 lx.',
+    source: 'ASR A3.4 / DIN EN 12464-1'
+  },
+  {
+    id: 'as017', path: 'lehrling-vde', category: 'Verkehrswege',
+    question: 'Was gilt für Verkehrswege in Arbeitsstätten grundsätzlich?',
+    options: ['Sie dürfen kurzzeitig zugestellt werden, wenn niemand vorbeigeht', 'Sie müssen ständig frei und sicher begehbar/befahrbar sein', 'Markierungen sind nicht zwingend erforderlich', 'Stolperstellen über 2 cm sind zulässig'],
+    correct: 1,
+    explain: 'ASR A1.8: Verkehrswege müssen stets frei sein, ausreichend bemessen und ohne Stolperstellen. Hindernisse sind sofort zu beseitigen oder deutlich zu kennzeichnen.',
+    source: 'ASR A1.8'
+  },
+  {
+    id: 'as018', path: 'lehrling-vde', category: 'Fluchtwege',
+    question: 'Welche Anforderung gilt für einen Notausgang nach ASR A2.3?',
+    options: ['Er darf abgeschlossen sein, wenn der Schlüssel im Sekretariat liegt', 'Er muss von innen jederzeit ohne Hilfsmittel zu öffnen sein', 'Eine Drehtür reicht aus', 'Er darf nur nach innen aufschlagen'],
+    correct: 1,
+    explain: 'ASR A2.3 / ArbStättV: Notausgangstüren müssen sich in Fluchtrichtung öffnen lassen, von innen jederzeit ohne Hilfsmittel (Schlüssel, Schalter) zu öffnen sein und gut erkennbar sein (Rettungszeichen).',
+    source: 'ASR A2.3'
+  },
+  {
+    id: 'as019', path: 'lehrling-vde', category: 'Absturz',
+    question: 'Wie sind Absturzkanten ab welcher Absturzhöhe in betrieblichen Bereichen zu sichern?',
+    options: ['Erst ab 3 m', 'Ab 1 m durch Geländer/Brüstung oder gleichwertige Maßnahmen', 'Erst nach individueller Risikoabwägung', 'Markierung am Boden reicht'],
+    correct: 1,
+    explain: 'ASR A2.1: Bereits ab 1 m Absturzhöhe sind Schutzmaßnahmen (Seitenschutz, Brüstung, Abdeckungen) erforderlich. Bei höheren Anforderungen: Anschlagpunkte für PSAgA.',
+    source: 'ASR A2.1 / DGUV Information 201-018'
+  },
+  {
+    id: 'as020', path: 'lehrling-vde', category: 'Erste Hilfe',
+    question: 'Welche organisatorischen Maßnahmen sind zur Sicherstellung der Ersten Hilfe im Betrieb nötig?',
+    options: ['Ausreichend geschulte Ersthelfer (1 je 20 Beschäftigte im Verwaltungs-/Handelsbereich)', 'Verbandkasten nach DIN 13157 / 13169', 'Aushang Erste-Hilfe-Plakat (DGUV Information 204-001)', 'Notruf 112 verfügbar'],
+    correct: [0, 1, 2, 3],
+    explain: 'DGUV V1 §§ 24-27: Ersthelferanzahl (1:20 in Verwaltung, 1:10 in Produktion), Verbandmittel nach DIN 13157, Aushang DGUV 204-001, Notrufmöglichkeit. Ersthelfer-Schulung alle 2 Jahre auffrischen.',
+    source: 'DGUV V1 §§ 24–27'
+  },
+  {
+    id: 'as021', path: 'lehrling-vde', category: 'Leitern',
+    question: 'Welche Arbeitsmittel sind beim Arbeiten in der Höhe gegenüber einer Leiter zu bevorzugen?',
+    options: ['Stehleiter mit Rückenlehne', 'Gerüst, Hubarbeitsbühne oder mobile Plattform', 'Drehleiter aus Holz', 'Hauptsache eine zweite Person hält die Leiter'],
+    correct: 1,
+    explain: 'TRBS 2121-2 sieht vor: Leiter ist nur als Arbeitsplatz zulässig, wenn andere Mittel (Gerüst, Hubarbeitsbühne) unverhältnismäßig sind. Standflächen ab 5 m bedürfen besonderer Begründung.',
+    source: 'TRBS 2121 / DGUV Information 208-016'
+  },
+  {
+    id: 'as022', path: 'lehrling-vde', category: 'Leitern',
+    question: 'Welches Merkmal gehört zu einer SICHEREN Stehleiter?',
+    options: ['Wackeliger Spreizschutz', 'Beidseitig begehbare Sprossen ohne Spreizschutz', 'Ausziehbare Spreizsicherung, rutschhemmende Füße, intakte Sprossen', 'Lackierte Holzleiter (Lack zur Konservierung)'],
+    correct: 2,
+    explain: 'Stehleitern müssen Spreizsicherung gegen Auseinanderrutschen, rutschhemmende Füße und unbeschädigte Sprossen haben. Holzleitern dürfen nicht lackiert werden (verdeckt Risse).',
+    source: 'DGUV Information 208-016'
+  },
+  {
+    id: 'as023', path: 'lehrling-vde', category: 'Sicherheitskennzeichen',
+    question: 'Welche Bedeutung hat ein gelbes Dreieck mit schwarzem Symbol an einer Maschine?',
+    options: ['Brandschutzzeichen', 'Warnung vor einer bestimmten Gefahr (z. B. „Warnung vor Quetschgefahr")', 'Gebot, eine PSA zu tragen', 'Verbot des Eingriffs'],
+    correct: 1,
+    explain: 'Gelbes Dreieck mit schwarzem Symbol = Warnzeichen. Beispiele: Quetschgefahr, heiße Oberfläche, gefährliche elektrische Spannung. Genaue Bedeutung gibt das Symbol vor (ASR A1.3).',
+    source: 'ASR A1.3'
+  },
+  {
+    id: 'as024', path: 'lehrling-vde', category: 'Maschinenschutz',
+    question: 'Welche Schutzphilosophie an Maschinen erreicht das höchste Sicherheitsniveau?',
+    options: ['Konstruktive Schutzmaßnahmen, die Gefährdungen beseitigen oder vermeiden (TOP-Prinzip „T")', 'Nur Hinweisschilder anbringen', 'Beschäftigte zur Vorsicht ermahnen', 'PSA aushändigen, sonst nichts'],
+    correct: 0,
+    explain: 'STOP-Prinzip: 1. Substitution/Eliminierung, 2. Technische Maßnahmen (z. B. Schutzgitter), 3. Organisatorische Maßnahmen, 4. PSA. Konstruktive Lösungen sind immer effektiver als nachgelagerte.',
+    source: 'ArbSchG § 4 / DGUV Regel 100-001'
+  },
+  {
+    id: 'as025', path: 'lehrling-vde', category: 'Maschinenschutz',
+    question: 'Welche Verletzungsarten sind beim Arbeiten an Maschinen typisch?',
+    options: ['Quetsch- und Scherverletzungen durch bewegte Teile', 'Schnittverletzungen an scharfen Kanten', 'Augenverletzungen durch wegfliegende Späne', 'Sonnenbrand'],
+    correct: [0, 1, 2],
+    explain: 'Mechanische Maschinengefährdungen: Quetschen, Scheren, Schneiden, Stoßen, Einziehen, Stechen sowie wegfliegende Teile. Sonnenbrand ist keine maschinentypische Gefährdung im Werkstattbetrieb.',
+    source: 'DIN EN ISO 12100 / DGUV Regel 100-500'
+  },
+  {
+    id: 'as026', path: 'lehrling-vde', category: 'Maschinenschutz',
+    question: 'Wie können Quetsch- und Scherstellen an Maschinen wirksam abgesichert werden?',
+    options: ['Nur Hinweisschild anbringen', 'Trennende Schutzeinrichtungen oder berührungslose Schutzeinrichtungen (z. B. Lichtgitter, Sicherheits-Trittmatten)', 'Auf die Aufmerksamkeit der Bedienenden vertrauen', 'Mit der Hand vorsichtig drumherum greifen'],
+    correct: 1,
+    explain: 'DIN EN ISO 13855 / 14120: Trennende Schutzeinrichtungen (Verkleidungen, verriegelte Klappen) und nicht-trennende (Lichtschranken, Sicherheitsmatten) verhindern Eingreifen in Gefahrstellen.',
+    source: 'DIN EN ISO 14120 / 13855'
+  },
+  {
+    id: 'as027', path: 'lehrling-vde', category: 'Maschinenschutz',
+    question: 'Was ist bei der Beseitigung von Störungen an Maschinen zwingend zu beachten?',
+    options: ['Maschine im Lauf lassen, damit der Fehler reproduzierbar ist', 'Maschine sicher abschalten / spannungsfrei machen, gegen Wiedereinschalten sichern (LOTO)', 'Schutzeinrichtungen überbrücken', 'Den Beschäftigten vorher auf den Vorfall ansprechen'],
+    correct: 1,
+    explain: 'LOTO (Lockout-Tagout) bzw. die 5 Sicherheitsregeln aus VDE 0105-100: freischalten, gegen Wiedereinschalten sichern, Spannungsfreiheit feststellen, erden+kurzschließen, benachbarte Teile abdecken. Nie unter Spannung „mal eben" drinhantieren.',
+    source: 'DIN VDE 0105-100 / DGUV V3'
+  },
+  {
+    id: 'as028', path: 'lehrling-vde', category: 'Schleifarbeit',
+    question: 'In welchem Fall darf beim Schleifen auf eine Schutzbrille verzichtet werden?',
+    options: ['Bei kurzen Tätigkeiten unter 2 Minuten', 'Wenn man eine Korrekturbrille trägt', 'Niemals – Schutzbrille (oder Korrektionsschutzbrille) ist beim Schleifen Pflicht', 'Wenn die Schleifscheibe gekapselt ist'],
+    correct: 2,
+    explain: 'Wegfliegende Schleifpartikel verursachen schwere Augenverletzungen. Eine Schutzbrille (oder eine Korrektionsschutzbrille mit ausreichender Filterklasse) ist immer erforderlich.',
+    source: 'DGUV Information 212-686 / TRGS 559'
+  },
+  {
+    id: 'as029', path: 'lehrling-vde', category: 'Sicherheitskennzeichen',
+    question: 'Was bedeutet ein grünes Rechteck mit weißem Symbol nach ASR A1.3?',
+    options: ['Rettungszeichen (Erste Hilfe, Notausgang, Notdusche)', 'Brandschutzzeichen', 'Verbotszeichen', 'Hinweis auf Lebensmittel'],
+    correct: 0,
+    explain: 'Grün = Rettung & Erste Hilfe. Rot rechteckig = Brandschutz (Feuerlöscher, Hydrant). Weiß auf Grün: Notausgang, Erste-Hilfe-Kasten, Notdusche.',
+    source: 'ASR A1.3'
+  },
+  {
+    id: 'as030', path: 'lehrling-vde', category: 'Elektrik-Unfall',
+    question: 'Welche Auswirkungen kann ein Stromunfall auf den Menschen haben?',
+    options: ['Direkte Schädigung von Nerven, Herz und Muskulatur', 'Verbrennungen durch Lichtbogen', 'Sekundärunfälle wie Sturz von der Leiter durch Schreckreaktion', 'Innerer Frieden und Entspannung'],
+    correct: [0, 1, 2],
+    explain: 'DGUV Information 203-001: Direkte Stromwirkung (Herzkammerflimmern!), thermische Wirkung des Lichtbogens und Sekundärunfälle (Absturz, Stoß) sind die drei Haupt-Gefährdungsbereiche.',
+    source: 'DGUV Information 203-001'
+  },
+  {
+    id: 'as031', path: 'lehrling-vde', category: 'Elektrik-Unfall',
+    question: 'Welche drei Faktoren bestimmen die Schwere eines Stromunfalls hauptsächlich?',
+    options: ['Stromstärke', 'Dauer der Durchströmung', 'Stromweg (Eintritts-/Austrittsstelle, ob Herz betroffen)', 'Hautfarbe der Person'],
+    correct: [0, 1, 2],
+    explain: 'DGUV Info 203-001: Stromstärke (durch den Körper), Einwirkungsdauer und Stromweg (insbesondere Hand-Hand oder Hand-Fuß durchs Herz) bestimmen die Schwere.',
+    source: 'DGUV Information 203-001'
+  },
+  {
+    id: 'as032', path: 'lehrling-vde', category: 'Elektrik-Unfall',
+    question: 'Wie groß ist der Strom durch einen Menschen mit 1000 Ω Körperwiderstand bei 230 V Berührungsspannung?',
+    options: ['ca. 0,23 mA', 'ca. 23 mA', 'ca. 230 mA', 'ca. 2,3 A'],
+    correct: 2,
+    explain: 'Ohmsches Gesetz: I = U / R = 230 V / 1000 Ω = 0,23 A = 230 mA. Werte ab ca. 30 mA können bereits zu Herzkammerflimmern führen – daher RCD 30 mA.',
+    source: 'Ohmsches Gesetz / VDE 0100-410'
+  },
+  {
+    id: 'as033', path: 'lehrling-vde', category: 'Elektrik-Unfall',
+    question: 'Ist auch ein Niederspannungslichtbogen (z. B. bei 230 V) gefährlich?',
+    options: ['Ja – er kann schwere Verbrennungen, Augenschäden und Brände verursachen', 'Nein, nur Hochspannungs-Lichtbögen sind gefährlich', 'Nur in feuchten Räumen', 'Nur über 1000 V'],
+    correct: 0,
+    explain: 'Lichtbogentemperaturen können > 4000 °C erreichen, auch bei Niederspannung. UV-/IR-Strahlung verursacht Augenschäden („Verblitzen"), Druckwelle kann Trommelfell schädigen.',
+    source: 'DGUV Information 203-077'
+  },
+  {
+    id: 'as034', path: 'lehrling-vde', category: 'Schutzklasse',
+    question: 'Was bedeutet das Doppelquadrat (▢▢) auf einem elektrischen Handgerät?',
+    options: ['Schutzkleinspannung', 'Schutzklasse I (mit Schutzleiter)', 'Schutzklasse II – schutzisoliert, kein Schutzleiter erforderlich', 'Erhöhter IP-Schutz'],
+    correct: 2,
+    explain: 'Symbol „zwei ineinanderliegende Quadrate" = Schutzklasse II nach DIN EN 61140. Doppelte oder verstärkte Isolierung, daher kein Schutzleiteranschluss nötig.',
+    source: 'DIN EN 61140'
+  },
+  {
+    id: 'as035', path: 'lehrling-vde', category: 'Prüfung',
+    question: 'Müssen ortsfeste elektrische Anlagen regelmäßig geprüft werden?',
+    options: ['Nein, einmalige Abnahme reicht', 'Nur in Industriebauten', 'Ja – nach DGUV V3 in regelmäßigen, durch Gefährdungsbeurteilung festgelegten Intervallen', 'Nur, wenn der Versicherer es verlangt'],
+    correct: 2,
+    explain: 'DGUV V3 § 5: Ortsfeste Anlagen werden wiederkehrend geprüft (Wohngebäude empfohlen 4 Jahre, gewerblich i. d. R. 1–4 Jahre nach Gefährdungsbeurteilung). Prüfung nur durch EFK.',
+    source: 'DGUV V3 § 5 / TRBS 1201'
+  },
+  {
+    id: 'as036', path: 'lehrling-vde', category: 'Prüfung',
+    question: 'Wie häufig werden ortsveränderliche elektrische Betriebsmittel auf Baustellen typischerweise geprüft?',
+    options: ['Einmalig vor Erstbenutzung', 'Alle 5 Jahre', 'Etwa alle 3 Monate (je nach Beanspruchung)', 'Nur bei Verdacht eines Defekts'],
+    correct: 2,
+    explain: 'DGUV V3 § 5 i. V. m. TRBS 1201: Auf Baustellen sind ortsveränderliche Geräte häufig (etwa alle 3 Monate) zu prüfen. Im Bürobereich genügen längere Intervalle (bis 24 Monate).',
+    source: 'DGUV V3 / TRBS 1201'
+  },
+  {
+    id: 'as037', path: 'lehrling-vde', category: 'Brandschutz',
+    question: 'Welche Bedingungen müssen erfüllt sein, damit ein Brand entstehen kann (Branddreieck)?',
+    options: ['Brennbarer Stoff', 'Sauerstoff (oder anderes Oxidationsmittel)', 'Zündenergie (Hitze, Funke, Lichtbogen)', 'Niedriger Luftdruck'],
+    correct: [0, 1, 2],
+    explain: 'Branddreieck = brennbarer Stoff + Sauerstoff + Zündenergie im richtigen Verhältnis. Fehlt eine Komponente, kann kein Feuer entstehen oder es erlischt.',
+    source: 'DGUV Information 205-026'
+  },
+  {
+    id: 'as038', path: 'lehrling-vde', category: 'Brandschutz',
+    question: 'Welche Einrichtung ist zur Bekämpfung von Entstehungsbränden im Betrieb vorzuhalten?',
+    options: ['Sprinkleranlage in jedem Raum', 'Geeignete Anzahl geprüfter Feuerlöscher entsprechend der Brandgefährdung', 'Wasserschlauch reicht in jedem Fall', 'Eimer mit Sand'],
+    correct: 1,
+    explain: 'ArbStättV / ASR A2.2: Geeignete und ausreichende Feuerlöscher (passende Brandklasse, Anzahl nach Grundfläche und Gefährdung). Beschäftigte müssen den Umgang regelmäßig üben.',
+    source: 'ASR A2.2 / DGUV Information 205-023'
+  },
+  {
+    id: 'as039', path: 'lehrling-vde', category: 'Brandschutz',
+    question: 'Wie lange spritzt der Löschstrahl eines voll betätigten 6-kg-Pulverlöschers etwa?',
+    options: ['ca. 9 bis 15 Sekunden', 'ca. 1 Minute', 'ca. 5 Minuten', 'ca. 30 Sekunden'],
+    correct: 0,
+    explain: '6-kg-PG-Pulverlöscher entleert sich bei voll gedrücktem Hebel in nur ca. 9–15 Sekunden. Daher gezielt einsetzen (Brandwurzel, gegen den Wind, in Etappen).',
+    source: 'DGUV Information 205-023 / DIN EN 3'
+  },
+  {
+    id: 'as040', path: 'lehrling-vde', category: 'Erste Hilfe',
+    question: 'Wie verhält sich ein Ersthelfer richtig bei Brandverletzungen?',
+    options: ['Verbrannte Stelle 10–20 min mit handwarmem Wasser kühlen (nicht eiskalt)', 'Brandwunde locker keimfrei abdecken', 'Notruf 112 absetzen', 'Salben und Cremes großzügig auftragen'],
+    correct: [0, 1, 2],
+    explain: 'DGUV 204-022: Kühlen mit lauwarmem Wasser (max. 20 min, kein Eis), keimfreie lockere Abdeckung, Notruf. KEINE Hausmittel/Salben/Mehl auf die Wunde.',
+    source: 'DGUV Information 204-022'
+  },
+  {
+    id: 'as041', path: 'lehrling-vde', category: 'Brandschutz',
+    question: 'Was bezeichnet der Flammpunkt einer brennbaren Flüssigkeit?',
+    options: ['Die Temperatur, bei der sie ohne Zündquelle entzündet', 'Die niedrigste Temperatur, bei der sich oberhalb der Flüssigkeit ein zündfähiges Dampf-Luft-Gemisch bildet', 'Die Temperatur ihrer Maximalverdunstung', 'Die Siedetemperatur'],
+    correct: 1,
+    explain: 'Flammpunkt = niedrigste Temperatur, bei der ein zündfähiges Dampf-Luft-Gemisch über der Flüssigkeit entsteht (Zündung durch Funke). Zündtemperatur dagegen = Selbstentzündung ohne Funke.',
+    source: 'GefStoffV / TRGS 200'
+  },
+  {
+    id: 'as042', path: 'lehrling-vde', category: 'GHS-Kennzeichnung',
+    question: 'Welches GHS-Piktogramm kennzeichnet entzündbare Flüssigkeiten der Kategorie 1 / 2 / 3?',
+    options: ['GHS01 (Bombe)', 'GHS02 (Flamme – orange Raute mit schwarzer Flamme)', 'GHS06 (Totenkopf)', 'GHS09 (Umweltgefahr – Fisch und Baum)'],
+    correct: 1,
+    explain: 'GHS02 „Flamme" kennzeichnet entzündbare Stoffe (Flüssigkeiten, Gase, Aerosole, Feststoffe). Beispiel: Aceton, Benzin, Spiritus.',
+    source: 'CLP-VO (EG) Nr. 1272/2008'
+  },
+  {
+    id: 'as043', path: 'lehrling-vde', category: 'GHS-Kennzeichnung',
+    question: 'Welche Eigenschaft hat eine „leicht entzündbare" Flüssigkeit nach CLP / GefStoffV (Kat. 2)?',
+    options: ['Flammpunkt ≥ 60 °C', 'Flammpunkt < 23 °C und Siedebeginn > 35 °C', 'Flammpunkt zwischen 60 und 100 °C', 'Sie zündet sich auch ohne Sauerstoff'],
+    correct: 1,
+    explain: 'CLP-Kategorie 2 (vormals „leicht entzündbar"): Flammpunkt < 23 °C bei Siedebeginn > 35 °C. Kat. 1 (extrem entzündbar): Flammpunkt < 23 °C und Siedebeginn ≤ 35 °C. Kat. 3 (entzündbar): Flammpunkt 23–60 °C.',
+    source: 'CLP-VO Anhang I'
+  },
+  {
+    id: 'as044', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
+    question: 'Wann besteht bei einer brennbaren Flüssigkeit die größte Brandgefahr?',
+    options: ['Wenn sie kalt gelagert ist', 'Wenn die Temperatur ihren Flammpunkt erreicht oder überschreitet', 'Wenn sie unter Sauerstoffabschluss steht', 'Nur wenn sie verdünnt ist'],
+    correct: 1,
+    explain: 'Sobald die Temperatur den Flammpunkt erreicht, kann sich oberhalb der Flüssigkeit ein zündfähiges Dampf-Luft-Gemisch bilden. Mit Zündquelle = sofortige Entzündung möglich.',
+    source: 'TRGS 800 / GefStoffV'
+  },
+  {
+    id: 'as045', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
+    question: 'Welche Mindestmaßnahmen sind beim Umgang mit brennbaren Flüssigkeiten – auch in kleinen Mengen – zu treffen?',
+    options: ['Geeignete, dicht verschlossene Behälter aus zugelassenem Material', 'Zündquellen fernhalten (Funken, Flammen, heiße Oberflächen)', 'Ausreichende Lüftung am Arbeitsplatz', 'Zigarettenanzünder dürfen verwendet werden'],
+    correct: [0, 1, 2],
+    explain: 'TRGS 510 / TRGS 800: Geeignete Behälter, Zündquellen ausschließen, Lüftung, Mengenbegrenzung am Arbeitsplatz. Rauchen, offenes Feuer und Funken sind verboten.',
+    source: 'TRGS 510 / TRGS 800'
+  },
+  {
+    id: 'as046', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
+    question: 'In welchem Behälter dürfen wenige Liter Aceton transportiert werden?',
+    options: ['Offene Glasflasche', 'Beliebiger Plastiksack', 'Zugelassener UN-geprüfter Sicherheitsbehälter mit dichtem Verschluss', 'Aluminium-Eimer ohne Deckel'],
+    correct: 2,
+    explain: 'ADR / GGVSE: Brennbare Flüssigkeiten in zugelassenen UN-Behältern (BAM-/UN-Prüfzeichen, dichter Verschluss). Bei kleinen Mengen Sicherheits-Kanister mit Flammendurchschlagsicherung.',
+    source: 'ADR / TRGS 510'
+  },
+  {
+    id: 'as047', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
+    question: 'Dürfen brennbare Flüssigkeiten dauerhaft am Arbeitsplatz aufbewahrt werden?',
+    options: ['Ja, in unbegrenzter Menge', 'Ja, in jedem Behälter', 'Nein – nur die für eine Schicht / einen Arbeitsgang erforderliche Menge in geeigneten Behältern', 'Nein, niemals'],
+    correct: 2,
+    explain: 'TRGS 510: Am Arbeitsplatz nur die zur Tagesarbeit nötige Menge in geeigneten Behältern. Größere Mengen im zugelassenen Lager (z. B. Sicherheitsschrank Typ 90).',
+    source: 'TRGS 510'
+  },
+  {
+    id: 'as048', path: 'lehrling-vde', category: 'Explosion',
+    question: 'Was ist eine Explosion im physikalisch-chemischen Sinn?',
+    options: ['Eine sehr schnelle, exotherme Reaktion mit plötzlichem Druckanstieg', 'Eine langsame Verbrennung ohne Energiefreisetzung', 'Nur ein Knall ohne chemische Reaktion', 'Ein Knattern in Metallrohren'],
+    correct: 0,
+    explain: 'Explosion = sehr schnelle Reaktion (Verbrennung) mit plötzlichem Druck-, Wärme- und Lichtanstieg. Detonation: Schallüberschall.',
+    source: 'GefStoffV / TRGS 720'
+  },
+  {
+    id: 'as049', path: 'lehrling-vde', category: 'Explosion',
+    question: 'Welche Maßnahme im Explosionsschutz ist nach STOP/TOP-Prinzip vorrangig?',
+    options: ['Vermeiden bzw. Einschränken explosionsfähiger Atmosphäre (primärer Explosionsschutz)', 'Sofort PSA bereitstellen', 'Auf Aufmerksamkeit der Beschäftigten vertrauen', 'Erst die Zündquellen suchen'],
+    correct: 0,
+    explain: 'Stufen Explosionsschutz: 1. Primär (Atmosphäre vermeiden) → 2. Sekundär (Zündquellen vermeiden) → 3. Tertiär (Auswirkungen begrenzen). Primärer Schutz hat immer Vorrang.',
+    source: 'TRBS 2152 / GefStoffV § 11'
+  },
+  {
+    id: 'as050', path: 'lehrling-vde', category: 'Explosion',
+    question: 'Wann besteht eine konkrete Explosionsgefahr?',
+    options: ['Brennbarer Stoff in Form Staub/Dampf/Gas in zündfähiger Konzentration', 'Sauerstoff (Luft) ist verfügbar', 'Eine wirksame Zündquelle ist vorhanden oder möglich', 'Hohe Luftfeuchtigkeit'],
+    correct: [0, 1, 2],
+    explain: 'Explosionsfähige Atmosphäre + wirksame Zündquelle = Explosion. Alle drei Bedingungen müssen gleichzeitig erfüllt sein.',
+    source: 'TRBS 2152'
+  },
+  {
+    id: 'as051', path: 'lehrling-vde', category: 'Explosion',
+    question: 'Kann man die Konzentration eines explosionsfähigen Gas-Luft-Gemisches am Geruch zuverlässig erkennen?',
+    options: ['Ja, immer', 'Nein – Geruchsschwellen liegen oft weit über oder unter zündfähigen Konzentrationen', 'Nur bei Erdgas', 'Nur bei Stadtgas'],
+    correct: 1,
+    explain: 'Geruchsschwellen sind kein verlässlicher Maßstab. Manche zündfähigen Konzentrationen sind geruchsneutral (z. B. Wasserstoff). Messung mit Gaswarngerät erforderlich.',
+    source: 'TRGS 900 / DGUV Information 213-006'
+  },
+  {
+    id: 'as052', path: 'lehrling-vde', category: 'Explosion',
+    question: 'Was beschreibt die Zündtemperatur eines brennbaren Stoffes?',
+    options: ['Maximale Lagertemperatur', 'Mindestbrennbare Temperatur einer Flüssigkeit', 'Niedrigste Temperatur, bei der sich der Stoff in Luft selbst entzündet (ohne Funke)', 'Erstarrungstemperatur'],
+    correct: 2,
+    explain: 'Zündtemperatur (auch Selbstentzündungstemperatur) = niedrigste Temperatur, bei der ein Stoff sich in Luft ohne externe Zündquelle entzündet. Wichtig für Heißarbeiten und Maschinen.',
+    source: 'DIN EN 14522 / TRGS 720'
+  },
+  {
+    id: 'as053', path: 'lehrling-vde', category: 'Explosion',
+    question: 'Welche Zündquellen können explosionsfähige Atmosphären entzünden?',
+    options: ['Offene Flamme, heiße Oberfläche', 'Mechanische Funken, elektrostatische Entladung', 'Elektrische Lichtbögen, Schaltvorgänge', 'Tageslicht ohne Brennglas'],
+    correct: [0, 1, 2],
+    explain: 'TRBS 2152-3 listet 13 Zündquellenarten: heiße Oberflächen, Flammen, Funken (mech./elektr.), Lichtbögen, Statik, Blitz, HF, ionisierende Strahlung … Tageslicht reicht nicht.',
+    source: 'TRBS 2152-3'
+  },
+  {
+    id: 'as054', path: 'lehrling-vde', category: 'Explosion',
+    question: 'Was sagen untere und obere Explosionsgrenze (UEG/OEG) aus?',
+    options: ['Konzentrationsbereich, in dem ein Gas-Luft-Gemisch zündfähig ist', 'Mindest- und Höchsttemperatur', 'Lagermenge ohne Genehmigung', 'Druckbereich der Maschine'],
+    correct: 0,
+    explain: 'UEG = Mindestkonzentration für eine Explosion, OEG = maximale Konzentration. Innerhalb dieses Bereichs kann das Gemisch durch Zündquelle entzündet werden. Außerhalb: zu „mager" oder zu „fett".',
+    source: 'DIN EN 1839 / TRGS 720'
+  },
+  {
+    id: 'as055', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
+    question: 'Welche Stoffe können bereits bei Raumtemperatur explosionsfähige Dampf-Luft-Gemische bilden?',
+    options: ['Aceton (Flammpunkt -19 °C)', 'Benzin (Flammpunkt < -20 °C)', 'Ethanol (Flammpunkt 12 °C)', 'Wasser'],
+    correct: [0, 1, 2],
+    explain: 'Stoffe mit Flammpunkt unter Raumtemperatur (~20 °C) können bei Normalbedingungen zündfähige Atmosphären bilden – Aceton, Benzin, Spiritus/Ethanol, Methanol. Wasser ist nicht brennbar.',
+    source: 'TRGS 200 / Sicherheitsdatenblätter'
+  },
+  {
+    id: 'as056', path: 'lehrling-vde', category: 'Brennbare Dämpfe',
+    question: 'Sind die Dämpfe der meisten brennbaren Flüssigkeiten leichter oder schwerer als Luft?',
+    options: ['Schwerer als Luft (sammeln sich am Boden)', 'Leichter als Luft (steigen hoch)', 'Genauso schwer wie Luft', 'Hängt nur von der Temperatur ab'],
+    correct: 0,
+    explain: 'Die meisten organischen Lösemitteldämpfe (Benzin, Aceton, Ether) sind schwerer als Luft (rel. Dampfdichte > 1) und sammeln sich am Boden, in Gruben, Kanälen.',
+    source: 'TRGS 720'
+  },
+  {
+    id: 'as057', path: 'lehrling-vde', category: 'Gase',
+    question: 'Welches der folgenden Gase ist schwerer als Luft (Dichte > 1,0)?',
+    options: ['Wasserstoff (H₂)', 'Methan (CH₄, Erdgas)', 'Propan / Butan (Flüssiggas)', 'Helium'],
+    correct: 2,
+    explain: 'Propan (1,55) und Butan (2,1) sind schwerer als Luft → sammeln sich in Gruben/Kellern. Wasserstoff (0,07), Methan (0,55) und Helium (0,14) sind leichter.',
+    source: 'Sicherheitsdatenblätter / DGUV Regel 113-001'
+  },
+  {
+    id: 'as058', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
+    question: 'Wieviel Kraftstoff genügt im 200-Liter-Fass, um eine zündfähige Atmosphäre zu erzeugen?',
+    options: ['Bereits ein Fingerhut bzw. wenige Milliliter', 'Mindestens 5 Liter', 'Mindestens 50 Liter', '0,5 Liter'],
+    correct: 0,
+    explain: 'Schon kleinste Restmengen (wenige ml) verdunsten im Fass und bilden ein zündfähiges Dampf-Luft-Gemisch. Daher dürfen leere Behälter ohne Reinigung nicht „heiß" bearbeitet werden.',
+    source: 'DGUV Information 213-006'
+  },
+  {
+    id: 'as059', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
+    question: 'Warum sollten leere Behälter brennbarer Flüssigkeiten nicht in Arbeitsräumen verbleiben?',
+    options: ['Sie nehmen Platz weg', 'Restdämpfe können sich entzünden oder explodieren – „leer" ist nicht „luftleer"', 'Sie verschlechtern den Geruch', 'Aus optischen Gründen'],
+    correct: 1,
+    explain: 'Leere Behälter enthalten oft noch Dampfreste in zündfähiger Konzentration → erhöhte Brand-/Explosionsgefahr. Entweder dampffrei spülen oder im Freien lagern.',
+    source: 'TRGS 510 / 800'
+  },
+  {
+    id: 'as060', path: 'lehrling-vde', category: 'GHS-Kennzeichnung',
+    question: 'Welche Stoffe werden mit dem GHS01-Symbol „explodierende Bombe" gekennzeichnet?',
+    options: ['Giftige Stoffe', 'Explosive Stoffe / Gemische, organische Peroxide bestimmter Typen', 'Stoffe, die nur Geruch verursachen', 'Aggressive Säuren'],
+    correct: 1,
+    explain: 'GHS01 = Bombe → instabile explosive Stoffe, Gemische, Erzeugnisse mit Explosivstoff, organische Peroxide Typ A/B. Bsp.: TNT, einige Pulver/Treibsätze.',
+    source: 'CLP-VO Anhang V'
+  },
+  {
+    id: 'as061', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'Für wen gilt die Gefahrstoffverordnung (GefStoffV)?',
+    options: ['Nur für Großunternehmen', 'Für jeden Arbeitgeber, in dessen Betrieb Tätigkeiten mit Gefahrstoffen ausgeübt werden', 'Nur für Chemiebetriebe', 'Nur in Apotheken'],
+    correct: 1,
+    explain: 'GefStoffV § 1: Gilt für jeden Arbeitgeber, der Tätigkeiten mit Gefahrstoffen ausübt – auch im Handwerk (Reinigungsmittel, Klebstoffe, Lacke …).',
+    source: 'GefStoffV § 1'
+  },
+  {
+    id: 'as062', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'Welche Aussagen zu GHS-Piktogrammen sind richtig?',
+    options: ['GHS06 (Totenkopf) = akut toxisch (lebensgefährliche Vergiftung)', 'GHS05 (Reagenzgläser) = ätzend (Haut/Augen, Korrosion von Metallen)', 'GHS08 (Gesundheitsgefahr) = krebserzeugend, mutagen, reproduktionstoxisch', 'GHS04 (Gasflasche) = Druckgas (komprimierte / verflüssigte Gase)'],
+    correct: [0, 1, 2, 3],
+    explain: 'GHS-Piktogramme nach CLP: GHS01 Explosiv, 02 Entzündbar, 03 Brandfördernd, 04 Druckgas, 05 Ätzend, 06 Akut toxisch, 07 gesundheitsschädlich, 08 chronisch gefährlich (CMR), 09 Umwelt.',
+    source: 'CLP-VO Anhang V'
+  },
+  {
+    id: 'as063', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'Auf welchen Wegen können Gefahrstoffe in den menschlichen Körper aufgenommen werden?',
+    options: ['Einatmen (inhalativ)', 'Hautkontakt / Resorption', 'Verschlucken (oral)', 'Durch Telepathie'],
+    correct: [0, 1, 2],
+    explain: '3 Aufnahmewege: inhalativ (häufigste!), dermal (Hautresorption, z. B. Lösemittel) und oral (selten am Arbeitsplatz, vor allem Hand-zu-Mund-Kontakt).',
+    source: 'TRGS 401 / 402'
+  },
+  {
+    id: 'as064', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'Was bedeutet der Begriff „Hautresorption"?',
+    options: ['Aufnahme über die Lunge', 'Aufnahme eines Stoffes durch die intakte Haut in den Körper', 'Allergische Hautreaktion', 'Aufnahme über die Mundschleimhaut'],
+    correct: 1,
+    explain: 'Hautresorption = Stoff durchdringt die Haut und gelangt in den Blutkreislauf. Lösemittel wie Toluol, Phenol, manche Pestizide. „H315/H317" Hinweise im SDB beachten.',
+    source: 'TRGS 401'
+  },
+  {
+    id: 'as065', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'In welchen Erscheinungsformen können Gefahrstoffe vorkommen?',
+    options: ['Gasförmig / Dämpfe', 'Flüssig / Aerosole', 'Fest / Stäube', 'Bei Vollmond unsichtbar'],
+    correct: [0, 1, 2],
+    explain: 'Gefahrstoffe können fest (Stäube, Granulate), flüssig (Lösungen, Sprays) oder gasförmig (Gase, Dämpfe) sein. Aerosole sind feste/flüssige Schwebeteilchen in Gasen.',
+    source: 'GefStoffV / TRGS 900'
+  },
+  {
+    id: 'as066', path: 'lehrling-vde', category: 'Sicherheitsdatenblatt',
+    question: 'Welche Angaben enthält ein Sicherheitsdatenblatt nach REACH/CLP?',
+    options: ['Identität des Stoffes / Gemisches und Lieferantendaten', 'Mögliche Gefahren, Erste-Hilfe-, Brandbekämpfungs- und Schutzmaßnahmen', 'Toxikologie, Ökologie, Entsorgung, Transport', 'Werbeanzeigen für Konkurrenzprodukte'],
+    correct: [0, 1, 2],
+    explain: 'SDB hat 16 Pflichtabschnitte (Anhang II REACH-VO). Es ist Pflicht-Information vom Lieferanten und Grundlage für Gefährdungsbeurteilung und Betriebsanweisung.',
+    source: 'REACH-VO Anhang II / TRGS 220'
+  },
+  {
+    id: 'as067', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'Welche Hauptgefahren können beim Umgang mit Gefahrstoffen auftreten?',
+    options: ['Akute oder chronische Vergiftung', 'Brand und Explosion', 'Verätzung, Reizung, Sensibilisierung', 'Glücksspielsucht'],
+    correct: [0, 1, 2],
+    explain: 'Gefahrenarten: gesundheitlich (akut/chronisch toxisch, ätzend, sensibilisierend, CMR), physikalisch (entzündbar, explosiv), umweltgefährlich.',
+    source: 'GefStoffV / CLP-VO'
+  },
+  {
+    id: 'as068', path: 'lehrling-vde', category: 'Arbeitsmedizin',
+    question: 'Wann ist eine arbeitsmedizinische Vorsorge nach ArbMedVV anlassbezogen vorgeschrieben (Pflichtvorsorge)?',
+    options: ['Bei jedem Beschäftigten unabhängig der Tätigkeit', 'Wenn die Tätigkeit in der ArbMedVV-Anlage als Pflichtvorsorge genannt ist (z. B. KMR-Stoffe, Lärm > 85 dB)', 'Erst nach 5 Jahren im Betrieb', 'Nur bei Krankenhauspersonal'],
+    correct: 1,
+    explain: 'ArbMedVV Anlage Teil 1: Pflichtvorsorge bei bestimmten Tätigkeiten (KMR-Stoffe, Asbest, Lärm > 85 dB(A), Vibrationen, Atemschutz schwer …). Ohne Vorsorge keine Beschäftigung erlaubt.',
+    source: 'ArbMedVV Anhang Teil 1'
+  },
+  {
+    id: 'as069', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'Welche Maßnahmen sind VOR Beginn einer Tätigkeit mit Gefahrstoffen zu treffen?',
+    options: ['Gefährdungsbeurteilung erstellen', 'Substitutionsprüfung (gibt es harmlosere Stoffe?)', 'Betriebsanweisung erstellen + Beschäftigte unterweisen', 'Niemand ist zu informieren'],
+    correct: [0, 1, 2],
+    explain: 'GefStoffV § 6 + § 14: Gefährdungsbeurteilung, Substitutionsprüfung, Betriebsanweisung in verständlicher Sprache, mündliche Unterweisung mind. jährlich.',
+    source: 'GefStoffV §§ 6, 14'
+  },
+  {
+    id: 'as070', path: 'lehrling-vde', category: 'Gefahrstoffe',
+    question: 'Welche Schutzmaßnahme bei Tätigkeiten mit Gefahrstoffen hat nach dem STOP-Prinzip Vorrang?',
+    options: ['Persönliche Schutzausrüstung', 'Substitution durch ungefährlichere Stoffe (S)', 'Hinweisschilder', 'Verkürzte Arbeitszeiten'],
+    correct: 1,
+    explain: 'STOP-Prinzip: 1. Substitution → 2. Technische Maßnahmen (z. B. Absaugung) → 3. Organisatorische Maßnahmen → 4. PSA (immer letzte Wahl).',
+    source: 'GefStoffV § 7 / TRGS 600'
+  },
+  {
+    id: 'as071', path: 'lehrling-vde', category: 'Erste Hilfe',
+    question: 'Kann Milchtrinken bei einer Vergiftung als „Gegengift" dienen?',
+    options: ['Ja, wirkt immer als Antidot', 'Nein – Milch kann die Aufnahme einiger Stoffe sogar beschleunigen. Nichts geben, sofort 112!', 'Nur bei Säurevergiftung', 'Nur bei Alkohol'],
+    correct: 1,
+    explain: 'Veraltete Annahme. Bei vielen Gefahrstoffen kann Milch die Resorption fettlöslicher Toxine beschleunigen. Richtig: nichts zu trinken geben (außer Wasser bei klarem ärztlichem Rat), Notruf 112, Giftnotruf.',
+    source: 'DGUV Information 204-022 / Giftnotruf'
+  },
+  {
+    id: 'as072', path: 'lehrling-vde', category: 'Gefahrstoffe-Kennzeichnung',
+    question: 'Wie müssen Gefahrstoff-Behälter im Betrieb gekennzeichnet sein?',
+    options: ['Nur mit dem Markennamen', 'Mit Produktidentifikator, GHS-Piktogrammen, Signalwort, H- und P-Sätzen', 'Mit einem roten Punkt', 'Eine Bedienungsanleitung daneben reicht'],
+    correct: 1,
+    explain: 'CLP-VO: Etikett enthält Identifikator, Mengenangabe, GHS-Pikto(s), Signalwort (Gefahr/Achtung), H-/P-Sätze, Lieferantendaten. Auch beim Umfüllen Pflicht.',
+    source: 'CLP-VO Art. 17'
+  },
+  {
+    id: 'as073', path: 'lehrling-vde', category: 'Gefahrstoffe-Behälter',
+    question: 'Welche Anforderungen müssen Behälter für Gefahrstoffe erfüllen?',
+    options: ['Gegenüber dem Inhalt beständig (Material/Verschluss)', 'Sicher verschließbar, dicht gegen Auslaufen und Dampfdurchtritt', 'Eindeutig gekennzeichnet (siehe Frage zuvor)', 'Keine besonderen Anforderungen'],
+    correct: [0, 1, 2],
+    explain: 'TRGS 510: Behälter müssen materialbeständig, dicht, sicher verschließbar, beschriftet und für Lager/Transport zugelassen sein. Lebensmittelbehälter sind verboten!',
+    source: 'TRGS 510'
+  },
+  {
+    id: 'as074', path: 'lehrling-vde', category: 'Lüftung',
+    question: 'Wie sollen Dämpfe abgeführt werden, die schwerer sind als Luft?',
+    options: ['Über Deckenabsaugung am höchsten Punkt', 'Bodennahe Absaugung am Entstehungsort', 'Durch geöffnete Fenster reicht', 'Mit dem Föhn nach oben'],
+    correct: 1,
+    explain: 'Schwere Dämpfe sammeln sich am Boden → Absaugung muss bodennah erfolgen, möglichst direkt an der Entstehungsstelle (Quellabsaugung).',
+    source: 'ASR A3.6 / TRGS 500'
+  },
+  {
+    id: 'as075', path: 'lehrling-vde', category: 'Atemschutz',
+    question: 'Welche PSA schützt zuverlässig vor dem Einatmen gesundheitsschädlicher Gase und Dämpfe?',
+    options: ['FFP3-Feinstaubmaske', 'Geeigneter Atemschutz mit Gasfilter passender Klasse (z. B. A2B2E2K2-P3)', 'Operationsmaske aus Stoff', 'Schutzbrille'],
+    correct: 1,
+    explain: 'Partikelmasken (FFP) wirken nicht gegen Gase/Dämpfe! Erforderlich: Gasfilter mit dem passenden Schutztyp (A für organisch, B für anorganisch, E für Säuren, K für Ammoniak) und Schutzklasse.',
+    source: 'DIN EN 14387 / DGUV Regel 112-190'
+  },
+  {
+    id: 'as076', path: 'lehrling-vde', category: 'Hautschutz',
+    question: 'Welche Maßnahmen schützen die Haut vor Schädigung durch Gefahrstoffe?',
+    options: ['Geeignete Schutzhandschuhe (Material zum Stoff passend, Durchbruchszeit beachten)', 'Hautschutzplan: Schutz vor – Reinigung während – Pflege nach der Arbeit', 'Vermeidung direkten Kontakts (Spritzschutz, Werkzeuge)', 'Hände vor Arbeitsbeginn sauber lecken'],
+    correct: [0, 1, 2],
+    explain: '3-Stufen-Hautschutzplan: Schutz (Creme, Handschuhe), Reinigung (mild!), Pflege (rückfettend). Handschuhmaterial nach Permeations-Tabelle wählen.',
+    source: 'TRGS 401 / DGUV Regel 112-195'
+  },
+  {
+    id: 'as077', path: 'lehrling-vde', category: 'Chemie-Praxis',
+    question: 'Wie wird konzentrierte Säure verdünnt?',
+    options: ['Wasser zur Säure', 'Säure langsam zum Wasser', 'Beides gleichzeitig in dritten Behälter', 'Temperatur ist egal'],
+    correct: 1,
+    explain: 'Merksatz „Erst das Wasser, dann die Säure, sonst geschieht das Ungeheure". Säure zu Wasser geben, sonst spritzt es heftig (Wärmeentwicklung, Siedeverzug).',
+    source: 'Chemie-Lehrbuch / TRGS 555'
+  },
+  {
+    id: 'as078', path: 'lehrling-vde', category: 'Hautschutz',
+    question: 'Welche Aussage zum Hautschutz ist richtig?',
+    options: ['Hautschutzcreme ersetzt Handschuhe vollständig', 'Hautschutz wirkt nur wenn vor jeder Tätigkeit aufgetragen und Handschuhe trotzdem getragen werden', 'Lederhandschuhe schützen immer gegen Lösemittel', 'Nach 3 Tagen Eingewöhnung braucht man keinen Hautschutz'],
+    correct: 1,
+    explain: 'Hautschutzcreme ist ergänzend zu Handschuhen, nicht statt! Schützt gegen Wasser, milde Reizstoffe, UV. Lösemittel-Handschuhe nur Nitril/Butyl mit ausreichender Permeationszeit.',
+    source: 'TRGS 401 / DGUV Regel 112-195'
+  },
+  {
+    id: 'as079', path: 'lehrling-vde', category: 'Arbeitsmedizin',
+    question: 'Wann muss der Arbeitgeber arbeitsmedizinische Angebotsvorsorge anbieten?',
+    options: ['Bei Tätigkeiten mit Gefahrstoffen unterhalb der Pflichtgrenzen, wenn Gesundheitsbeeinträchtigung möglich', 'Bildschirmarbeit (Untersuchung der Augen)', 'Tätigkeiten an feuchten Händen länger als 2 h/Tag', 'Niemals'],
+    correct: [0, 1, 2],
+    explain: 'ArbMedVV Anlage Teil 2: Angebotsvorsorge bei diversen Tätigkeiten – Beschäftigte können freiwillig annehmen. Pflichtvorsorge ist Voraussetzung der Tätigkeit, Angebotsvorsorge nicht.',
+    source: 'ArbMedVV Anlage Teil 2'
+  },
+  {
+    id: 'as080', path: 'lehrling-vde', category: 'Erste Hilfe',
+    question: 'Welche Erst-Hilfe-Maßnahme ist bei Verätzungen am Auge durch Säure korrekt?',
+    options: ['Mit dem Finger reiben', 'Mit reichlich Wasser sofort und mind. 15 min spülen, von innen nach außen, danach Augenarzt', 'Mit Lösemittel neutralisieren', 'Verbinden und nichts tun'],
+    correct: 1,
+    explain: 'DGUV 204-022: Sofort 15+ Minuten mit Wasser spülen, gesundes Auge nicht kontaminieren (von innen nach außen), parallel Notruf / Augenarzt. Nicht reiben, nicht neutralisieren.',
+    source: 'DGUV Information 204-022'
+  },
+  {
+    id: 'as081', path: 'lehrling-vde', category: 'Reinigungsmittel',
+    question: 'Welche Gefahren bestehen bei Tätigkeiten mit Kaltreinigern auf Lösemittelbasis?',
+    options: ['Brand- und ggf. Explosionsgefahr (entzündbare Lösemittel)', 'Hautreizung und Hautresorption von Lösemitteln', 'Atemwegsbelastung, ggf. ZNS-Effekte (Schwindel, Übelkeit)', 'Erhöhte Konzentrationsfähigkeit'],
+    correct: [0, 1, 2],
+    explain: 'Kaltreiniger enthalten oft Kohlenwasserstoff- oder Esterlösungsmittel: brennbar, hautresorptiv, atemwegsreizend. Substitution durch wasserbasierte Reiniger prüfen!',
+    source: 'TRGS 612 / Sicherheitsdatenblatt'
+  },
+  {
+    id: 'as082', path: 'lehrling-vde', category: 'Reinigungsmittel',
+    question: 'Welche Schutzmaßnahmen sind bei Verwendung von lösemittelhaltigen Kaltreinigern erforderlich?',
+    options: ['Substitution prüfen (wasserbasiert?)', 'Geeignete Lüftung / Absaugung am Arbeitsplatz', 'Lösemittelbeständige Handschuhe (Nitril/Butyl, Permeation prüfen)', 'Mit offenen Flammen in der Nähe arbeiten'],
+    correct: [0, 1, 2],
+    explain: 'STOP-Prinzip: Erst Substitution, dann technische Lösungen (Absaugung, Kapselung), dann organisatorisch, zuletzt PSA. Niemals Zündquellen in der Nähe.',
+    source: 'GefStoffV § 7 / TRGS 612'
+  },
+  {
+    id: 'as083', path: 'lehrling-vde', category: 'Klebstoffe',
+    question: 'Was ist beim Umgang mit reaktiven 2-Komponenten-Klebstoffen / Methacrylaten zu beachten?',
+    options: ['Sensibilisierungsgefahr – Hautkontakt strikt vermeiden', 'Geruchsstark, daher gute Lüftung erforderlich', 'Ausgehärtete Reste sind i. d. R. unbedenklich, Bearbeitung von Stäuben aber Atemschutz', 'Nur bei Sonnenschein verwenden'],
+    correct: [0, 1, 2],
+    explain: 'Methacrylate (Acryl, Cyanacrylat) sind sensibilisierend (H317), reizen Atemwege. Schutzhandschuhe (Nitril, kein Latex), Lüftung, Augenschutz. Ausgehärtetes Material ist meist inert.',
+    source: 'TRGS 401 / Sicherheitsdatenblatt'
+  },
+  {
+    id: 'as084', path: 'lehrling-vde', category: 'Sicherheitskennzeichen',
+    question: 'Ein Schild mit gelbem Dreieck und Gabelstapler-Symbol bedeutet …',
+    options: ['Hinweis auf Lieferzone', 'Warnung vor Flurförderzeugen / Staplerverkehr', 'Verbot für Gabelstapler', 'Werbeschild'],
+    correct: 1,
+    explain: 'Gelbes Warndreieck = „Warnung vor …". Symbol Stapler = Warnung vor Flurförderzeugen. Beschäftigte müssen besonders auf den Stapler-Verkehr achten.',
+    source: 'ASR A1.3'
+  },
+  {
+    id: 'as085', path: 'lehrling-vde', category: 'Sicherheitskennzeichen',
+    question: 'Mit welchen Symbolen wird ein Arbeitsplatz mit ätzenden Gefahrstoffen typischerweise gekennzeichnet?',
+    options: ['GHS05 (Reagenzgläser auf Hand und Metall)', 'Warnzeichen W023 „Warnung vor ätzenden Stoffen"', 'Gebotszeichen für Schutzhandschuhe und Augenschutz', 'Grüner Pfeil zur Notdusche / Augendusche'],
+    correct: [0, 1, 2, 3],
+    explain: 'Kombinierte Kennzeichnung am Arbeitsplatz: GHS-Piktogramm an Behältern, ASR-Warn- und -Gebotszeichen am Arbeitsbereich, Rettungszeichen für Augendusche/Notdusche.',
+    source: 'ASR A1.3 / CLP-VO'
+  },
+  {
+    id: 'as086', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Sie sind in geselliger Runde und müssen mit dem Auto nach Hause. Wie verhalten Sie sich richtig?',
+    options: ['Kein Alkohol, wenn Sie noch fahren wollen', 'Alternativen wählen (Taxi, ÖPNV, abholen lassen, Übernachtung)', 'Schon beim ersten Glas das Fahrzeug stehen lassen', 'Promillegrenze bis zur Hausschwelle ausreizen'],
+    correct: [0, 1, 2],
+    explain: 'StVG / StGB: 0,5 ‰ ist Ordnungswidrigkeitsgrenze, ab 1,1 ‰ absolute Fahruntüchtigkeit (Straftat). Wegeunfälle sind versichert – nicht jedoch unter Alkoholeinfluss „aus eigener Schuld".',
+    source: '§ 24a StVG / § 316 StGB'
+  },
+  {
+    id: 'as087', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Was ist nötig, damit man beim Autofahren stets gute Sicht hat?',
+    options: ['Saubere Scheiben innen und außen, intakte Wischer', 'Funktionierende Beleuchtung und Spiegelreinigung', 'Sichtfeld nicht durch Anbauten, Air-Fresheners o. ä. einschränken', 'Frontscheibe mit Sticker dekorieren'],
+    correct: [0, 1, 2],
+    explain: 'StVZO § 23 + § 41: Sicht muss vollständig erhalten sein. Verschmutzte/beschlagene Scheiben, defekte Wischer oder verdeckte Spiegel sind verboten.',
+    source: 'StVZO § 23'
+  },
+  {
+    id: 'as088', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Was ist bei Fahrten im Regen besonders zu beachten?',
+    options: ['Geschwindigkeit reduzieren, Bremsweg verlängert sich deutlich', 'Größeren Sicherheitsabstand einhalten (mind. doppelt)', 'Aquaplaning-Gefahr bei stehendem Wasser – sanft lenken/bremsen', 'Sonnenbrille hilft gegen Aquaplaning'],
+    correct: [0, 1, 2],
+    explain: 'StVO § 3 Abs. 1: Geschwindigkeit den Verhältnissen anpassen. Auf nasser Fahrbahn verdoppeln sich Bremswege, Aquaplaning ab 6–8 mm Wasserhöhe + zu hoher Geschwindigkeit.',
+    source: 'StVO § 3 / § 4'
+  },
+  {
+    id: 'as089', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Welche Pflichten bestehen nach einem Verkehrsunfall mit Personenschaden?',
+    options: ['Unfallstelle absichern (Warnblinker, Warndreieck, Warnweste)', 'Erste Hilfe leisten und Notruf 112', 'An der Unfallstelle bleiben bis Polizei eintrifft (§ 142 StGB)', 'Sofort weiterfahren, sonst kommt man zu spät zur Arbeit'],
+    correct: [0, 1, 2],
+    explain: 'Pflichten: Absichern, Hilfe leisten, melden, an Unfallstelle warten. Unerlaubtes Entfernen ist Straftat (§ 142 StGB), erst recht bei Personenschaden.',
+    source: 'StVO § 34 / § 142 StGB'
+  },
+  {
+    id: 'as090', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Was ist bei abgefahrenen Winterreifen (Profiltiefe < 4 mm) zu tun?',
+    options: ['Weiterfahren, gesetzlich erlaubt sind 1,6 mm', 'Reifen erneuern – Winterreifen verlieren ihre Funktion deutlich unter 4 mm', 'Reifen aufpumpen reicht', 'Frühlingsreifen aufziehen'],
+    correct: 1,
+    explain: 'Gesetzlich Mindesttiefe 1,6 mm, ADAC empfiehlt für Winterreifen ≥ 4 mm. Darunter Wintereigenschaften (Schnee, Matsch) stark eingeschränkt.',
+    source: 'StVZO § 36 / ADAC-Empfehlung'
+  },
+  {
+    id: 'as091', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Was sollte beim Reifenluftdruck regelmäßig kontrolliert werden?',
+    options: ['Mindestens monatlich + vor langen Fahrten', 'Bei kalten Reifen messen', 'Herstellerempfehlung im Tankdeckel/Türholm beachten', 'Niemals selbst kontrollieren – nur beim TÜV'],
+    correct: [0, 1, 2],
+    explain: 'Falscher Luftdruck verschlechtert Fahrverhalten, Bremsweg, Verbrauch und Reifenlebensdauer. Sollwert vom Hersteller, kalt messen, monatlich prüfen.',
+    source: 'StVZO § 36 / Herstellervorgaben'
+  },
+  {
+    id: 'as092', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Welche Geschwindigkeit ist mit einem Mofa zulässig?',
+    options: ['25 km/h (bauartbedingt) auf der Straße / Radwegen außer Ortschaften erlaubt', '45 km/h', '60 km/h', 'Beliebig'],
+    correct: 0,
+    explain: 'Mofa = max. 25 km/h bauartbedingt, Versicherungskennzeichen Pflicht, Mofa-Prüfbescheinigung ab 15 Jahren. Schnellere Krafträder = Roller / Motorrad.',
+    source: 'FeV / StVZO'
+  },
+  {
+    id: 'as093', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Wie groß sollte der Sicherheitsabstand zum vorausfahrenden Fahrzeug innerorts mindestens sein?',
+    options: ['Mindestens halber Tachowert in Metern (klassische Faustregel)', 'Mindestens 100 m', 'Bumper-an-Bumper reicht', 'Eine Fahrzeuglänge'],
+    correct: 0,
+    explain: 'Faustregel innerorts: ½-Tacho in Metern (z. B. 50 km/h → 25 m). StVO § 4 Abs. 1: Abstand muss so groß sein, dass auch bei plötzlicher Bremsung noch hinter dem Vorausfahrenden gehalten werden kann.',
+    source: 'StVO § 4'
+  },
+  {
+    id: 'as094', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Wie verhält man sich bei Stau auf der Autobahn?',
+    options: ['Sofort Warnblinker einschalten', 'Rettungsgasse zwischen linker und mittlerer/rechter Spur bilden (StVO § 11 Abs. 2)', 'Nicht aussteigen außer bei Gefahr', 'Auf Standspur wechseln und überholen'],
+    correct: [0, 1, 2],
+    explain: 'StVO § 11: Bei Stau Warnblinker, Rettungsgasse zwischen linkem und nächstem Streifen rechts (auf BAB mit ≥ 2 Spuren je Richtung). Standstreifen ist NICHT zur Weiterfahrt da.',
+    source: 'StVO § 11'
+  },
+  {
+    id: 'as095', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Wie lang ist der Anhalteweg eines PKW bei 50 km/h auf trockener Straße ungefähr?',
+    options: ['ca. 14 m', 'ca. 28 m', 'ca. 50 m', 'ca. 80 m'],
+    correct: 1,
+    explain: 'Faustformel: Reaktionsweg = (km/h ÷ 10) · 3 = 15 m, Bremsweg ≈ (km/h ÷ 10)² = 25 m. Anhalteweg ≈ 28 m. Bei nasser Straße deutlich mehr (Bremsweg verdoppelt).',
+    source: 'Fahrschul-Standardformel'
+  },
+  {
+    id: 'as096', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Wie verbessern Motorradfahrer ihre Sichtbarkeit?',
+    options: ['Helle, kontrastreiche Schutzkleidung (Warnweste optional)', 'Tagfahrlicht / Abblendlicht ständig eingeschaltet', 'Reflektierende Streifen an Helm/Anzug', 'Schwarze Komplettkleidung'],
+    correct: [0, 1, 2],
+    explain: 'Motorradfahrer werden statistisch besonders oft übersehen. Helle Kleidung, Reflektoren, Licht an, in der Spur eher mittig fahren – alles verbessert die Erkennbarkeit.',
+    source: 'Verkehrserziehung / DGUV Information 214-046'
+  },
+  {
+    id: 'as097', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Wie vermeidet man Türöffner-Unfälle mit vorbeifahrenden Radfahrern (sog. „Dooring")?',
+    options: ['Vor dem Öffnen Schulterblick und Rückspiegel', 'Mit der gegenüberliegenden Hand öffnen („Dutch reach")', 'Tür nur kurz und nur soweit nötig öffnen', 'Tür mit Schwung gegen die Fahrbahn aufstoßen'],
+    correct: [0, 1, 2],
+    explain: 'Dutch Reach: Mit der weiter entfernten Hand greifen → Körper dreht automatisch mit, Schulterblick fast unausweichlich. Hat in NL die Dooring-Unfälle deutlich gesenkt.',
+    source: 'DGUV Information 214-046 / Verkehrserziehung'
+  },
+  {
+    id: 'as098', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Welche Beleuchtung ist bei „erheblicher Sichtbehinderung durch Niederschlag" einzuschalten?',
+    options: ['Nur Standlicht', 'Abblendlicht', 'Fernlicht (immer)', 'Innenraumbeleuchtung'],
+    correct: 1,
+    explain: 'StVO § 17 Abs. 1: Tagfahrlicht reicht NICHT. Bei erheblicher Sichtbehinderung Abblendlicht, ggf. Nebelschlussleuchte, wenn Sicht < 50 m – Höchstgeschwindigkeit dann 50 km/h.',
+    source: 'StVO § 17'
+  },
+  {
+    id: 'as099', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Wie verhalten sich Fußgänger bei Schnee und Eis am sichersten?',
+    options: ['Festes Schuhwerk mit guter Profilsohle tragen', 'Helle / reflektierende Kleidung in der Dunkelheit', 'Geräumte Wege benutzen, nicht ablenken (kein Smartphone in der Hand)', 'Mit Rollkoffer Slalom auf Glatteis üben'],
+    correct: [0, 1, 2],
+    explain: 'Wegeunfälle in der dunklen Jahreszeit sind häufig (Glätte!). Festes Schuhwerk, Reflektoren / Stirnlampe, Wege wählen statt abkürzen, beide Hände frei.',
+    source: 'DGUV Information 208-006'
+  },
+  {
+    id: 'as100', path: 'lehrling-vde', category: 'Wegesicherheit',
+    question: 'Was ist beim Fahren in der Dämmerung und bei Dunkelheit zu beachten?',
+    options: ['Geschwindigkeit der Sichtweite anpassen, „auf Sicht" fahren', 'Saubere Scheinwerfer und Heckleuchten, Höhe richtig eingestellt', 'Wildwechsel-Schilder ernst nehmen, Abblendlicht bei Gegenverkehr', 'Innenraum hell beleuchten, damit man drinnen besser sieht'],
+    correct: [0, 1, 2],
+    explain: 'Bei Dunkelheit: auf Sicht fahren (Anhalteweg < Reichweite Abblendlicht!), saubere Beleuchtung, Wildwechselgefahr v. a. in Dämmerung. Innenlicht stört nur die eigene Sicht.',
+    source: 'StVO § 3 / § 17'
   }
 ];
