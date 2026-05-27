@@ -7,7 +7,8 @@ desktop.ini
 node_modules/
 
 # Edit-Tool / IDE Backup-Sicherungen vom Filesystem-Hook
-*_bak_edit_*.*
+*_bak_*.*
 *.bak
 *.orig
+*~
 
