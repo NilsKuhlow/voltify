@@ -41,11 +41,25 @@
     };
   }
 
+  // 30-Tage-Heatmap mit realistisch verteilten Sessions
+  const sessionDays = {};
+  for (let i = 0; i < 30; i++) {
+    const d = new Date(Date.now() - i * DAY);
+    const key = d.toISOString().slice(0, 10);
+    // Häufiger an Werktagen (~70% Wahrscheinlichkeit), seltener Wochenende (~25%)
+    const isWeekend = d.getDay() === 0 || d.getDay() === 6;
+    const p = isWeekend ? 0.25 : 0.7;
+    if (Math.random() < p) {
+      sessionDays[key] = 1 + Math.floor(Math.random() * 3);
+    }
+  }
+
   const state = {
     schemaVersion: 1,
     cards,
     streak: 12,
     lastSession: Date.now() - DAY,
+    sessionDays,
     profile: { gradeYear: 3, examDate: new Date(Date.now() + 28 * DAY).toISOString().slice(0, 10) },
     settings: { batch: 15, theme: 'dark', shuffle: true }
   };

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Feature-Graphic für Google Play: 1024×500. Im Browser öffnen und
+     via scripts/icon-export.html (oder DevTools "Capture screenshot")
+     in 1024×500 PNG exportieren. Voltify-Markenidentität bewusst dunkel. -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 500" width="1024" height="500">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%"   stop-color="#0a0e27"/>
+      <stop offset="60%"  stop-color="#141a3a"/>
+      <stop offset="100%" stop-color="#1a2150"/>
+    </linearGradient>
+    <linearGradient id="bolt" x1="0.1" y1="0" x2="0.9" y2="1">
+      <stop offset="0%"   stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <linearGradient id="brand" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%"   stop-color="#00d4ff"/>
+      <stop offset="100%" stop-color="#facc15"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="10" result="b"/>
+      <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <radialGradient id="spot" cx="0.18" cy="0.5" r="0.5">
+      <stop offset="0%"   stop-color="rgba(0,212,255,0.35)"/>
+      <stop offset="100%" stop-color="rgba(0,212,255,0)"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Hintergrund -->
+  <rect width="1024" height="500" fill="url(#bg)"/>
+  <rect width="1024" height="500" fill="url(#spot)"/>
+
+  <!-- Blitz-Symbol links -->
+  <g transform="translate(120 250)" filter="url(#glow)">
+    <path d="M30 -180 L-80 50 L-10 50 L-50 180 L100 -20 L20 -20 L60 -180 Z"
+          fill="url(#bolt)"/>
+  </g>
+
+  <!-- Wortmarke + Tagline -->
+  <text x="320" y="220" font-family="-apple-system, Segoe UI, system-ui, sans-serif"
+        font-size="120" font-weight="800" fill="url(#brand)"
+        letter-spacing="-3">Voltify</text>
+  <text x="320" y="280" font-family="-apple-system, Segoe UI, system-ui, sans-serif"
+        font-size="32" font-weight="500" fill="#a8b3d4" letter-spacing="0.5">
+    Spaced Repetition für Elektriker
+  </text>
+
+  <!-- Pfad-Chips unter dem Titel -->
+  <g transform="translate(320 320)" font-family="-apple-system, Segoe UI, system-ui, sans-serif"
+     font-size="20" font-weight="600" fill="#f0f4ff">
+    <g>
+      <rect x="0" y="0" width="180" height="44" rx="22"
+            fill="rgba(0,212,255,0.18)" stroke="rgba(0,212,255,0.5)" stroke-width="1"/>
+      <text x="90" y="29" text-anchor="middle">⚡ Grundlagen</text>
+    </g>
+    <g transform="translate(200 0)">
+      <rect x="0" y="0" width="240" height="44" rx="22"
+            fill="rgba(250,204,21,0.18)" stroke="rgba(250,204,21,0.5)" stroke-width="1"/>
+      <text x="120" y="29" text-anchor="middle">🛡 VDE &amp; Sicherheit</text>
+    </g>
+    <g transform="translate(460 0)">
+      <rect x="0" y="0" width="160" height="44" rx="22"
+            fill="rgba(168,85,247,0.22)" stroke="rgba(168,85,247,0.55)" stroke-width="1"/>
+      <text x="80" y="29" text-anchor="middle">🎓 Meister</text>
+    </g>
+  </g>
+
+  <!-- Footer-Hinweise -->
+  <text x="320" y="430" font-family="-apple-system, Segoe UI, system-ui, sans-serif"
+        font-size="22" font-weight="500" fill="#a8b3d4">
+    278 Fragen · Prüfungssimulator · offline · ohne Werbung
+  </text>
+
+  <!-- Dezente Linie -->
+  <rect x="0" y="498" width="1024" height="2" fill="url(#brand)" opacity="0.6"/>
+</svg>

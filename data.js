@@ -33,63 +33,72 @@ window.QUESTIONS = [
     question: 'Was besagt das Ohmsche Gesetz?',
     options: ['U = R · I', 'U = R + I', 'U = R / I', 'U = I / R'],
     correct: 0,
-    explain: 'Spannung (U) = Widerstand (R) · Stromstärke (I). Gilt für ohmsche Widerstände bei konstanter Temperatur.'
+    explain: 'Spannung (U) = Widerstand (R) · Stromstärke (I). Gilt für ohmsche Widerstände bei konstanter Temperatur.',
+    source: 'Ohmsches Gesetz / DIN 1304'
   },
   {
     id: 'lg02', path: 'lehrling-grund', category: 'Grundgesetze',
     question: 'Wie berechnet man die elektrische Leistung im Gleichstromkreis?',
     options: ['P = U · I', 'P = U + I', 'P = U / I', 'P = U² · I'],
     correct: 0,
-    explain: 'P = U · I (Leistung = Spannung · Strom). In Watt (W).'
+    explain: 'P = U · I (Leistung = Spannung · Strom). In Watt (W).',
+    source: 'Leistungsformel P = U · I'
   },
   {
     id: 'lg03', path: 'lehrling-grund', category: 'Einheiten',
     question: 'Welche Einheit hat der elektrische Widerstand?',
     options: ['Volt (V)', 'Ampere (A)', 'Ohm (Ω)', 'Watt (W)'],
     correct: 2,
-    explain: 'Der elektrische Widerstand wird in Ohm (Ω) gemessen.'
+    explain: 'Der elektrische Widerstand wird in Ohm (Ω) gemessen.',
+    source: 'SI-Basiseinheiten'
   },
   {
     id: 'lg04', path: 'lehrling-grund', category: 'Einheiten',
     question: 'Welche Einheit hat die elektrische Leistung?',
     options: ['Joule (J)', 'Watt (W)', 'Volt (V)', 'Var (var)'],
     correct: 1,
-    explain: 'Leistung wird in Watt (W) gemessen. 1 W = 1 V · 1 A.'
+    explain: 'Leistung wird in Watt (W) gemessen. 1 W = 1 V · 1 A.',
+    source: 'SI-Basiseinheiten'
   },
   {
     id: 'lg05', path: 'lehrling-grund', category: 'Einheiten',
     question: 'Welche Einheit hat die elektrische Arbeit (Energie)?',
     options: ['Watt (W)', 'Wattstunde (Wh) bzw. Joule (J)', 'Ampere (A)', 'Coulomb (C)'],
     correct: 1,
-    explain: 'Energie = Leistung · Zeit. Einheit: Wattsekunde = Joule, in der Praxis Wattstunde (Wh) oder Kilowattstunde (kWh).'
+    explain: 'Energie = Leistung · Zeit. Einheit: Wattsekunde = Joule, in der Praxis Wattstunde (Wh) oder Kilowattstunde (kWh).',
+    source: 'SI-Einheiten / DIN 1301'
   },
   {
     id: 'lg06', path: 'lehrling-grund', category: 'Netz',
     question: 'Welche Frequenz hat das öffentliche Stromnetz in Deutschland?',
     options: ['16,7 Hz', '50 Hz', '60 Hz', '400 Hz'],
     correct: 1,
-    explain: '50 Hz – das ist die Netzfrequenz in Europa. 60 Hz gilt z. B. in den USA.'
+    explain: '50 Hz – das ist die Netzfrequenz in Europa. 60 Hz gilt z. B. in den USA.',
+    source: 'DIN VDE 0100-100 / EN 50160'
   },
   {
     id: 'lg07', path: 'lehrling-grund', category: 'Netz',
     question: 'Welche Spannungen liegen im deutschen Niederspannungsnetz an?',
     options: ['110 V / 230 V', '230 V / 400 V', '400 V / 690 V', '230 V / 690 V'],
     correct: 1,
-    explain: '230 V zwischen Außen- und Neutralleiter (L–N), 400 V zwischen zwei Außenleitern (L–L).'
+    explain: '230 V zwischen Außen- und Neutralleiter (L–N), 400 V zwischen zwei Außenleitern (L–L).',
+    source: 'DIN VDE 0100-100 / EN 50160'
   },
   {
     id: 'lg08', path: 'lehrling-grund', category: 'Schaltungen',
     question: 'Wie verhalten sich Widerstände in Reihenschaltung?',
     options: ['Sie addieren sich: R = R1 + R2 + …', 'Kehrwerte addieren sich', 'Größter Widerstand zählt', 'Kleinster Widerstand zählt'],
     correct: 0,
-    explain: 'Reihenschaltung: Gesamtwiderstand = Summe der Einzelwiderstände. Strom überall gleich.'
+    explain: 'Reihenschaltung: Gesamtwiderstand = Summe der Einzelwiderstände. Strom überall gleich.',
+    source: 'Kirchhoffsche Gesetze'
   },
   {
     id: 'lg09', path: 'lehrling-grund', category: 'Schaltungen',
     question: 'Wie berechnet man den Gesamtwiderstand bei zwei parallel geschalteten Widerständen?',
     options: ['R = R1 + R2', 'R = R1 · R2', 'R = (R1 · R2) / (R1 + R2)', 'R = R1 / R2'],
     correct: 2,
-    explain: 'Bei zwei parallelen Widerständen gilt R = (R1 · R2) / (R1 + R2). Allgemein: 1/R = 1/R1 + 1/R2 + …'
+    explain: 'Bei zwei parallelen Widerständen gilt R = (R1 · R2) / (R1 + R2). Allgemein: 1/R = 1/R1 + 1/R2 + …',
+    source: 'Kirchhoffsche Gesetze'
   },
   {
     id: 'lg10', path: 'lehrling-grund', category: 'Strom',
@@ -99,35 +108,40 @@ window.QUESTIONS = [
              'Spannung über 1000 V',
              'Spannung mit überlagertem Gleichanteil'],
     correct: 1,
-    explain: 'Wechselspannung (AC) ändert periodisch Wert und Polarität – im Netz sinusförmig mit 50 Hz.'
+    explain: 'Wechselspannung (AC) ändert periodisch Wert und Polarität – im Netz sinusförmig mit 50 Hz.',
+    source: 'Wechselstromtechnik (DIN 40110)'
   },
   {
     id: 'lg11', path: 'lehrling-grund', category: 'Aderfarben',
     question: 'Welche Farbe hat der Schutzleiter (PE)?',
     options: ['blau', 'schwarz', 'grün-gelb', 'braun'],
     correct: 2,
-    explain: 'Der Schutzleiter ist immer grün-gelb. Diese Kombination ist ausschließlich für PE reserviert.'
+    explain: 'Der Schutzleiter ist immer grün-gelb. Diese Kombination ist ausschließlich für PE reserviert.',
+    source: 'DIN VDE 0293-308'
   },
   {
     id: 'lg12', path: 'lehrling-grund', category: 'Aderfarben',
     question: 'Welche Farbe hat der Neutralleiter (N)?',
     options: ['grün-gelb', 'blau', 'grau', 'schwarz'],
     correct: 1,
-    explain: 'Der Neutralleiter ist blau. Grau wird oft als zweiter geschalteter Leiter verwendet, ist aber nicht der N.'
+    explain: 'Der Neutralleiter ist blau. Grau wird oft als zweiter geschalteter Leiter verwendet, ist aber nicht der N.',
+    source: 'DIN VDE 0293-308'
   },
   {
     id: 'lg13', path: 'lehrling-grund', category: 'Drehstrom',
     question: 'Wie viele Außenleiter hat ein Drehstromnetz?',
     options: ['1', '2', '3', '4'],
     correct: 2,
-    explain: 'Drehstrom hat drei Außenleiter L1, L2, L3, jeweils 120° phasenverschoben.'
+    explain: 'Drehstrom hat drei Außenleiter L1, L2, L3, jeweils 120° phasenverschoben.',
+    source: 'DIN VDE 0100-100 / Drehstromnetz'
   },
   {
     id: 'lg14', path: 'lehrling-grund', category: 'Drehstrom',
     question: 'Wie groß ist die Periodendauer bei 50 Hz?',
     options: ['10 ms', '20 ms', '50 ms', '100 ms'],
     correct: 1,
-    explain: 'T = 1 / f = 1 / 50 Hz = 20 ms.'
+    explain: 'T = 1 / f = 1 / 50 Hz = 20 ms.',
+    source: 'T = 1 / f'
   },
   {
     id: 'lg15', path: 'lehrling-grund', category: 'Schaltungen',
@@ -135,7 +149,8 @@ window.QUESTIONS = [
     options: ['An allen Verbrauchern gleich', 'Sie teilt sich entsprechend der Widerstände auf',
              'Sie ist immer null', 'Sie verdoppelt sich'],
     correct: 1,
-    explain: 'In der Reihenschaltung teilt sich die Gesamtspannung im Verhältnis der Einzelwiderstände auf. Der Strom ist gleich.'
+    explain: 'In der Reihenschaltung teilt sich die Gesamtspannung im Verhältnis der Einzelwiderstände auf. Der Strom ist gleich.',
+    source: 'Kirchhoffsche Gesetze'
   },
   {
     id: 'lg16', path: 'lehrling-grund', category: 'Schaltungen',
@@ -143,21 +158,24 @@ window.QUESTIONS = [
     options: ['Überall gleich', 'Er teilt sich auf die Zweige auf',
              'Er ist immer null', 'Er addiert sich zu Null'],
     correct: 1,
-    explain: 'In der Parallelschaltung teilt sich der Strom auf die Zweige, die Spannung ist überall gleich.'
+    explain: 'In der Parallelschaltung teilt sich der Strom auf die Zweige, die Spannung ist überall gleich.',
+    source: 'Kirchhoffsche Gesetze'
   },
   {
     id: 'lg17', path: 'lehrling-grund', category: 'Drehstrom',
     question: 'Wie berechnet man die Wirkleistung im Drehstrom-Symmetriebetrieb?',
     options: ['P = U · I', 'P = √3 · U · I · cos φ', 'P = 3 · U · I', 'P = U · I · cos φ'],
     correct: 1,
-    explain: 'P = √3 · U · I · cos φ – mit U = verkettete Spannung (z. B. 400 V), I = Außenleiterstrom.'
+    explain: 'P = √3 · U · I · cos φ – mit U = verkettete Spannung (z. B. 400 V), I = Außenleiterstrom.',
+    source: 'Drehstromrechnung (P = √3 · U · I · cos φ)'
   },
   {
     id: 'lg18', path: 'lehrling-grund', category: 'Grundgesetze',
     question: 'Wie hängen elektrische Energie, Leistung und Zeit zusammen?',
     options: ['W = P · t', 'W = P / t', 'W = P + t', 'W = P · t²'],
     correct: 0,
-    explain: 'Energie = Leistung · Zeit. Beispiel: 2 kW über 3 h = 6 kWh.'
+    explain: 'Energie = Leistung · Zeit. Beispiel: 2 kW über 3 h = 6 kWh.',
+    source: 'Energie-Leistungs-Beziehung W = P · t'
   },
   {
     id: 'lg19', path: 'lehrling-grund', category: 'Strom',
@@ -167,14 +185,16 @@ window.QUESTIONS = [
              'Spitzenwert / 2',
              'Spitzenwert · 2'],
     correct: 1,
-    explain: 'Ueff = Û / √2. Bei 230 V Effektivspannung beträgt der Spitzenwert ca. 325 V.'
+    explain: 'Ueff = Û / √2. Bei 230 V Effektivspannung beträgt der Spitzenwert ca. 325 V.',
+    source: 'Wechselstromtechnik (Effektivwert)'
   },
   {
     id: 'lg20', path: 'lehrling-grund', category: 'Aderfarben',
     question: 'Welche Farbe hat üblicherweise der Außenleiter L1?',
     options: ['blau', 'braun', 'schwarz', 'grau'],
     correct: 1,
-    explain: 'Nach harmonisierter Norm: L1 braun, L2 schwarz, L3 grau, N blau, PE grün-gelb.'
+    explain: 'Nach harmonisierter Norm: L1 braun, L2 schwarz, L3 grau, N blau, PE grün-gelb.',
+    source: 'DIN VDE 0293-308'
   },
   {
     id: 'lg21', path: 'lehrling-grund', category: 'Magnetismus',
@@ -184,7 +204,8 @@ window.QUESTIONS = [
              'Die Spule wird zur Stromquelle ohne Verluste',
              'Die Spule wird zum Kondensator'],
     correct: 1,
-    explain: 'Lenz\'sche Regel: Die induzierte Spannung wirkt der Stromänderung entgegen (Selbstinduktion).'
+    explain: 'Lenz\'sche Regel: Die induzierte Spannung wirkt der Stromänderung entgegen (Selbstinduktion).',
+    source: 'Faradaysches Induktionsgesetz / Lenz’sche Regel'
   },
   {
     id: 'lg22', path: 'lehrling-grund', category: 'Bauteile',
@@ -192,7 +213,8 @@ window.QUESTIONS = [
     options: ['Ladung in einem elektrischen Feld', 'Energie in einem magnetischen Feld',
              'Wärme', 'Stromstärke'],
     correct: 0,
-    explain: 'Ein Kondensator speichert elektrische Ladung in einem elektrischen Feld zwischen seinen Platten. Q = C · U.'
+    explain: 'Ein Kondensator speichert elektrische Ladung in einem elektrischen Feld zwischen seinen Platten. Q = C · U.',
+    source: 'Kondensatorgrundlagen (Q = C · U)'
   },
   {
     id: 'lg23', path: 'lehrling-grund', category: 'Strom',
@@ -419,7 +441,8 @@ window.QUESTIONS = [
     options: ['Spannungsfreiheit feststellen', 'Freischalten',
              'Erden und Kurzschließen', 'Gegen Wiedereinschalten sichern'],
     correct: 1,
-    explain: '1. Freischalten · 2. Gegen Wiedereinschalten sichern · 3. Spannungsfreiheit feststellen · 4. Erden und Kurzschließen · 5. Benachbarte unter Spannung stehende Teile abdecken oder abschranken.'
+    explain: '1. Freischalten · 2. Gegen Wiedereinschalten sichern · 3. Spannungsfreiheit feststellen · 4. Erden und Kurzschließen · 5. Benachbarte unter Spannung stehende Teile abdecken oder abschranken.',
+    source: 'DIN VDE 0105-100'
   },
   {
     id: 'lv02', path: 'lehrling-vde', category: 'Sicherheit',
@@ -431,7 +454,8 @@ window.QUESTIONS = [
       'Erden – Freischalten – Sichern – Spannungsfreiheit – Abdecken'
     ],
     correct: 1,
-    explain: 'Eselsbrücke „FSSEAN": Freischalten, Sichern, Spannungsfreiheit feststellen, Erden+Kurzschließen, benachbarte Teile Abdecken.'
+    explain: 'Eselsbrücke „FSSEAN": Freischalten, Sichern, Spannungsfreiheit feststellen, Erden+Kurzschließen, benachbarte Teile Abdecken.',
+    source: 'DIN VDE 0105-100'
   },
   {
     id: 'lv03', path: 'lehrling-vde', category: 'Netzformen',
@@ -441,7 +465,8 @@ window.QUESTIONS = [
              'Sternpunkt isoliert, Körper geerdet',
              'Sternpunkt und Körper beide isoliert'],
     correct: 1,
-    explain: 'TN-Netz: Sternpunkt direkt geerdet (T), Körper über Schutzleiter mit dem Sternpunkt verbunden (N).'
+    explain: 'TN-Netz: Sternpunkt direkt geerdet (T), Körper über Schutzleiter mit dem Sternpunkt verbunden (N).',
+    source: 'DIN VDE 0100-100 / DIN VDE 0100-310'
   },
   {
     id: 'lv04', path: 'lehrling-vde', category: 'Netzformen',
@@ -451,7 +476,8 @@ window.QUESTIONS = [
              'Sternpunkt isoliert, Körper geerdet',
              'Beide Sternpunkte isoliert'],
     correct: 0,
-    explain: 'TT-Netz: Sternpunkt direkt geerdet (T), Körper über separaten lokalen Erder geerdet (T).'
+    explain: 'TT-Netz: Sternpunkt direkt geerdet (T), Körper über separaten lokalen Erder geerdet (T).',
+    source: 'DIN VDE 0100-100 / DIN VDE 0100-310'
   },
   {
     id: 'lv05', path: 'lehrling-vde', category: 'Netzformen',
@@ -461,7 +487,8 @@ window.QUESTIONS = [
              'Beide Pole geerdet',
              'Nur PE-Leiter vorhanden'],
     correct: 1,
-    explain: 'IT-Netz: Sternpunkt isoliert (oder hochohmig geerdet), Körper geerdet. Erster Erdschluss ist ungefährlich – Vorteil in OPs, Industrie etc.'
+    explain: 'IT-Netz: Sternpunkt isoliert (oder hochohmig geerdet), Körper geerdet. Erster Erdschluss ist ungefährlich – Vorteil in OPs, Industrie etc.',
+    source: 'DIN VDE 0100-100 / DIN VDE 0100-310'
   },
   {
     id: 'lv06', path: 'lehrling-vde', category: 'Schutzklassen',
@@ -469,7 +496,8 @@ window.QUESTIONS = [
     options: ['Schutzkleinspannung', 'Schutz durch Schutzisolierung',
              'Schutz durch Anschluss an Schutzleiter', 'Funktionskleinspannung'],
     correct: 2,
-    explain: 'Schutzklasse I: Berührbare leitfähige Teile sind mit dem Schutzleiter verbunden – Symbol: Erdungszeichen.'
+    explain: 'Schutzklasse I: Berührbare leitfähige Teile sind mit dem Schutzleiter verbunden – Symbol: Erdungszeichen.',
+    source: 'DIN EN 61140 (VDE 0140-1)'
   },
   {
     id: 'lv07', path: 'lehrling-vde', category: 'Schutzklassen',
@@ -477,7 +505,8 @@ window.QUESTIONS = [
     options: ['Schutzleiter erforderlich', 'Schutzisolierung (doppelt/verstärkt)',
              'Schutzkleinspannung', 'IP-Schutz X4'],
     correct: 1,
-    explain: 'Schutzklasse II: doppelte oder verstärkte Isolierung – kein Schutzleiteranschluss. Symbol: zwei ineinander liegende Quadrate.'
+    explain: 'Schutzklasse II: doppelte oder verstärkte Isolierung – kein Schutzleiteranschluss. Symbol: zwei ineinander liegende Quadrate.',
+    source: 'DIN EN 61140 (VDE 0140-1)'
   },
   {
     id: 'lv08', path: 'lehrling-vde', category: 'Schutzklassen',
@@ -485,14 +514,16 @@ window.QUESTIONS = [
     options: ['Schutzkleinspannung (SELV/PELV)', 'Vollisolierung',
              'Schutzleiter zwingend', 'Hochspannungsanschluss'],
     correct: 0,
-    explain: 'Schutzklasse III: Versorgung mit Schutzkleinspannung (≤ 50 V AC / 120 V DC) aus sicheren Quellen – SELV oder PELV.'
+    explain: 'Schutzklasse III: Versorgung mit Schutzkleinspannung (≤ 50 V AC / 120 V DC) aus sicheren Quellen – SELV oder PELV.',
+    source: 'DIN EN 61140 (VDE 0140-1)'
   },
   {
     id: 'lv09', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
     question: 'Welcher Bemessungsfehlerstrom ist für Steckdosenstromkreise (≤ 32 A) im Wohnbereich vorgeschrieben?',
     options: ['10 mA', '30 mA', '100 mA', '300 mA'],
     correct: 1,
-    explain: 'RCD mit IΔn = 30 mA ist nach DIN VDE 0100-410 für Steckdosenstromkreise bis 32 A in Wohnungen Pflicht (Zusatzschutz).'
+    explain: 'RCD mit IΔn = 30 mA ist nach DIN VDE 0100-410 für Steckdosenstromkreise bis 32 A in Wohnungen Pflicht (Zusatzschutz).',
+    source: 'DIN VDE 0100-410 § 411.3.3'
   },
   {
     id: 'lv10', path: 'lehrling-vde', category: 'Prüfung',
@@ -500,21 +531,24 @@ window.QUESTIONS = [
     options: ['Nur Beleuchtung', 'Elektrische Anlagen und ortsveränderliche Betriebsmittel',
              'Heizungsanlagen', 'Gasanlagen'],
     correct: 1,
-    explain: 'DGUV V3 (vormals BGV A3) regelt die Wiederholungsprüfung ortsfester Anlagen und ortsveränderlicher elektrischer Betriebsmittel.'
+    explain: 'DGUV V3 (vormals BGV A3) regelt die Wiederholungsprüfung ortsfester Anlagen und ortsveränderlicher elektrischer Betriebsmittel.',
+    source: 'DGUV Vorschrift 3'
   },
   {
     id: 'lv11', path: 'lehrling-vde', category: 'Spannungsbereiche',
     question: 'Ab welcher Wechselspannung spricht man von Hochspannung?',
     options: ['Über 50 V', 'Über 230 V', 'Über 1000 V', 'Über 30 kV'],
     correct: 2,
-    explain: 'Niederspannung: bis 1000 V AC bzw. 1500 V DC. Darüber: Hochspannung (mit Bereichen Mittel-, Hoch-, Höchstspannung).'
+    explain: 'Niederspannung: bis 1000 V AC bzw. 1500 V DC. Darüber: Hochspannung (mit Bereichen Mittel-, Hoch-, Höchstspannung).',
+    source: 'DIN VDE 0100-100 (Spannungsbereiche)'
   },
   {
     id: 'lv12', path: 'lehrling-vde', category: 'Spannungsbereiche',
     question: 'Wie hoch ist die zulässige Berührungsspannung für Wechselstrom in trockenen Räumen?',
     options: ['12 V', '25 V', '50 V', '120 V'],
     correct: 2,
-    explain: 'Maximal 50 V AC bzw. 120 V DC – darüber gilt eine Berührung als gefährlich (Schutzziel der VDE).'
+    explain: 'Maximal 50 V AC bzw. 120 V DC – darüber gilt eine Berührung als gefährlich (Schutzziel der VDE).',
+    source: 'DIN VDE 0100-410'
   },
   {
     id: 'lv13', path: 'lehrling-vde', category: 'Schutzkleinspannung',
@@ -524,21 +558,24 @@ window.QUESTIONS = [
              'Spannung über 50 V',
              'Schaltfähige Spannung über 230 V'],
     correct: 0,
-    explain: 'SELV = Safety Extra Low Voltage. Sichere Trennung von Netz, keine Verbindung zur Erde. Im Gegensatz zu PELV (mit Erdung).'
+    explain: 'SELV = Safety Extra Low Voltage. Sichere Trennung von Netz, keine Verbindung zur Erde. Im Gegensatz zu PELV (mit Erdung).',
+    source: 'DIN VDE 0100-410 / IEC 60364-4-41'
   },
   {
     id: 'lv14', path: 'lehrling-vde', category: 'Installation',
     question: 'Welcher Aderquerschnitt ist üblich für allgemeine Steckdosenstromkreise (16 A)?',
     options: ['0,75 mm²', '1,5 mm²', '4 mm²', '6 mm²'],
     correct: 1,
-    explain: '1,5 mm² Cu für Beleuchtung und allgemeine Steckdosen mit 16 A. Bei höherer Belastung oder Verlegeart B2 ggf. 2,5 mm².'
+    explain: '1,5 mm² Cu für Beleuchtung und allgemeine Steckdosen mit 16 A. Bei höherer Belastung oder Verlegeart B2 ggf. 2,5 mm².',
+    source: 'DIN VDE 0100-430 / DIN 18015-1'
   },
   {
     id: 'lv15', path: 'lehrling-vde', category: 'Absicherung',
     question: 'Welche maximale Absicherung ist üblicherweise für 1,5 mm² Cu zulässig?',
     options: ['10 A', '13 A', '16 A', '20 A'],
     correct: 2,
-    explain: '1,5 mm² Cu wird je nach Verlegeart bis maximal 16 A LS-Schalter abgesichert.'
+    explain: '1,5 mm² Cu wird je nach Verlegeart bis maximal 16 A LS-Schalter abgesichert.',
+    source: 'DIN VDE 0100-430 (Schutz bei Überstrom)'
   },
   {
     id: 'lv16', path: 'lehrling-vde', category: 'Schaltungen',
@@ -548,7 +585,8 @@ window.QUESTIONS = [
              'Eine Drehstromschaltung',
              'Eine Schaltung mit Kreuzschalter'],
     correct: 1,
-    explain: 'Wechselschaltung = Eine Lampe wird von zwei Stellen geschaltet (zwei Wechselschalter, drei korrespondierende Adern).'
+    explain: 'Wechselschaltung = Eine Lampe wird von zwei Stellen geschaltet (zwei Wechselschalter, drei korrespondierende Adern).',
+    source: 'Installationspraxis (Wechselschaltung)'
   },
   {
     id: 'lv17', path: 'lehrling-vde', category: 'Schaltungen',
@@ -558,7 +596,8 @@ window.QUESTIONS = [
              'Nur in Bädern',
              'Zum Dimmen'],
     correct: 0,
-    explain: 'Kreuzschaltung = eine Lampe von 3 oder mehr Stellen schalten. Aufbau: Wechsel – Kreuz – … – Wechsel.'
+    explain: 'Kreuzschaltung = eine Lampe von 3 oder mehr Stellen schalten. Aufbau: Wechsel – Kreuz – … – Wechsel.',
+    source: 'Installationspraxis (Kreuzschaltung)'
   },
   {
     id: 'lv18', path: 'lehrling-vde', category: 'Schaltungen',
@@ -568,7 +607,8 @@ window.QUESTIONS = [
              'Schaltet nur bei Stromausfall',
              'Schaltet 3-phasig dauerhaft'],
     correct: 0,
-    explain: 'Ein Stromstoßrelais kippt bei jedem Tasterimpuls seinen Schaltzustand – ideal bei vielen Schaltstellen mit nur einer Leitung.'
+    explain: 'Ein Stromstoßrelais kippt bei jedem Tasterimpuls seinen Schaltzustand – ideal bei vielen Schaltstellen mit nur einer Leitung.',
+    source: 'Installationspraxis (Stromstoßrelais)'
   },
   {
     id: 'lv19', path: 'lehrling-vde', category: 'Leiter',
@@ -578,7 +618,8 @@ window.QUESTIONS = [
              'Kombinierter Schutz- und Neutralleiter',
              'Außenleiter mit Erdung'],
     correct: 2,
-    explain: 'Der PEN-Leiter (TN-C-System) übernimmt sowohl die Funktion des Neutralleiters (N) als auch des Schutzleiters (PE). Querschnitt mind. 10 mm² Cu.'
+    explain: 'Der PEN-Leiter (TN-C-System) übernimmt sowohl die Funktion des Neutralleiters (N) als auch des Schutzleiters (PE). Querschnitt mind. 10 mm² Cu.',
+    source: 'DIN VDE 0100-310 (TN-C-System)'
   },
   {
     id: 'lv20', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
@@ -588,7 +629,8 @@ window.QUESTIONS = [
              'Resistance Control Device',
              'Relay Common Disconnect'],
     correct: 0,
-    explain: 'RCD = Residual Current Device, deutsch: FI-Schutzschalter. Schaltet ab, wenn der Fehlerstrom IΔn überschritten wird.'
+    explain: 'RCD = Residual Current Device, deutsch: FI-Schutzschalter. Schaltet ab, wenn der Fehlerstrom IΔn überschritten wird.',
+    source: 'DIN VDE 0100-410'
   },
   {
     id: 'lv21', path: 'lehrling-vde', category: 'Schutzart',
@@ -598,7 +640,8 @@ window.QUESTIONS = [
              'Maximale Stromstärke',
              'Frequenzbereich'],
     correct: 1,
-    explain: 'IPxx: Erste Ziffer = Schutz gegen feste Fremdkörper / Berührung, zweite Ziffer = Schutz gegen Wasser. IP44 z. B. Schutz gegen Spritzwasser und Drähte.'
+    explain: 'IPxx: Erste Ziffer = Schutz gegen feste Fremdkörper / Berührung, zweite Ziffer = Schutz gegen Wasser. IP44 z. B. Schutz gegen Spritzwasser und Drähte.',
+    source: 'DIN EN 60529'
   },
   {
     id: 'lv22', path: 'lehrling-vde', category: 'Bad',
@@ -608,14 +651,16 @@ window.QUESTIONS = [
              'Nur ein einziger Bereich',
              'Bereich 1 bis 5'],
     correct: 0,
-    explain: 'Schutzbereiche im Bad: 0 = Innenraum Badewanne/Dusche, 1 = darüber bis 2,25 m, 2 = 60 cm seitlich. Frühere Bereiche 3 wurden 2018 gestrichen.'
+    explain: 'Schutzbereiche im Bad: 0 = Innenraum Badewanne/Dusche, 1 = darüber bis 2,25 m, 2 = 60 cm seitlich. Frühere Bereiche 3 wurden 2018 gestrichen.',
+    source: 'DIN VDE 0100-701'
   },
   {
     id: 'lv23', path: 'lehrling-vde', category: 'Erdung',
     question: 'Welcher Mindestquerschnitt ist für einen Schutzleiter aus Kupfer (verlegt mit Außenleiter ≤ 16 mm²) vorgeschrieben?',
     options: ['Querschnitt wie der Außenleiter', '1,5 mm²', '2,5 mm²', 'Halbierter Querschnitt'],
     correct: 0,
-    explain: 'Bis zu Phasenquerschnitt 16 mm² gilt: PE-Querschnitt = Außenleiterquerschnitt. Darüber gelten reduzierte Querschnitte nach VDE.'
+    explain: 'Bis zu Phasenquerschnitt 16 mm² gilt: PE-Querschnitt = Außenleiterquerschnitt. Darüber gelten reduzierte Querschnitte nach VDE.',
+    source: 'DIN VDE 0100-540'
   },
   {
     id: 'lv24', path: 'lehrling-vde', category: 'Messtechnik',
@@ -625,7 +670,8 @@ window.QUESTIONS = [
              'Schleifenwiderstandsmessgerät',
              'Erdungsmessgerät'],
     correct: 1,
-    explain: 'Isolationsmessung mit definierter Prüfspannung (z. B. 500 V DC bei Niederspannungsanlagen). Mindestwert i. d. R. 1 MΩ.'
+    explain: 'Isolationsmessung mit definierter Prüfspannung (z. B. 500 V DC bei Niederspannungsanlagen). Mindestwert i. d. R. 1 MΩ.',
+    source: 'DGUV V3 / DIN VDE 0100-600'
   },
   {
     id: 'lv25', path: 'lehrling-vde', category: 'Normen',
@@ -881,7 +927,8 @@ window.QUESTIONS = [
              'Nur die Meisterprüfung',
              'Steuerrecht für Handwerker'],
     correct: 1,
-    explain: 'Die HwO regelt Berufszugang (Anlage A/B), Handwerkskammern, Innungen, Meisterprüfung und Berufsausbildung im Handwerk.'
+    explain: 'Die HwO regelt Berufszugang (Anlage A/B), Handwerkskammern, Innungen, Meisterprüfung und Berufsausbildung im Handwerk.',
+    source: 'Handwerksordnung (HwO)'
   },
   {
     id: 'm02', path: 'meister', category: 'Recht – HwO',
@@ -891,21 +938,24 @@ window.QUESTIONS = [
              'Liste der Innungen',
              'Liste der Tarifverträge'],
     correct: 0,
-    explain: 'Anlage A = zulassungspflichtige Handwerke (Meisterzwang), z. B. Elektrotechniker. Anlage B1 = zulassungsfrei, B2 = handwerksähnlich.'
+    explain: 'Anlage A = zulassungspflichtige Handwerke (Meisterzwang), z. B. Elektrotechniker. Anlage B1 = zulassungsfrei, B2 = handwerksähnlich.',
+    source: 'Handwerksordnung Anlage A'
   },
   {
     id: 'm03', path: 'meister', category: 'Recht – BBiG',
     question: 'Wie lange darf die Probezeit in einem Ausbildungsverhältnis maximal dauern?',
     options: ['1 Monat', '4 Monate', '6 Monate', '1 Jahr'],
     correct: 1,
-    explain: '§ 20 BBiG: Mindestens 1, maximal 4 Monate. In der Probezeit kann beidseitig fristlos gekündigt werden.'
+    explain: '§ 20 BBiG: Mindestens 1, maximal 4 Monate. In der Probezeit kann beidseitig fristlos gekündigt werden.',
+    source: '§ 20 BBiG (Probezeit)'
   },
   {
     id: 'm04', path: 'meister', category: 'Recht – BBiG',
     question: 'Wie lange dauert die Regelausbildungszeit zum Elektroniker für Energie- und Gebäudetechnik?',
     options: ['2 Jahre', '3 Jahre', '3,5 Jahre', '4 Jahre'],
     correct: 2,
-    explain: 'Regelausbildungszeit: 3,5 Jahre (42 Monate). Verkürzung möglich.'
+    explain: 'Regelausbildungszeit: 3,5 Jahre (42 Monate). Verkürzung möglich.',
+    source: 'AusbildungsVO Elektroniker EBT'
   },
   {
     id: 'm05', path: 'meister', category: 'Recht',
@@ -915,7 +965,8 @@ window.QUESTIONS = [
              'Technische Normen',
              'Steuersätze für Bauleistungen'],
     correct: 1,
-    explain: 'VOB/B enthält die Allgemeinen Vertragsbedingungen für die Ausführung von Bauleistungen (Pendant zu BGB-Werkvertrag).'
+    explain: 'VOB/B enthält die Allgemeinen Vertragsbedingungen für die Ausführung von Bauleistungen (Pendant zu BGB-Werkvertrag).',
+    source: 'VOB/B (Allg. Vertragsbedingungen)'
   },
   {
     id: 'm06', path: 'meister', category: 'Betriebsführung',
@@ -925,7 +976,8 @@ window.QUESTIONS = [
              'Gewinn + Steuern',
              'Umsatz – Umsatzsteuer'],
     correct: 1,
-    explain: 'Deckungsbeitrag = Erlös – variable Kosten. Er „deckt" Fixkosten und trägt zum Gewinn bei.'
+    explain: 'Deckungsbeitrag = Erlös – variable Kosten. Er „deckt" Fixkosten und trägt zum Gewinn bei.',
+    source: 'Kostenrechnung (Deckungsbeitrag)'
   },
   {
     id: 'm07', path: 'meister', category: 'Betriebsführung',
@@ -935,7 +987,8 @@ window.QUESTIONS = [
              'Kosten für Rohstoffe',
              'Kosten für Akkordlohn'],
     correct: 1,
-    explain: 'Fixkosten fallen mengenunabhängig an: Miete, Versicherungen, Abschreibungen, Gehälter (im Wesentlichen).'
+    explain: 'Fixkosten fallen mengenunabhängig an: Miete, Versicherungen, Abschreibungen, Gehälter (im Wesentlichen).',
+    source: 'Kostenrechnung (Fixkosten)'
   },
   {
     id: 'm08', path: 'meister', category: 'Betriebsführung',
@@ -943,7 +996,8 @@ window.QUESTIONS = [
     options: ['Return on Investment – Kapitalrendite',
              'Rate of Inflation', 'Result of Income', 'Recurring Operating Income'],
     correct: 0,
-    explain: 'ROI = Gewinn / eingesetztes Kapital · 100 %. Misst die Rentabilität des eingesetzten Kapitals.'
+    explain: 'ROI = Gewinn / eingesetztes Kapital · 100 %. Misst die Rentabilität des eingesetzten Kapitals.',
+    source: 'Rechnungswesen (Kennzahl ROI)'
   },
   {
     id: 'm09', path: 'meister', category: 'Betriebsführung',
@@ -953,7 +1007,8 @@ window.QUESTIONS = [
              'Liquidität',
              'Kundenforderungen'],
     correct: 1,
-    explain: 'Die GuV stellt Erträge und Aufwendungen einer Periode gegenüber und ermittelt Gewinn oder Verlust. Bilanz hingegen = Vermögen/Schulden zum Stichtag.'
+    explain: 'Die GuV stellt Erträge und Aufwendungen einer Periode gegenüber und ermittelt Gewinn oder Verlust. Bilanz hingegen = Vermögen/Schulden zum Stichtag.',
+    source: '§ 242 HGB (GuV)'
   },
   {
     id: 'm10', path: 'meister', category: 'Betriebsführung',
@@ -963,7 +1018,8 @@ window.QUESTIONS = [
              'Nur Bruttogehalt durch Stunden',
              'Nettoumsatz / Anzahl Mitarbeiter'],
     correct: 1,
-    explain: 'Lohnkosten je produktiver Stunde + Gemeinkosten + Gewinn-/Wagniszuschlag = kalkulatorischer Stundenverrechnungssatz.'
+    explain: 'Lohnkosten je produktiver Stunde + Gemeinkosten + Gewinn-/Wagniszuschlag = kalkulatorischer Stundenverrechnungssatz.',
+    source: 'Handwerks-Kalkulation (Stundenverrechnungssatz)'
   },
   {
     id: 'm11', path: 'meister', category: 'AdA – Pädagogik',
@@ -973,7 +1029,8 @@ window.QUESTIONS = [
              'Allgemeine deutsche Ausbildung',
              'Ausbilder im dualen Ausbildungssystem'],
     correct: 1,
-    explain: 'AdA = „Ausbildung der Ausbilder". Voraussetzung für die Ausbildereignung nach AEVO/BBiG.'
+    explain: 'AdA = „Ausbildung der Ausbilder". Voraussetzung für die Ausbildereignung nach AEVO/BBiG.',
+    source: 'AEVO (Ausbildereignung)'
   },
   {
     id: 'm12', path: 'meister', category: 'AdA – Pädagogik',
@@ -983,7 +1040,8 @@ window.QUESTIONS = [
              'Planen – Demonstrieren – Prüfen – Wiederholen',
              'Lesen – Hören – Sehen – Tun'],
     correct: 0,
-    explain: 'Klassische 4-Stufen-Methode: Vorbereiten (Lernort, Auszubildender), Vormachen (Vorbild), Nachmachen (geführt), Üben (selbstständig).'
+    explain: 'Klassische 4-Stufen-Methode: Vorbereiten (Lernort, Auszubildender), Vormachen (Vorbild), Nachmachen (geführt), Üben (selbstständig).',
+    source: 'AEVO / Berufspädagogik'
   },
   {
     id: 'm13', path: 'meister', category: 'AdA – Pädagogik',
@@ -993,7 +1051,8 @@ window.QUESTIONS = [
              'kurz – mittel – lang',
              'fachlich – methodisch – sozial'],
     correct: 0,
-    explain: 'Lernzielbereiche: kognitiv (Wissen/Denken), affektiv (Einstellung/Werte), psychomotorisch (Fertigkeiten/Bewegung).'
+    explain: 'Lernzielbereiche: kognitiv (Wissen/Denken), affektiv (Einstellung/Werte), psychomotorisch (Fertigkeiten/Bewegung).',
+    source: 'Lernzieltaxonomie (Bloom u.a.)'
   },
   {
     id: 'm14', path: 'meister', category: 'Fachtheorie',
@@ -1003,7 +1062,8 @@ window.QUESTIONS = [
              'Sicherung mit höchstem Nennstrom löst zuerst aus',
              'Nur Hauptschalter löst aus'],
     correct: 0,
-    explain: 'Selektivität: Im Fehlerfall trennt nur die unmittelbar dem Fehler vorgelagerte Schutzeinrichtung – Rest der Anlage bleibt versorgt.'
+    explain: 'Selektivität: Im Fehlerfall trennt nur die unmittelbar dem Fehler vorgelagerte Schutzeinrichtung – Rest der Anlage bleibt versorgt.',
+    source: 'DIN VDE 0100-430 (Selektivität)'
   },
   {
     id: 'm15', path: 'meister', category: 'Fachtheorie – Leistung',
@@ -1013,14 +1073,16 @@ window.QUESTIONS = [
              'Leistung, die das Netz verlässt',
              'Geometrische Summe aus Wirk- und Scheinleistung'],
     correct: 1,
-    explain: 'Blindleistung Q entsteht in induktiven oder kapazitiven Verbrauchern. Sie wird nicht in Arbeit umgesetzt, belastet aber das Netz.'
+    explain: 'Blindleistung Q entsteht in induktiven oder kapazitiven Verbrauchern. Sie wird nicht in Arbeit umgesetzt, belastet aber das Netz.',
+    source: 'Wechselstromtechnik (Blindleistung Q)'
   },
   {
     id: 'm16', path: 'meister', category: 'Fachtheorie – Leistung',
     question: 'In welcher Einheit wird Blindleistung angegeben?',
     options: ['Watt (W)', 'Var (var)', 'Voltampere (VA)', 'Joule (J)'],
     correct: 1,
-    explain: 'Blindleistung Q wird in Var (Voltampere reaktiv) angegeben. Wirkleistung in W, Scheinleistung in VA.'
+    explain: 'Blindleistung Q wird in Var (Voltampere reaktiv) angegeben. Wirkleistung in W, Scheinleistung in VA.',
+    source: 'SI-Einheiten (Var)'
   },
   {
     id: 'm17', path: 'meister', category: 'Fachtheorie – Leistung',
@@ -1030,7 +1092,8 @@ window.QUESTIONS = [
              'Geometrische Summe aller Leistungen',
              'Leistung der Sicherungen'],
     correct: 0,
-    explain: 'Wirkleistung P: Anteil, der tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Einheit Watt.'
+    explain: 'Wirkleistung P: Anteil, der tatsächlich in nützliche Arbeit oder Wärme umgesetzt wird. Einheit Watt.',
+    source: 'Wechselstromtechnik (Wirkleistung P)'
   },
   {
     id: 'm18', path: 'meister', category: 'Fachtheorie – Leistung',
@@ -1040,7 +1103,8 @@ window.QUESTIONS = [
              'Nur den Blindanteil',
              'Nur den Wirkanteil'],
     correct: 1,
-    explain: 'Scheinleistung S = √(P² + Q²) in VA. cos φ = P / S.'
+    explain: 'Scheinleistung S = √(P² + Q²) in VA. cos φ = P / S.',
+    source: 'Wechselstromtechnik (Scheinleistung S² = P² + Q²)'
   },
   {
     id: 'm19', path: 'meister', category: 'Fachtheorie – Leistung',
@@ -1050,7 +1114,8 @@ window.QUESTIONS = [
              'Verhältnis Wirk- zu Blindleistung',
              'Verhältnis Strom zu Frequenz'],
     correct: 0,
-    explain: 'cos φ = P / S. Je näher an 1, desto mehr nutzbare Wirkleistung gegenüber Scheinleistung.'
+    explain: 'cos φ = P / S. Je näher an 1, desto mehr nutzbare Wirkleistung gegenüber Scheinleistung.',
+    source: 'Wechselstromtechnik (cos φ)'
   },
   {
     id: 'm20', path: 'meister', category: 'Recht – BGB',
@@ -1059,7 +1124,8 @@ window.QUESTIONS = [
              'Herstellung eines Werkes gegen Vergütung – Erfolg geschuldet',
              'Mietverhältnisse', 'Versicherungsverträge'],
     correct: 1,
-    explain: 'Werkvertrag (§§ 631 ff. BGB): Werkunternehmer schuldet einen Erfolg, nicht nur Tätigkeit. Standard für Handwerksleistungen.'
+    explain: 'Werkvertrag (§§ 631 ff. BGB): Werkunternehmer schuldet einen Erfolg, nicht nur Tätigkeit. Standard für Handwerksleistungen.',
+    source: '§ 631 ff. BGB (Werkvertrag)'
   },
   {
     id: 'm21', path: 'meister', category: 'Betriebsführung',
@@ -1069,7 +1135,8 @@ window.QUESTIONS = [
              'Punkt der Marktsättigung',
              'Punkt höchster Liquidität'],
     correct: 0,
-    explain: 'Break-even (Gewinnschwelle): Umsatz = Gesamtkosten. Ab hier macht der Betrieb Gewinn. x = Fixkosten / Deckungsbeitrag pro Stück.'
+    explain: 'Break-even (Gewinnschwelle): Umsatz = Gesamtkosten. Ab hier macht der Betrieb Gewinn. x = Fixkosten / Deckungsbeitrag pro Stück.',
+    source: 'BWL-Grundlagen (Break-even)'
   },
   {
     id: 'm22', path: 'meister', category: 'Fachtheorie',
@@ -1079,7 +1146,8 @@ window.QUESTIONS = [
              'Erhöht die Spannung',
              'Verringert die Frequenz'],
     correct: 1,
-    explain: 'Mit Kompensationskondensatoren wird induktive Blindleistung lokal kompensiert – cos φ steigt, Netzbelastung und Verluste sinken.'
+    explain: 'Mit Kompensationskondensatoren wird induktive Blindleistung lokal kompensiert – cos φ steigt, Netzbelastung und Verluste sinken.',
+    source: 'EnWG / Wechselstromtechnik (Blindstromkompensation)'
   },
   {
     id: 'm23', path: 'meister', category: 'Steuern',

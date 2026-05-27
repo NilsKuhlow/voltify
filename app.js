@@ -17,6 +17,7 @@
       cards: {},
       streak: 0,
       lastSession: null,
+      sessionDays: {},
       profile: { gradeYear: null, examDate: null },
       settings: { batch: 15, theme: 'dark', shuffle: true }
     };
@@ -27,7 +28,10 @@
   //   if (v < 3) { state = migrateV2ToV3(state); v = 3; }
   function migrate(state) {
     if (!state || typeof state !== 'object') return defaultState();
-    // Aktuell keine Migration nötig – Platzhalter für künftige Schemata.
+    // Migrationen rückwirkend
+    if (!state.sessionDays || typeof state.sessionDays !== 'object') {
+      state.sessionDays = {};
+    }
     state.schemaVersion = CURRENT_SCHEMA;
     return state;
   }
@@ -645,7 +649,8 @@
   function finishSession() {
     stopExamTimer();
 
-    const today = new Date().toDateString();
+    const now = new Date();
+    const today = now.toDateString();
     const lastSessionDate = state.lastSession
       ? new Date(state.lastSession).toDateString()
       : null;
@@ -659,6 +664,17 @@
       }
       state.lastSession = Date.now();
     }
+
+    // Aktivitäts-Heatmap pro Tag
+    if (!state.sessionDays) state.sessionDays = {};
+    const dayKey = now.toISOString().slice(0, 10);
+    state.sessionDays[dayKey] = (state.sessionDays[dayKey] || 0) + 1;
+    // Alte Einträge > 90 Tage aufräumen (Storage klein halten)
+    const cutoff = Date.now() - 90 * DAY;
+    Object.keys(state.sessionDays).forEach((k) => {
+      if (new Date(k + 'T00:00:00').getTime() < cutoff) delete state.sessionDays[k];
+    });
+
     saveState();
 
     if (session && session.mode === 'exam') {
@@ -750,7 +766,41 @@
       boxes[Math.max(0, Math.min(4, b - 1))]++;
     });
 
+    // Heatmap-HTML vorbereiten (letzte 30 Tage)
+    const today = new Date(); today.setHours(0, 0, 0, 0);
+    const days = state.sessionDays || {};
+    const counts = Object.values(days).filter((v) => v > 0);
+    const maxCount = counts.length ? Math.max(...counts) : 1;
+    let heatCells = '';
+    for (let i = 29; i >= 0; i--) {
+      const d = new Date(today.getTime() - i * DAY);
+      const key = d.toISOString().slice(0, 10);
+      const c = days[key] || 0;
+      const level = c === 0 ? 0 : Math.min(4, Math.ceil(4 * c / maxCount));
+      const label = d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }) +
+                    ': ' + (c === 0 ? 'keine Session' : c + ' Session' + (c === 1 ? '' : 's'));
+      heatCells += `<div class="heat-cell level-${level}" title="${label}" aria-label="${label}"></div>`;
+    }
+    const activeDaysLast30 = Object.keys(days).filter((k) => {
+      const t = new Date(k + 'T00:00:00').getTime();
+      return t >= today.getTime() - 29 * DAY;
+    }).length;
+
     let html = `
+      <div class="stats-section">
+        <h3>Aktivität · letzte 30 Tage</h3>
+        <p class="stats-hint">${activeDaysLast30} aktive Tage. Heller = mehr Sessions an dem Tag.</p>
+        <div class="heatmap">${heatCells}</div>
+        <div class="heatmap-legend" aria-hidden="true">
+          <span>weniger</span>
+          <span class="heat-cell level-0"></span>
+          <span class="heat-cell level-1"></span>
+          <span class="heat-cell level-2"></span>
+          <span class="heat-cell level-3"></span>
+          <span class="heat-cell level-4"></span>
+          <span>mehr</span>
+        </div>
+      </div>
       <div class="stats-section">
         <h3>Gesamtüberblick</h3>
         <div class="stat-row"><span>Karten insgesamt</span><span>${totalQ}</span></div>
@@ -966,29 +1016,149 @@
       });
     }
 
-    // Escape-Taste: zurück, wenn nicht im Quiz-Mode (sonst nicht versehentlich abbrechen)
+    // Tastatur-Shortcuts: Escape, Quiz-Antworten 1-9 / A-H, Weiter (Space/Enter), Bookmark (B)
     document.addEventListener('keydown', (e) => {
-      if (e.key !== 'Escape') return;
+      // Im Such-/Input-Feld nichts kapern
+      const t = e.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) {
+        return;
+      }
       const fv = document.getElementById('first-visit');
-      if (fv && !fv.classList.contains('hidden')) return; // Erst-Start nicht skippen
+      const fvOpen = fv && !fv.classList.contains('hidden');
       const active = document.querySelector('.screen.active');
-      if (!active) return;
-      const screen = active.dataset.screen;
-      const escapableScreens = [
-        'imprint', 'privacy', 'browse', 'settings',
-        'exam-setup', 'exam-result', 'stats', 'results'
-      ];
-      if (escapableScreens.includes(screen)) {
-        showScreen('home');
+      const screen = active ? active.dataset.screen : null;
+
+      // Escape: zurück, wenn nicht im Quiz, nicht im Wizard
+      if (e.key === 'Escape') {
+        if (fvOpen) return;
+        const escapable = ['imprint', 'privacy', 'browse', 'settings',
+                           'exam-setup', 'exam-result', 'stats', 'results'];
+        if (escapable.includes(screen)) showScreen('home');
+        return;
+      }
+
+      // Im Quiz aktiv?
+      if (screen !== 'quiz' || fvOpen) return;
+
+      const fbHidden = document.getElementById('card-feedback').classList.contains('hidden');
+
+      // Weiter (Space / Enter) – nur wenn Feedback sichtbar
+      if ((e.key === ' ' || e.key === 'Enter') && !fbHidden) {
+        e.preventDefault();
+        const nextBtn = document.getElementById('next-btn');
+        if (nextBtn && !nextBtn.disabled) nextBtn.click();
+        return;
+      }
+
+      // Bookmark-Toggle (B oder M)
+      if ((e.key === 'b' || e.key === 'B' || e.key === 'm' || e.key === 'M') && fbHidden) {
+        e.preventDefault();
+        const bm = document.getElementById('bookmark-btn');
+        if (bm) bm.click();
+        return;
+      }
+
+      // Antwort-Selektion via Ziffer (1..9) oder Buchstabe (A..H) – nur wenn Feedback noch nicht da
+      if (!fbHidden) return;
+      const opts = Array.from(document.querySelectorAll('.option'));
+      if (opts.length === 0) return;
+
+      let idx = -1;
+      // 1..9
+      if (/^[1-9]$/.test(e.key)) idx = parseInt(e.key, 10) - 1;
+      // A..H (case-insensitiv)
+      else if (/^[a-hA-H]$/.test(e.key)) idx = e.key.toUpperCase().charCodeAt(0) - 65;
+
+      if (idx < 0 || idx >= opts.length) return;
+      const btn = opts[idx];
+      if (btn.disabled) return;
+      e.preventDefault();
+      btn.click();
+
+      // Bei Multi-Choice ist nach Auswahl noch keine Auswertung – wenn ENTER danach gedrückt wird,
+      // soll der Multi-Check-Button greifen.
+      // (Wird beim nächsten Tastendruck-Cycle erfasst, siehe Block oben "Weiter".)
+      // Ergänzung: Auch Multi-Check über Enter ermöglichen, wenn er sichtbar und enabled ist.
+      const mc = document.getElementById('multi-check');
+      if (mc && !mc.disabled) {
+        // separat behandelt im nächsten Enter-Druck – nichts weiter tun
+      }
+    });
+
+    // Enter im Multi-Mode: löst Antwort-prüfen aus, wenn vorhanden
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Enter') return;
+      const t = e.target;
+      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
+      const active = document.querySelector('.screen.active');
+      if (!active || active.dataset.screen !== 'quiz') return;
+      const mc = document.getElementById('multi-check');
+      if (mc && !mc.disabled) {
+        e.preventDefault();
+        mc.click();
       }
     });
   }
 
-  // ===== SERVICE WORKER =====
+  // ===== SERVICE WORKER + UPDATE-BANNER =====
+  function showUpdateBanner(reg) {
+    const banner = document.getElementById('update-banner');
+    if (!banner) return;
+    banner.classList.remove('hidden');
+    const reloadBtn = document.getElementById('update-reload');
+    const dismissBtn = document.getElementById('update-dismiss');
+    reloadBtn.onclick = () => {
+      reloadBtn.disabled = true;
+      reloadBtn.textContent = 'lädt…';
+      if (reg.waiting) reg.waiting.postMessage({ type: 'SKIP_WAITING' });
+    };
+    dismissBtn.onclick = () => banner.classList.add('hidden');
+    // Reload, sobald der neue SW die Kontrolle übernimmt
+    let didReload = false;
+    navigator.serviceWorker.addEventListener('controllerchange', () => {
+      if (didReload) return;
+      didReload = true;
+      window.location.reload();
+    });
+  }
+
   if ('serviceWorker' in navigator) {
     window.addEventListener('load', () => {
-      navigator.serviceWorker.register('sw.js').catch(() => {});
+      navigator.serviceWorker.register('sw.js').then((reg) => {
+        if (!reg) return;
+        // Bei Page-Load nochmal explizit nach Updates checken
+        reg.update().catch(() => {});
+        // Wenn schon ein waiting-SW da ist (Tab-Wechsel etc.)
+        if (reg.waiting && navigator.serviceWorker.controller) {
+          showUpdateBanner(reg);
+        }
+        // Auf neue Versionen lauschen
+        reg.addEventListener('updatefound', () => {
+          const nw = reg.installing;
+          if (!nw) return;
+          nw.addEventListener('statechange', () => {
+            if (nw.state === 'installed' && navigator.serviceWorker.controller) {
+              showUpdateBanner(reg);
+            }
+          });
+        });
+      }).catch(() => {});
     });
+  }
+
+  // ===== URL-Action (App-Icon-Shortcuts: ?action=mix|exam|browse) =====
+  function handleStartAction() {
+    try {
+      const params = new URLSearchParams(location.search);
+      const action = params.get('action');
+      if (!action) return;
+      // Saubere URL ohne Action (damit Reload nicht erneut feuert)
+      const clean = location.pathname + location.hash;
+      history.replaceState({}, '', clean);
+      if (action === 'mix') startSession(null);
+      else if (action === 'exam') showScreen('exam-setup');
+      else if (action === 'browse') showScreen('browse');
+    } catch (e) {}
   }
 
   // ===== BOOT =====
@@ -997,4 +1167,5 @@
   bind();
   showScreen('home');
   maybeShowFirstVisit();
+  handleStartAction();
 })();

@@ -1,0 +1,11 @@
+User-agent: *
+Allow: /
+
+# Tool-Seiten von Suchergebnissen ausschließen
+Disallow: /scripts/
+Disallow: /store/
+Disallow: /android/
+Disallow: /ios/
+Disallow: /.well-known/
+
+Sitemap: https://nilskuhlow.github.io/voltify/sitemap.xml

@@ -90,28 +90,6 @@ async function svgToPng(svgText, size) {
   }
 }
 
-async function svgToRectPng(svgText, w, h) {
-  const blob = new Blob([svgText], { type: 'image/svg+xml' });
-  const url = URL.createObjectURL(blob);
-  try {
-    const img = await new Promise((res, rej) => {
-      const i = new Image();
-      i.onload = () => res(i);
-      i.onerror = rej;
-      i.src = url;
-    });
-    const c = document.createElement('canvas');
-    c.width = w; c.height = h;
-    const ctx = c.getContext('2d');
-    ctx.imageSmoothingEnabled = true;
-    ctx.imageSmoothingQuality = 'high';
-    ctx.drawImage(img, 0, 0, w, h);
-    return c.toDataURL('image/png');
-  } finally {
-    URL.revokeObjectURL(url);
-  }
-}
-
 async function generate() {
   const src = document.getElementById('src').value;
   const r = await fetch(src);
@@ -129,22 +107,6 @@ async function generate() {
         <div class="meta">${s.size}×${s.size} · ${s.note}</div>
       </div>
     `);
-  }
-  // Rechteckige Exports (z.B. Feature-Graphic)
-  for (const r of RECT_EXPORTS) {
-    try {
-      const svgRes = await fetch(r.src);
-      if (!svgRes.ok) continue;
-      const txt = await svgRes.text();
-      const data = await svgToRectPng(txt, r.width, r.height);
-      cards.push(`
-        <div class="card" style="grid-column: span 2;">
-          <img src="${data}" alt="${r.width}×${r.height}" style="max-width:100%">
-          <a href="${data}" download="${r.name}">${r.name} ⬇</a>
-          <div class="meta">${r.width}×${r.height} · ${r.note}</div>
-        </div>
-      `);
-    } catch (e) { /* skip */ }
   }
   grid.innerHTML = cards.join('');
 }

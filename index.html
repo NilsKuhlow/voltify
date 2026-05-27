@@ -4,10 +4,35 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover, user-scalable=no">
   <meta name="theme-color" content="#0a0e27">
-  <meta name="description" content="Voltify – Spaced-Repetition-Lernen für Elektriker. Lehrling und Meister.">
+  <meta name="description" content="Voltify – Lern-App für Elektriker. Karteikarten mit Spaced Repetition (Leitner), Prüfungssimulator, 278 Fragen aus Lehrling und Meister, offline-fähig.">
+  <meta name="keywords" content="Elektriker, Lernen, Karteikarten, Prüfungsvorbereitung, VDE, Meister, Lehrling, Spaced Repetition, Leitner, IHK, HwK">
+  <meta name="author" content="Voltify">
+  <link rel="canonical" href="https://nilskuhlow.github.io/voltify/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Voltify">
+  <meta property="og:title" content="Voltify – Lernen für Elektriker">
+  <meta property="og:description" content="Karteikarten-Lern-App für Elektriker (Lehrling + Meister). Spaced Repetition, Prüfungssimulator, 278 Fragen, offline-fähig.">
+  <meta property="og:url" content="https://nilskuhlow.github.io/voltify/">
+  <meta property="og:image" content="https://nilskuhlow.github.io/voltify/icons/icon-1024.png">
+  <meta property="og:image:width" content="1024">
+  <meta property="og:image:height" content="1024">
+  <meta property="og:locale" content="de_DE">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Voltify – Lernen für Elektriker">
+  <meta name="twitter:description" content="Karteikarten-Lern-App für Elektriker. Spaced Repetition, Prüfungssimulator, 278 Fragen.">
+  <meta name="twitter:image" content="https://nilskuhlow.github.io/voltify/icons/icon-1024.png">
+
+  <!-- PWA / Apple -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Voltify">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="format-detection" content="telephone=no">
+  <meta name="application-name" content="Voltify">
   <title>Voltify – Lernen für Elektriker</title>
   <link rel="manifest" href="manifest.json">
   <link rel="stylesheet" href="styles.css">
@@ -20,6 +45,11 @@
   <link rel="apple-touch-icon" sizes="120x120" href="icons/apple-touch-120.png">
 </head>
 <body>
+  <div id="update-banner" class="update-banner hidden" role="status" aria-live="polite">
+    <span>Eine neue Version von Voltify ist verfügbar.</span>
+    <button class="btn primary" id="update-reload" type="button">Jetzt laden</button>
+    <button class="icon-btn ghost" id="update-dismiss" type="button" aria-label="Schließen">✕</button>
+  </div>
   <div id="app">
 
     <!-- HOME -->
@@ -350,6 +380,17 @@
               <p class="setting-hint">Setzt alle Lernstände auf 0</p>
             </div>
             <button class="btn danger" id="reset-progress">Reset</button>
+          </div>
+          <div class="setting-row">
+            <div class="setting-text">
+              <h3>Tastatur-Shortcuts</h3>
+              <p class="setting-hint">
+                <kbd>1</kbd>–<kbd>9</kbd> oder <kbd>A</kbd>–<kbd>H</kbd>: Antwort wählen ·
+                <kbd>Enter</kbd>/<kbd>Space</kbd>: Weiter bzw. Multi prüfen ·
+                <kbd>B</kbd>: Lesezeichen ·
+                <kbd>Esc</kbd>: Zurück
+              </p>
+            </div>
           </div>
           <div class="setting-row link-row">
             <div class="setting-text">
