@@ -5,6 +5,40 @@ Versionierung an [SemVer](https://semver.org/lang/de/).
 
 ## [Unreleased]
 
+### Pre-Launch-Sprint (Mai 2026)
+
+#### Geändert
+- **Typografische Identität**: Crimson-Pro-Serife (lokal aus Fontsource,
+  SIL OFL) für Hero, Page-Title, Results-Title, Exam-Grade, alle
+  Section-Headings. Body bleibt System-Sans.
+- **Anti-KI-Design**: Alle Glow-Filter, Pulse-Animationen, Glassmorphism-
+  Blur und Gradient-Brand-Text entfernt. Pfad-Icons sind jetzt
+  typografische Marker G/V/M statt Emoji.
+- **Wording**: 143 stilistische Gedankenstriche „–" durch „, " ersetzt,
+  Result-Subtitle und Exam-Countdown sachlich, Pseudo-Vertraulichkeit
+  raus.
+- **Design-Tokens**: Spacing-Scale `--sp-1..--sp-12`, Type-Scale
+  `--fs-12..--fs-40`, Animation-Tokens `--t-fast/--t-base`,
+  `--accent-fg` separat für Text auf Surface.
+- **WCAG-Kontrast**: `--text-muted` heller (3.3:1 → 5.0:1 auf bg-card),
+  Light-Theme-Werte ebenfalls konservativer.
+- **sw.js**: `data.js` jetzt im Pre-Cache, Fonts gecacht,
+  `CACHE = voltify-v8`.
+
+#### Hinzugefügt
+- **Datenvalidierung beim Boot**: doppelte Frage-IDs werden entfernt,
+  ungültige `correct`-Indizes herausgefiltert, verwaiste
+  `state.cards`-Einträge (z. B. alte `pu003-*`) aufgeräumt.
+- **localStorage-Quota-Toast** statt stiller `console.warn`.
+- **Cross-Tab-Sync** via `storage`-Event – außer im aktiven Quiz.
+- **A11y**: `aria-live="polite"` + `aria-atomic` auf
+  `#card-feedback`, Heatmap-`aria-label` kompakt formatiert,
+  First-Visit-Wizard fokussiert ersten Knopf jedes Steps automatisch,
+  Multi-Choice-Feedback zeigt Detail („3 von 4 richtig markiert").
+- `exam-countdown.past` als dezenter, gemuteter Hinweis statt
+  „urgent".
+- **LICENSE**: SIL Open Font License 1.1 für Crimson Pro ergänzt.
+
 ### Hinzugefügt
 - Tastatur-Shortcuts: `1`–`9` / `A`–`H` für Antworten, `Enter`/`Space`
   für Weiter bzw. Multi-Check, `B` für Lesezeichen, `Esc` für Zurück.
