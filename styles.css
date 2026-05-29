@@ -1,14 +1,71 @@
+/* Schrift: Crimson Pro (SIL Open Font License 1.1, lokal gehostet). */
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/crimson-pro-400.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+                 U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122,
+                 U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url('fonts/crimson-pro-600.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+                 U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122,
+                 U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+@font-face {
+  font-family: 'Crimson Pro';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('fonts/crimson-pro-italic.woff2') format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6,
+                 U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122,
+                 U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
 :root {
+  /* Typografie */
+  --font-head: 'Crimson Pro', 'Iowan Old Style', 'Charter', 'Georgia', serif;
+  --font-body: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui,
+               "Helvetica Neue", Arial, sans-serif;
+  --fs-12: 0.75rem;
+  --fs-14: 0.875rem;
+  --fs-16: 1rem;
+  --fs-18: 1.125rem;
+  --fs-20: 1.25rem;
+  --fs-24: 1.5rem;
+  --fs-32: 2rem;
+  --fs-40: 2.5rem;
+  --lh-tight: 1.15;
+  --lh-base: 1.5;
+
+  /* Spacing-Scale */
+  --sp-1: 4px;  --sp-2: 8px;  --sp-3: 12px;
+  --sp-4: 16px; --sp-5: 20px; --sp-6: 24px;
+  --sp-8: 32px; --sp-10: 40px; --sp-12: 48px;
+
+  /* Animation-Tokens */
+  --t-fast: 0.12s ease;
+  --t-base: 0.22s ease;
+
   --bg: #0a0e27;
   --bg-elevated: #141a3a;
   --bg-card: #1a2150;
   --surface: #232b5c;
   --surface-2: #2c3570;
   --text: #f0f4ff;
-  --text-dim: #a8b3d4;
-  --text-muted: #6b7299;
+  --text-dim: #b6c0dd;
+  --text-muted: #8e98be;
   --accent: #00d4ff;
-  --accent-glow: rgba(0, 212, 255, 0.28);
+  --accent-fg: #66e3ff;
+  --accent-soft: rgba(0, 212, 255, 0.18);
   --accent-2: #facc15;
   --success: #22c55e;
   --success-bg: rgba(34, 197, 94, 0.18);
@@ -18,7 +75,7 @@
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
   --radius: 16px;
   --radius-sm: 12px;
-  --transition: 0.18s ease;
+  --transition: var(--t-base);
   --safe-top: env(safe-area-inset-top, 0);
   --safe-bottom: env(safe-area-inset-bottom, 0);
 }
@@ -30,16 +87,17 @@
   --surface: #eef1f8;
   --surface-2: #e2e7f3;
   --text: #0a0e27;
-  --text-dim: #4a5275;
-  --text-muted: #8b91a8;
-  --accent: #0066ff;
-  --accent-glow: rgba(0, 102, 255, 0.18);
-  --accent-2: #d97706;
+  --text-dim: #3a4264;
+  --text-muted: #5d6485;
+  --accent: #0052cc;
+  --accent-fg: #0052cc;
+  --accent-soft: rgba(0, 82, 204, 0.15);
+  --accent-2: #b25e00;
   --success: #15803d;
   --success-bg: rgba(34, 197, 94, 0.14);
-  --danger: #dc2626;
+  --danger: #b91c1c;
   --danger-bg: rgba(239, 68, 68, 0.12);
-  --border: rgba(0, 0, 0, 0.08);
+  --border: rgba(0, 0, 0, 0.1);
   --shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
 }
 
@@ -51,7 +109,7 @@
 
 html, body {
   height: 100%;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, "Helvetica Neue", Arial, sans-serif;
+  font-family: var(--font-body);
   background: var(--bg);
   color: var(--text);
   -webkit-font-smoothing: antialiased;
@@ -104,14 +162,14 @@ button { font-family: inherit; }
 .bolt {
   display: inline-block;
   font-size: 1.5rem;
-  filter: drop-shadow(0 0 8px var(--accent-glow));
+  color: var(--accent-2);
 }
 
 .brand-name {
-  background: linear-gradient(135deg, var(--accent), var(--accent-2));
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
+  font-family: var(--font-head);
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: var(--text);
 }
 
 .icon-btn {
@@ -134,8 +192,10 @@ button { font-family: inherit; }
 .icon-btn:active { transform: scale(0.94); }
 
 .page-title {
-  font-size: 1.05rem;
+  font-family: var(--font-head);
+  font-size: var(--fs-18);
   font-weight: 600;
+  letter-spacing: -0.005em;
 }
 
 /* CONTENT */
@@ -163,10 +223,11 @@ button { font-family: inherit; }
 }
 
 .hero-title {
-  font-size: 1.85rem;
-  font-weight: 700;
-  margin-bottom: 22px;
-  line-height: 1.15;
+  font-family: var(--font-head);
+  font-size: 2.2rem;
+  font-weight: 600;
+  margin-bottom: var(--sp-5);
+  line-height: var(--lh-tight);
   letter-spacing: -0.02em;
 }
 
@@ -230,18 +291,22 @@ button { font-family: inherit; }
 .path-icon {
   width: 48px;
   height: 48px;
-  border-radius: 12px;
+  border-radius: 8px;
   display: flex;
   align-items: center;
   justify-content: center;
-  font-size: 1.55rem;
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 1.6rem;
   flex-shrink: 0;
   background: var(--surface);
+  color: var(--text);
+  letter-spacing: 0;
 }
 
-.path-icon.lehrling-grund { background: linear-gradient(135deg, rgba(0,212,255,0.25), rgba(0,212,255,0.08)); }
-.path-icon.lehrling-vde { background: linear-gradient(135deg, rgba(250,204,21,0.25), rgba(250,204,21,0.08)); }
-.path-icon.meister { background: linear-gradient(135deg, rgba(168,85,247,0.28), rgba(168,85,247,0.08)); }
+.path-icon.lehrling-grund { color: var(--accent-fg, var(--accent)); }
+.path-icon.lehrling-vde   { color: var(--accent-2); }
+.path-icon.meister        { color: #c4a3ff; }
 
 .path-info {
   flex: 1;
@@ -319,7 +384,7 @@ button { font-family: inherit; }
 .btn.primary {
   background: linear-gradient(135deg, var(--accent), #0099ff);
   color: #001428;
-  box-shadow: 0 4px 18px var(--accent-glow);
+  box-shadow: 0 4px 18px var(--accent-soft);
 }
 
 [data-theme="light"] .btn.primary { color: #ffffff; }
@@ -542,7 +607,7 @@ button { font-family: inherit; }
 
 .option.multi.selected {
   border-color: var(--accent);
-  background: var(--accent-glow);
+  background: var(--accent-soft);
 }
 
 .option.multi.selected .option-mark {
@@ -606,19 +671,18 @@ button { font-family: inherit; }
 }
 
 .results-icon {
-  font-size: 4rem;
-  filter: drop-shadow(0 0 24px var(--accent-glow));
-  animation: pulse 2.4s ease infinite;
+  font-family: var(--font-head);
+  font-size: 3.2rem;
+  font-weight: 600;
+  color: var(--accent-2);
   margin-top: 16px;
-}
-
-@keyframes pulse {
-  50% { transform: scale(1.1); }
+  letter-spacing: 0.05em;
 }
 
 .results-title {
+  font-family: var(--font-head);
   font-size: 1.85rem;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -781,9 +845,11 @@ button { font-family: inherit; }
 }
 
 .stats-section h3 {
-  font-size: 1.02rem;
-  margin-bottom: 12px;
+  font-family: var(--font-head);
+  font-size: var(--fs-20);
+  margin-bottom: var(--sp-3);
   font-weight: 600;
+  letter-spacing: -0.005em;
 }
 
 .stat-row {
@@ -930,11 +996,13 @@ button { font-family: inherit; }
 
 /* PROSE (Impressum, Datenschutz) */
 .prose h3 {
-  font-size: 1rem;
+  font-family: var(--font-head);
+  font-size: var(--fs-20);
   font-weight: 600;
-  margin-top: 22px;
-  margin-bottom: 8px;
+  margin-top: var(--sp-6);
+  margin-bottom: var(--sp-2);
   color: var(--text);
+  letter-spacing: -0.005em;
 }
 
 .prose h3:first-child {
@@ -1015,20 +1083,18 @@ button { font-family: inherit; }
 .first-visit {
   position: fixed;
   inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
+  background: rgba(10, 14, 39, 0.94);
   z-index: 100;
   display: flex;
   align-items: center;
   justify-content: center;
   padding: 20px;
   padding-bottom: calc(20px + var(--safe-bottom));
-  animation: fade 0.3s ease;
+  animation: fade 0.22s ease;
 }
 
 [data-theme="light"] .first-visit {
-  background: rgba(0, 0, 0, 0.35);
+  background: rgba(245, 247, 251, 0.96);
 }
 
 .first-visit.hidden { display: none; }
@@ -1040,23 +1106,27 @@ button { font-family: inherit; }
   padding: 28px 24px;
   max-width: 420px;
   width: 100%;
-  text-align: center;
+  text-align: left;
   box-shadow: var(--shadow);
   display: flex;
   flex-direction: column;
   gap: 14px;
-  animation: cardin 0.35s ease;
+  animation: cardin 0.22s ease;
 }
 
-.first-visit-icon {
-  font-size: 3rem;
-  margin: 0 auto;
-  filter: drop-shadow(0 0 16px var(--accent-glow));
+.first-visit-mark {
+  font-family: var(--font-head);
+  font-weight: 600;
+  font-size: 0.85rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--text-muted);
 }
 
 .first-visit-card h2 {
-  font-size: 1.4rem;
-  font-weight: 700;
+  font-family: var(--font-head);
+  font-size: 1.65rem;
+  font-weight: 600;
   letter-spacing: -0.01em;
 }
 
@@ -1136,7 +1206,7 @@ button { font-family: inherit; }
 }
 
 .exam-countdown {
-  background: linear-gradient(135deg, var(--accent-glow), transparent);
+  background: linear-gradient(135deg, var(--accent-soft), transparent);
   border-left: 3px solid var(--accent);
   color: var(--text);
   font-size: 0.9rem;
@@ -1154,6 +1224,12 @@ button { font-family: inherit; }
 .exam-countdown.urgent {
   border-left-color: var(--danger);
   color: var(--text);
+}
+
+.exam-countdown.past {
+  border-left-color: var(--text-muted);
+  color: var(--text-muted);
+  background: var(--surface);
 }
 
 /* EXAM-MODUS */
@@ -1181,7 +1257,7 @@ button { font-family: inherit; }
 .exam-timer.urgent {
   background: var(--danger-bg);
   color: var(--danger);
-  animation: pulse 1.4s ease infinite;
+  border: 1px solid var(--danger);
 }
 
 .exam-timer.hidden { display: none; }
@@ -1196,10 +1272,11 @@ button { font-family: inherit; }
 }
 
 .exam-grade {
-  font-size: 3.4rem;
-  font-weight: 700;
+  font-family: var(--font-head);
+  font-size: 4rem;
+  font-weight: 600;
   letter-spacing: -0.04em;
-  color: var(--accent);
+  color: var(--accent-fg, var(--accent));
   line-height: 1;
 }
 
@@ -1402,7 +1479,7 @@ select:focus-visible,
 textarea:focus-visible {
   outline: none;
   border-color: var(--accent) !important;
-  box-shadow: 0 0 0 2px var(--accent-glow);
+  box-shadow: 0 0 0 2px var(--accent-soft);
 }
 
 a:focus-visible {

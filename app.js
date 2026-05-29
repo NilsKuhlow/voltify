@@ -48,23 +48,79 @@
         });
       }
     } catch (e) {
-      console.warn('Konnte State nicht laden:', e);
+      console.debug('[Voltify] State konnte nicht geladen werden:', e.message);
     }
     return defaultState();
   }
 
+  let quotaWarned = false;
   function saveState() {
     try {
       localStorage.setItem(STORAGE_KEY, JSON.stringify(state));
     } catch (e) {
-      console.warn('Konnte State nicht speichern:', e);
+      console.debug('[Voltify] State konnte nicht gespeichert werden:', e.message);
+      if (!quotaWarned && (e.name === 'QuotaExceededError' ||
+          e.code === 22 || /quota/i.test(e.message || ''))) {
+        quotaWarned = true;
+        showStorageWarning();
+      }
+    }
+  }
+
+  function showStorageWarning() {
+    let banner = document.getElementById('storage-banner');
+    if (!banner) {
+      banner = document.createElement('div');
+      banner.id = 'storage-banner';
+      banner.className = 'update-banner danger';
+      banner.setAttribute('role', 'alert');
+      banner.innerHTML = '<span>Browser-Speicher ist voll. Bitte Fortschritt exportieren und zurücksetzen.</span>' +
+        '<button class="icon-btn ghost" type="button" aria-label="Schließen">✕</button>';
+      document.body.insertBefore(banner, document.body.firstChild);
+      banner.querySelector('button').onclick = () => banner.remove();
     }
   }
 
   let state = loadState();
   let session = null;
 
+  // Daten-Validierung der QUESTIONS-Konstante (Doppelte IDs, ungültige correct-Indizes).
+  // Ungültige Karten werden aus QUESTIONS entfernt; doppelte IDs geloggt.
+  (function validateQuestions() {
+    const seen = new Set();
+    const dupes = [];
+    for (let i = QUESTIONS.length - 1; i >= 0; i--) {
+      const q = QUESTIONS[i];
+      // Doppelte ID
+      if (seen.has(q.id)) {
+        dupes.push(q.id);
+        QUESTIONS.splice(i, 1);
+        continue;
+      }
+      seen.add(q.id);
+      // correct-Index-Bounds
+      const max = (q.options || []).length - 1;
+      const correctArr = Array.isArray(q.correct) ? q.correct : [q.correct];
+      const invalid = correctArr.some(
+        (idx) => typeof idx !== 'number' || idx < 0 || idx > max
+      );
+      if (invalid || !q.options || q.options.length < 2) {
+        console.error('[Voltify] Frage', q.id, 'hat ungültige correct/options – wird entfernt.');
+        QUESTIONS.splice(i, 1);
+      }
+    }
+    if (dupes.length) {
+      console.error('[Voltify] Doppelte Frage-IDs entfernt:', dupes.join(', '));
+    }
+  })();
+
   function ensureCardsInitialized() {
+    const validIds = new Set(QUESTIONS.map((q) => q.id));
+    // Verwaiste card-Einträge entfernen (z. B. ehemalige pu003-* nach Replace)
+    Object.keys(state.cards).forEach((id) => {
+      if (!validIds.has(id)) delete state.cards[id];
+    });
+    // Fehlende Karten anlegen, alte ohne bookmarked-Feld nachrüsten
     QUESTIONS.forEach((q) => {
       if (!state.cards[q.id]) {
         state.cards[q.id] = {
@@ -210,7 +266,15 @@
   // ===== ERST-START-WIZARD =====
   function showVisitStep(n) {
     document.querySelectorAll('.visit-step').forEach((s) => {
-      s.classList.toggle('hidden', s.dataset.step !== String(n));
+      const visible = s.dataset.step === String(n);
+      s.classList.toggle('hidden', !visible);
+      if (visible) {
+        // Fokus auf den ersten interaktiven Knopf des Steps setzen
+        setTimeout(() => {
+          const focusable = s.querySelector('button, input, select, [tabindex]');
+          if (focusable) focusable.focus({ preventScroll: true });
+        }, 50);
+      }
     });
   }
 
@@ -434,13 +498,14 @@
     today.setHours(0, 0, 0, 0);
     const days = Math.round((exam - today) / DAY);
     let txt;
-    if (days < 0) txt = `Prüfung war vor ${-days} ${-days === 1 ? 'Tag' : 'Tagen'}`;
-    else if (days === 0) txt = 'Heute ist deine Prüfung – viel Erfolg!';
-    else if (days === 1) txt = 'Morgen ist deine Prüfung – viel Erfolg!';
-    else txt = `Noch ${days} Tage bis zur Prüfung`;
+    if (days < 0) txt = `Prüfung war vor ${-days} ${-days === 1 ? 'Tag' : 'Tagen'}.`;
+    else if (days === 0) txt = 'Prüfung heute.';
+    else if (days === 1) txt = 'Prüfung morgen.';
+    else txt = `Noch ${days} Tage bis zur Prüfung.`;
     el.textContent = txt;
     el.classList.remove('hidden');
     el.classList.toggle('urgent', days >= 0 && days <= 14);
+    el.classList.toggle('past', days < 0);
   }
 
   // ===== SESSION =====
@@ -624,7 +689,17 @@
     const fb = document.getElementById('card-feedback');
     const fbHeader = document.getElementById('feedback-header');
     fbHeader.className = 'feedback-header ' + (correct ? 'ok' : 'no');
-    fbHeader.textContent = correct ? '✓ Richtig!' : '✗ Falsch';
+    // Bei Multi-Choice: Detail zur Antwort
+    if (correctSet.size > 1) {
+      const hits = [...chosenSet].filter((i) => correctSet.has(i)).length;
+      const wrongs = chosenSet.size - hits;
+      fbHeader.textContent = correct
+        ? `Richtig. Alle ${correctSet.size} richtigen Antworten markiert.`
+        : `Falsch. ${hits} von ${correctSet.size} richtigen markiert` +
+          (wrongs > 0 ? `, ${wrongs} ${wrongs === 1 ? 'falsche' : 'falsche'} dabei.` : '.');
+    } else {
+      fbHeader.textContent = correct ? 'Richtig.' : 'Falsch.';
+    }
     document.getElementById('feedback-explain').textContent = q.explain;
     const fbSource = document.getElementById('feedback-source');
     if (q.source) {
@@ -690,11 +765,11 @@
     const accuracy = total > 0 ? Math.round((session.correct / total) * 100) : 0;
     document.getElementById('result-accuracy').textContent = accuracy + '%';
 
-    let msg = '';
-    if (accuracy === 100) msg = 'Perfekt! Alles richtig.';
-    else if (accuracy >= 80) msg = 'Sehr stark! Du bist auf einem guten Weg.';
-    else if (accuracy >= 60) msg = 'Solide. Wiederhole die schwierigen Karten gleich.';
-    else msg = 'Üben lohnt sich – die falschen Karten kommen bald wieder.';
+    let msg;
+    if (accuracy === 100) msg = 'Alle Karten richtig beantwortet.';
+    else if (accuracy >= 80) msg = accuracy + ' Prozent richtig.';
+    else if (accuracy >= 60) msg = accuracy + ' Prozent richtig. Falsche Karten kommen gleich nochmal.';
+    else msg = accuracy + ' Prozent richtig. Falsche Karten werden in der nächsten Session wiederholt.';
     document.getElementById('results-subtitle').textContent = msg;
   }
 
@@ -777,8 +852,10 @@
       const key = d.toISOString().slice(0, 10);
       const c = days[key] || 0;
       const level = c === 0 ? 0 : Math.min(4, Math.ceil(4 * c / maxCount));
-      const label = d.toLocaleDateString('de-DE', { day: '2-digit', month: '2-digit' }) +
-                    ': ' + (c === 0 ? 'keine Session' : c + ' Session' + (c === 1 ? '' : 's'));
+      const dStr = d.toLocaleDateString('de-DE', { day: 'numeric', month: 'long' });
+      const label = c === 0
+        ? `${dStr}: keine Session`
+        : `${dStr}: ${c} Session${c === 1 ? '' : 's'}`;
       heatCells += `<div class="heat-cell level-${level}" title="${label}" aria-label="${label}"></div>`;
     }
     const activeDaysLast30 = Object.keys(days).filter((k) => {
@@ -1042,7 +1119,7 @@
 
       const fbHidden = document.getElementById('card-feedback').classList.contains('hidden');
 
-      // Weiter (Space / Enter) – nur wenn Feedback sichtbar
+      // Weiter (Space/Enter) wenn Feedback sichtbar
       if ((e.key === ' ' || e.key === 'Enter') && !fbHidden) {
         e.preventDefault();
         const nextBtn = document.getElementById('next-btn');
@@ -1050,7 +1127,17 @@
         return;
       }
 
-      // Bookmark-Toggle (B oder M)
+      // Enter bei Multi-Auswahl: Antwort prüfen
+      if (e.key === 'Enter' && fbHidden) {
+        const mc = document.getElementById('multi-check');
+        if (mc && !mc.disabled) {
+          e.preventDefault();
+          mc.click();
+          return;
+        }
+      }
+
+      // Bookmark-Toggle (B/M)
       if ((e.key === 'b' || e.key === 'B' || e.key === 'm' || e.key === 'M') && fbHidden) {
         e.preventDefault();
         const bm = document.getElementById('bookmark-btn');
@@ -1064,9 +1151,7 @@
       if (opts.length === 0) return;
 
       let idx = -1;
-      // 1..9
       if (/^[1-9]$/.test(e.key)) idx = parseInt(e.key, 10) - 1;
-      // A..H (case-insensitiv)
       else if (/^[a-hA-H]$/.test(e.key)) idx = e.key.toUpperCase().charCodeAt(0) - 65;
 
       if (idx < 0 || idx >= opts.length) return;
@@ -1074,29 +1159,17 @@
       if (btn.disabled) return;
       e.preventDefault();
       btn.click();
-
-      // Bei Multi-Choice ist nach Auswahl noch keine Auswertung – wenn ENTER danach gedrückt wird,
-      // soll der Multi-Check-Button greifen.
-      // (Wird beim nächsten Tastendruck-Cycle erfasst, siehe Block oben "Weiter".)
-      // Ergänzung: Auch Multi-Check über Enter ermöglichen, wenn er sichtbar und enabled ist.
-      const mc = document.getElementById('multi-check');
-      if (mc && !mc.disabled) {
-        // separat behandelt im nächsten Enter-Druck – nichts weiter tun
-      }
     });
 
-    // Enter im Multi-Mode: löst Antwort-prüfen aus, wenn vorhanden
-    document.addEventListener('keydown', (e) => {
-      if (e.key !== 'Enter') return;
-      const t = e.target;
-      if (t && (t.tagName === 'INPUT' || t.tagName === 'TEXTAREA' || t.tagName === 'SELECT')) return;
+    // Cross-Tab-Sync: Änderungen aus anderem Tab übernehmen, außer im aktiven Quiz
+    window.addEventListener('storage', (e) => {
+      if (e.key !== STORAGE_KEY) return;
       const active = document.querySelector('.screen.active');
-      if (!active || active.dataset.screen !== 'quiz') return;
-      const mc = document.getElementById('multi-check');
-      if (mc && !mc.disabled) {
-        e.preventDefault();
-        mc.click();
-      }
+      const screen = active ? active.dataset.screen : null;
+      if (screen === 'quiz') return; // Quiz-Session nicht zerschießen
+      state = loadState();
+      ensureCardsInitialized();
+      if (screen) showScreen(screen);
     });
   }
 

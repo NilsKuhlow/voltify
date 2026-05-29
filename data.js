@@ -7,21 +7,21 @@
 
 window.PATHS = {
   'lehrling-grund': {
-    name: 'Lehrling – Grundlagen',
+    name: 'Lehrling: Grundlagen',
     short: 'Grundlagen',
-    icon: '⚡',
+    icon: 'G',
     desc: 'Ohm, Spannung, Schaltungen, Drehstrom, Bauelemente'
   },
   'lehrling-vde': {
-    name: 'Lehrling – VDE & Installation',
-    short: 'VDE & Installation',
-    icon: '🛡',
+    name: 'Lehrling: VDE und Installation',
+    short: 'VDE und Installation',
+    icon: 'V',
     desc: 'Sicherheit, Normen, Installation, RCD, Wallbox, PV'
   },
   'meister': {
     name: 'Meister',
     short: 'Meister',
-    icon: '🎓',
+    icon: 'M',
     desc: 'Recht, Betriebsführung, AdA, Fachtheorie vertieft'
   }
 };
@@ -73,7 +73,7 @@ window.QUESTIONS = [
     question: 'Welche Frequenz hat das öffentliche Stromnetz in Deutschland?',
     options: ['16,7 Hz', '50 Hz', '60 Hz', '400 Hz'],
     correct: 1,
-    explain: '50 Hz – das ist die Netzfrequenz in Europa. 60 Hz gilt z. B. in den USA.',
+    explain: '50 Hz, das ist die Netzfrequenz in Europa. 60 Hz gilt z. B. in den USA.',
     source: 'DIN VDE 0100-100 / EN 50160'
   },
   {
@@ -108,7 +108,7 @@ window.QUESTIONS = [
              'Spannung über 1000 V',
              'Spannung mit überlagertem Gleichanteil'],
     correct: 1,
-    explain: 'Wechselspannung (AC) ändert periodisch Wert und Polarität – im Netz sinusförmig mit 50 Hz.',
+    explain: 'Wechselspannung (AC) ändert periodisch Wert und Polarität, im Netz sinusförmig mit 50 Hz.',
     source: 'Wechselstromtechnik (DIN 40110)'
   },
   {
@@ -145,7 +145,7 @@ window.QUESTIONS = [
   },
   {
     id: 'lg15', path: 'lehrling-grund', category: 'Schaltungen',
-    question: 'In einer Reihenschaltung – was gilt für die Spannung?',
+    question: 'In einer Reihenschaltung, was gilt für die Spannung?',
     options: ['An allen Verbrauchern gleich', 'Sie teilt sich entsprechend der Widerstände auf',
              'Sie ist immer null', 'Sie verdoppelt sich'],
     correct: 1,
@@ -154,7 +154,7 @@ window.QUESTIONS = [
   },
   {
     id: 'lg16', path: 'lehrling-grund', category: 'Schaltungen',
-    question: 'In einer Parallelschaltung – was gilt für den Strom?',
+    question: 'In einer Parallelschaltung, was gilt für den Strom?',
     options: ['Überall gleich', 'Er teilt sich auf die Zweige auf',
              'Er ist immer null', 'Er addiert sich zu Null'],
     correct: 1,
@@ -166,7 +166,7 @@ window.QUESTIONS = [
     question: 'Wie berechnet man die Wirkleistung im Drehstrom-Symmetriebetrieb?',
     options: ['P = U · I', 'P = √3 · U · I · cos φ', 'P = 3 · U · I', 'P = U · I · cos φ'],
     correct: 1,
-    explain: 'P = √3 · U · I · cos φ – mit U = verkettete Spannung (z. B. 400 V), I = Außenleiterstrom.',
+    explain: 'P = √3 · U · I · cos φ, mit U = verkettete Spannung (z. B. 400 V), I = Außenleiterstrom.',
     source: 'Drehstromrechnung (P = √3 · U · I · cos φ)'
   },
   {
@@ -190,7 +190,7 @@ window.QUESTIONS = [
   },
   {
     id: 'lg20', path: 'lehrling-grund', category: 'Aderfarben',
-    question: 'Welche Farbe hat üblicherweise der Außenleiter L1?',
+    question: 'Welche Farbe hat der Außenleiter L1 nach DIN VDE 0293-308?',
     options: ['blau', 'braun', 'schwarz', 'grau'],
     correct: 1,
     explain: 'Nach harmonisierter Norm: L1 braun, L2 schwarz, L3 grau, N blau, PE grün-gelb.',
@@ -242,7 +242,7 @@ window.QUESTIONS = [
     question: 'Welche Energie speichert ein geladener Kondensator?',
     options: ['W = U · I', 'W = C · U', 'W = ½ · C · U²', 'W = C / U'],
     correct: 2,
-    explain: 'W = ½ · C · U². Energie steigt quadratisch mit der Spannung – wichtig bei Sicherheitsabständen!'
+    explain: 'W = ½ · C · U². Energie steigt quadratisch mit der Spannung, wichtig bei Sicherheitsabständen!'
   },
   {
     id: 'lg27', path: 'lehrling-grund', category: 'Einheiten',
@@ -277,7 +277,7 @@ window.QUESTIONS = [
   {
     id: 'lg31', path: 'lehrling-grund', category: 'Halbleiter',
     question: 'Was ist die Funktion einer Halbleiterdiode?',
-    options: ['Stromrichtungsabhängige Leitung – sperrt in Sperr-, leitet in Durchlassrichtung',
+    options: ['Stromrichtungsabhängige Leitung, sperrt in Sperr-, leitet in Durchlassrichtung',
              'Stromregelung in beide Richtungen gleich',
              'Spannungswandlung wie Trafo',
              'Speicherung von Ladung'],
@@ -287,7 +287,7 @@ window.QUESTIONS = [
   {
     id: 'lg32', path: 'lehrling-grund', category: 'Halbleiter',
     question: 'Welche typische Durchlassspannung hat eine rote Standard-LED?',
-    options: ['ca. 0,3 V', 'ca. 0,7 V', 'ca. 1,8 – 2,2 V', 'ca. 5 V'],
+    options: ['ca. 0,3 V', 'ca. 0,7 V', 'ca. 1,8, 2,2 V', 'ca. 5 V'],
     correct: 2,
     explain: 'Rote LEDs: ca. 1,8–2,2 V. Grün/Gelb: ~2,2–2,5 V. Blau/Weiß: ~3,0–3,4 V.'
   },
@@ -331,7 +331,7 @@ window.QUESTIONS = [
     question: 'Wie groß ist der Effektivwert einer sinusförmigen Wechselspannung mit Spitzenwert 325 V?',
     options: ['325 V', 'ca. 230 V', 'ca. 460 V', 'ca. 162 V'],
     correct: 1,
-    explain: 'U_eff = Û / √2 = 325 / 1,414 ≈ 230 V. Genau das ist der Effektivwert unseres Niederspannungsnetzes.'
+    explain: 'U_eff = Û / √2 = 325 / 1,414 ≈ 230 V. Das ist der Effektivwert im deutschen Niederspannungsnetz.'
   },
   {
     id: 'lg38', path: 'lehrling-grund', category: 'Strom',
@@ -400,7 +400,7 @@ window.QUESTIONS = [
              'Spannungsabfall im Stator',
              'Frequenzverschiebung'],
     correct: 1,
-    explain: 's = (n_d − n) / n_d. Ohne Schlupf könnte der Rotor keine Spannung induzieren – kein Drehmoment. Typisch 2–6 % bei Nennlast.'
+    explain: 's = (n_d − n) / n_d. Ohne Schlupf könnte der Rotor keine Spannung induzieren, kein Drehmoment. Typisch 2–6 % bei Nennlast.'
   },
   {
     id: 'lg47', path: 'lehrling-grund', category: 'Maschinen',
@@ -448,10 +448,10 @@ window.QUESTIONS = [
     id: 'lv02', path: 'lehrling-vde', category: 'Sicherheit',
     question: 'Wie lautet die korrekte Reihenfolge der 5 Sicherheitsregeln?',
     options: [
-      'Freischalten – Spannungsfreiheit – Sichern – Erden – Abdecken',
-      'Freischalten – Sichern – Spannungsfreiheit – Erden – Abdecken',
-      'Spannungsfreiheit – Freischalten – Sichern – Abdecken – Erden',
-      'Erden – Freischalten – Sichern – Spannungsfreiheit – Abdecken'
+      'Freischalten, Spannungsfreiheit, Sichern, Erden, Abdecken',
+      'Freischalten, Sichern, Spannungsfreiheit, Erden, Abdecken',
+      'Spannungsfreiheit, Freischalten, Sichern, Abdecken, Erden',
+      'Erden, Freischalten, Sichern, Spannungsfreiheit, Abdecken'
     ],
     correct: 1,
     explain: 'Eselsbrücke „FSSEAN": Freischalten, Sichern, Spannungsfreiheit feststellen, Erden+Kurzschließen, benachbarte Teile Abdecken.',
@@ -487,7 +487,7 @@ window.QUESTIONS = [
              'Beide Pole geerdet',
              'Nur PE-Leiter vorhanden'],
     correct: 1,
-    explain: 'IT-Netz: Sternpunkt isoliert (oder hochohmig geerdet), Körper geerdet. Erster Erdschluss ist ungefährlich – Vorteil in OPs, Industrie etc.',
+    explain: 'IT-Netz: Sternpunkt isoliert (oder hochohmig geerdet), Körper geerdet. Erster Erdschluss ist ungefährlich, Vorteil in OPs, Industrie etc.',
     source: 'DIN VDE 0100-100 / DIN VDE 0100-310'
   },
   {
@@ -496,7 +496,7 @@ window.QUESTIONS = [
     options: ['Schutzkleinspannung', 'Schutz durch Schutzisolierung',
              'Schutz durch Anschluss an Schutzleiter', 'Funktionskleinspannung'],
     correct: 2,
-    explain: 'Schutzklasse I: Berührbare leitfähige Teile sind mit dem Schutzleiter verbunden – Symbol: Erdungszeichen.',
+    explain: 'Schutzklasse I: Berührbare leitfähige Teile sind mit dem Schutzleiter verbunden, Symbol: Erdungszeichen.',
     source: 'DIN EN 61140 (VDE 0140-1)'
   },
   {
@@ -505,7 +505,7 @@ window.QUESTIONS = [
     options: ['Schutzleiter erforderlich', 'Schutzisolierung (doppelt/verstärkt)',
              'Schutzkleinspannung', 'IP-Schutz X4'],
     correct: 1,
-    explain: 'Schutzklasse II: doppelte oder verstärkte Isolierung – kein Schutzleiteranschluss. Symbol: zwei ineinander liegende Quadrate.',
+    explain: 'Schutzklasse II: doppelte oder verstärkte Isolierung, kein Schutzleiteranschluss. Symbol: zwei ineinander liegende Quadrate.',
     source: 'DIN EN 61140 (VDE 0140-1)'
   },
   {
@@ -514,7 +514,7 @@ window.QUESTIONS = [
     options: ['Schutzkleinspannung (SELV/PELV)', 'Vollisolierung',
              'Schutzleiter zwingend', 'Hochspannungsanschluss'],
     correct: 0,
-    explain: 'Schutzklasse III: Versorgung mit Schutzkleinspannung (≤ 50 V AC / 120 V DC) aus sicheren Quellen – SELV oder PELV.',
+    explain: 'Schutzklasse III: Versorgung mit Schutzkleinspannung (≤ 50 V AC / 120 V DC) aus sicheren Quellen, SELV oder PELV.',
     source: 'DIN EN 61140 (VDE 0140-1)'
   },
   {
@@ -547,13 +547,13 @@ window.QUESTIONS = [
     question: 'Wie hoch ist die zulässige Berührungsspannung für Wechselstrom in trockenen Räumen?',
     options: ['12 V', '25 V', '50 V', '120 V'],
     correct: 2,
-    explain: 'Maximal 50 V AC bzw. 120 V DC – darüber gilt eine Berührung als gefährlich (Schutzziel der VDE).',
+    explain: 'Maximal 50 V AC bzw. 120 V DC, darüber gilt eine Berührung als gefährlich (Schutzziel der VDE).',
     source: 'DIN VDE 0100-410'
   },
   {
     id: 'lv13', path: 'lehrling-vde', category: 'Schutzkleinspannung',
     question: 'Was ist SELV?',
-    options: ['Safety Extra Low Voltage – Schutzkleinspannung mit sicherer Trennung, ohne Erdung',
+    options: ['Safety Extra Low Voltage, Schutzkleinspannung mit sicherer Trennung, ohne Erdung',
              'Schutz mit Erdverbindung',
              'Spannung über 50 V',
              'Schaltfähige Spannung über 230 V'],
@@ -571,7 +571,7 @@ window.QUESTIONS = [
   },
   {
     id: 'lv15', path: 'lehrling-vde', category: 'Absicherung',
-    question: 'Welche maximale Absicherung ist üblicherweise für 1,5 mm² Cu zulässig?',
+    question: 'Welche maximale Absicherung ist für 1,5 mm² Cu zulässig?',
     options: ['10 A', '13 A', '16 A', '20 A'],
     correct: 2,
     explain: '1,5 mm² Cu wird je nach Verlegeart bis maximal 16 A LS-Schalter abgesichert.',
@@ -596,7 +596,7 @@ window.QUESTIONS = [
              'Nur in Bädern',
              'Zum Dimmen'],
     correct: 0,
-    explain: 'Kreuzschaltung = eine Lampe von 3 oder mehr Stellen schalten. Aufbau: Wechsel – Kreuz – … – Wechsel.',
+    explain: 'Kreuzschaltung = eine Lampe von 3 oder mehr Stellen schalten. Aufbau: Wechsel, Kreuz, …, Wechsel.',
     source: 'Installationspraxis (Kreuzschaltung)'
   },
   {
@@ -607,7 +607,7 @@ window.QUESTIONS = [
              'Schaltet nur bei Stromausfall',
              'Schaltet 3-phasig dauerhaft'],
     correct: 0,
-    explain: 'Ein Stromstoßrelais kippt bei jedem Tasterimpuls seinen Schaltzustand – ideal bei vielen Schaltstellen mit nur einer Leitung.',
+    explain: 'Ein Stromstoßrelais kippt bei jedem Tasterimpuls seinen Schaltzustand, ideal bei vielen Schaltstellen mit nur einer Leitung.',
     source: 'Installationspraxis (Stromstoßrelais)'
   },
   {
@@ -624,7 +624,7 @@ window.QUESTIONS = [
   {
     id: 'lv20', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
     question: 'Was bedeutet RCD?',
-    options: ['Residual Current Device – Fehlerstromschutzschalter',
+    options: ['Residual Current Device, Fehlerstromschutzschalter',
              'Reverse Current Detector',
              'Resistance Control Device',
              'Relay Common Disconnect'],
@@ -687,7 +687,7 @@ window.QUESTIONS = [
     options: ['Errichten neuer Anlagen', 'Betrieb elektrischer Anlagen (z. B. die 5 Sicherheitsregeln)',
              'Schaltschrankbau', 'Photovoltaik'],
     correct: 1,
-    explain: 'VDE 0105-100 ist die Norm für den Betrieb elektrischer Anlagen – Quelle u. a. der 5 Sicherheitsregeln und der Definition von Elektrofachkraft.'
+    explain: 'VDE 0105-100 ist die Norm für den Betrieb elektrischer Anlagen, Quelle u. a. der 5 Sicherheitsregeln und der Definition von Elektrofachkraft.'
   },
   {
     id: 'lv27', path: 'lehrling-vde', category: 'Erdung',
@@ -719,16 +719,16 @@ window.QUESTIONS = [
   {
     id: 'lv30', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
     question: 'Welcher Auslösestrombereich gilt für die Schnellauslösung eines LS-Schalters Charakteristik B?',
-    options: ['1,1 – 1,4 · I_n', '3 – 5 · I_n', '5 – 10 · I_n', '10 – 20 · I_n'],
+    options: ['1,1, 1,4 · I_n', '3, 5 · I_n', '5, 10 · I_n', '10, 20 · I_n'],
     correct: 1,
     explain: 'B-Charakteristik: magnetische Schnellauslösung bei Ia = 3–5 · I_n. Standard im Wohnbau für ohmsche/leichte Lasten.'
   },
   {
     id: 'lv31', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
     question: 'Welcher Auslösestrombereich gilt für einen LS-Schalter Charakteristik C?',
-    options: ['3 – 5 · I_n', '5 – 10 · I_n', '10 – 20 · I_n', '20 – 30 · I_n'],
+    options: ['3, 5 · I_n', '5, 10 · I_n', '10, 20 · I_n', '20, 30 · I_n'],
     correct: 1,
-    explain: 'C-Charakteristik: Ia = 5–10 · I_n – verwendet bei Verbrauchern mit höheren Einschaltströmen (Trafos, Leuchtstofflampen-Gruppen).'
+    explain: 'C-Charakteristik: Ia = 5–10 · I_n, verwendet bei Verbrauchern mit höheren Einschaltströmen (Trafos, Leuchtstofflampen-Gruppen).'
   },
   {
     id: 'lv32', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
@@ -800,7 +800,7 @@ window.QUESTIONS = [
     question: 'Mit welcher Versorgungsspannung arbeitet das KNX-TP1-Bussystem?',
     options: ['12 V AC', '24 V AC', '29 V DC', '230 V AC'],
     correct: 2,
-    explain: 'KNX TP1 (Twisted Pair) wird mit 29 V DC versorgt – SELV. Daten und Spannung laufen über das gleiche Buskabel.'
+    explain: 'KNX TP1 (Twisted Pair) wird mit 29 V DC versorgt, SELV. Daten und Spannung laufen über das gleiche Buskabel.'
   },
   {
     id: 'lv41', path: 'lehrling-vde', category: 'Photovoltaik',
@@ -824,13 +824,13 @@ window.QUESTIONS = [
              'Nur Hochfrequenzfehlerströme',
              'Nur Drehstromsysteme'],
     correct: 1,
-    explain: 'Typ A erfasst sinusförmige AC-Fehlerströme und pulsierende DC-Fehlerströme – Standard im Wohnbau. Glatte DC-Anteile (z. B. an Wechselrichtern) braucht Typ B oder Typ-A + RDC-DD.'
+    explain: 'Typ A erfasst sinusförmige AC-Fehlerströme und pulsierende DC-Fehlerströme, Standard im Wohnbau. Glatte DC-Anteile (z. B. an Wechselrichtern) braucht Typ B oder Typ-A + RDC-DD.'
   },
   {
     id: 'lv44', path: 'lehrling-vde', category: 'E-Mobilität',
     question: 'Was bedeutet RDC-DD im Kontext von Ladeeinrichtungen für E-Autos?',
     options: ['Eine Lade-Ladekurve',
-             'Residual DC Detection Device – erkennt glatte Gleichfehlerströme ≥ 6 mA',
+             'Residual DC Detection Device, erkennt glatte Gleichfehlerströme ≥ 6 mA',
              'Ein Drehstromschalter',
              'Ein Energie-Messgerät'],
     correct: 1,
@@ -861,13 +861,13 @@ window.QUESTIONS = [
              'Schutz gegen thermische Einwirkungen',
              'Schutz gegen Überspannungen'],
     correct: 0,
-    explain: 'VDE 0100-410: Schutzmaßnahmen gegen elektrischen Schlag – Grundnorm für Schutzarten, Schutzklassen, Trennung, Hindernisse, Erdung.'
+    explain: 'VDE 0100-410: Schutzmaßnahmen gegen elektrischen Schlag, Grundnorm für Schutzarten, Schutzklassen, Trennung, Hindernisse, Erdung.'
   },
   {
     id: 'lv48', path: 'lehrling-vde', category: 'Schutzeinrichtungen',
     question: 'Wann sind zwei in Reihe liegende LS-Schalter (vorgelagert 35 A B / nachgelagert 16 A B) bei einem Kurzschluss selektiv?',
     options: ['Immer',
-             'Nur eingeschränkt – verlässliche Selektivität meist erst über die Hersteller-Selektivitätstabellen oder mit deutlich „trägerer" Vorsicherung (z. B. NH)',
+             'Nur eingeschränkt, verlässliche Selektivität meist erst über die Hersteller-Selektivitätstabellen oder mit deutlich „trägerer" Vorsicherung (z. B. NH)',
              'Nie',
              'Nur bei Gleichstromkreisen'],
     correct: 1,
@@ -895,7 +895,7 @@ window.QUESTIONS = [
              'Eine Seriennummer',
              'Eine Erdungsklemme'],
     correct: 1,
-    explain: 'Doppeldreieck mit Blitz und Spannungsangabe (z. B. 1000 V), geprüft nach IEC 60900 – Pflicht beim Arbeiten unter Spannung.'
+    explain: 'Doppeldreieck mit Blitz und Spannungsangabe (z. B. 1000 V), geprüft nach IEC 60900, Pflicht beim Arbeiten unter Spannung.'
   },
   {
     id: 'lv52', path: 'lehrling-vde', category: 'Werkzeug',
@@ -905,7 +905,7 @@ window.QUESTIONS = [
              'Reinigen mit Lösungsmittel',
              'Aufladen'],
     correct: 1,
-    explain: 'Vor jedem Einsatz Sichtkontrolle: Risse, Beschädigungen, Verformung der Isolierung – sonst aussortieren.'
+    explain: 'Vor jedem Einsatz Sichtkontrolle: Risse, Beschädigungen, Verformung der Isolierung, sonst aussortieren.'
   },
   {
     id: 'lv53', path: 'lehrling-vde', category: 'Personen',
@@ -920,7 +920,7 @@ window.QUESTIONS = [
 
   // ====== MEISTER ======
   {
-    id: 'm01', path: 'meister', category: 'Recht – HwO',
+    id: 'm01', path: 'meister', category: 'Recht, HwO',
     question: 'Was regelt die Handwerksordnung (HwO)?',
     options: ['Tarifverträge im Handwerk',
              'Den Aufbau und die Ordnung des deutschen Handwerks',
@@ -931,7 +931,7 @@ window.QUESTIONS = [
     source: 'Handwerksordnung (HwO)'
   },
   {
-    id: 'm02', path: 'meister', category: 'Recht – HwO',
+    id: 'm02', path: 'meister', category: 'Recht, HwO',
     question: 'Was findet sich in Anlage A der HwO?',
     options: ['Zulassungspflichtige Handwerke (Meisterpflicht)',
              'Zulassungsfreie Handwerke',
@@ -942,7 +942,7 @@ window.QUESTIONS = [
     source: 'Handwerksordnung Anlage A'
   },
   {
-    id: 'm03', path: 'meister', category: 'Recht – BBiG',
+    id: 'm03', path: 'meister', category: 'Recht, BBiG',
     question: 'Wie lange darf die Probezeit in einem Ausbildungsverhältnis maximal dauern?',
     options: ['1 Monat', '4 Monate', '6 Monate', '1 Jahr'],
     correct: 1,
@@ -950,7 +950,7 @@ window.QUESTIONS = [
     source: '§ 20 BBiG (Probezeit)'
   },
   {
-    id: 'm04', path: 'meister', category: 'Recht – BBiG',
+    id: 'm04', path: 'meister', category: 'Recht, BBiG',
     question: 'Wie lange dauert die Regelausbildungszeit zum Elektroniker für Energie- und Gebäudetechnik?',
     options: ['2 Jahre', '3 Jahre', '3,5 Jahre', '4 Jahre'],
     correct: 2,
@@ -971,12 +971,12 @@ window.QUESTIONS = [
   {
     id: 'm06', path: 'meister', category: 'Betriebsführung',
     question: 'Wie ist der Deckungsbeitrag definiert?',
-    options: ['Erlös – Fixkosten',
-             'Erlös – variable Kosten',
+    options: ['Erlös, Fixkosten',
+             'Erlös, variable Kosten',
              'Gewinn + Steuern',
-             'Umsatz – Umsatzsteuer'],
+             'Umsatz, Umsatzsteuer'],
     correct: 1,
-    explain: 'Deckungsbeitrag = Erlös – variable Kosten. Er „deckt" Fixkosten und trägt zum Gewinn bei.',
+    explain: 'Deckungsbeitrag = Erlös, variable Kosten. Er „deckt" Fixkosten und trägt zum Gewinn bei.',
     source: 'Kostenrechnung (Deckungsbeitrag)'
   },
   {
@@ -993,7 +993,7 @@ window.QUESTIONS = [
   {
     id: 'm08', path: 'meister', category: 'Betriebsführung',
     question: 'Was bedeutet ROI?',
-    options: ['Return on Investment – Kapitalrendite',
+    options: ['Return on Investment, Kapitalrendite',
              'Rate of Inflation', 'Result of Income', 'Recurring Operating Income'],
     correct: 0,
     explain: 'ROI = Gewinn / eingesetztes Kapital · 100 %. Misst die Rentabilität des eingesetzten Kapitals.',
@@ -1022,7 +1022,7 @@ window.QUESTIONS = [
     source: 'Handwerks-Kalkulation (Stundenverrechnungssatz)'
   },
   {
-    id: 'm11', path: 'meister', category: 'AdA – Pädagogik',
+    id: 'm11', path: 'meister', category: 'AdA, Pädagogik',
     question: 'Wofür steht „AdA"?',
     options: ['Akademie der Ausbilder',
              'Ausbildung der Ausbilder',
@@ -1033,23 +1033,23 @@ window.QUESTIONS = [
     source: 'AEVO (Ausbildereignung)'
   },
   {
-    id: 'm12', path: 'meister', category: 'AdA – Pädagogik',
+    id: 'm12', path: 'meister', category: 'AdA, Pädagogik',
     question: 'Wie lauten die Schritte der 4-Stufen-Methode in der Ausbildung?',
-    options: ['Vorbereiten – Vormachen – Nachmachen – Üben',
-             'Erklären – Vormachen – Korrigieren – Bewerten',
-             'Planen – Demonstrieren – Prüfen – Wiederholen',
-             'Lesen – Hören – Sehen – Tun'],
+    options: ['Vorbereiten, Vormachen, Nachmachen, Üben',
+             'Erklären, Vormachen, Korrigieren, Bewerten',
+             'Planen, Demonstrieren, Prüfen, Wiederholen',
+             'Lesen, Hören, Sehen, Tun'],
     correct: 0,
     explain: 'Klassische 4-Stufen-Methode: Vorbereiten (Lernort, Auszubildender), Vormachen (Vorbild), Nachmachen (geführt), Üben (selbstständig).',
     source: 'AEVO / Berufspädagogik'
   },
   {
-    id: 'm13', path: 'meister', category: 'AdA – Pädagogik',
+    id: 'm13', path: 'meister', category: 'AdA, Pädagogik',
     question: 'Welche drei Lernzielarten unterscheidet man in der Pädagogik?',
-    options: ['kognitiv – affektiv – psychomotorisch',
-             'theoretisch – praktisch – sozial',
-             'kurz – mittel – lang',
-             'fachlich – methodisch – sozial'],
+    options: ['kognitiv, affektiv, psychomotorisch',
+             'theoretisch, praktisch, sozial',
+             'kurz, mittel, lang',
+             'fachlich, methodisch, sozial'],
     correct: 0,
     explain: 'Lernzielbereiche: kognitiv (Wissen/Denken), affektiv (Einstellung/Werte), psychomotorisch (Fertigkeiten/Bewegung).',
     source: 'Lernzieltaxonomie (Bloom u.a.)'
@@ -1062,11 +1062,11 @@ window.QUESTIONS = [
              'Sicherung mit höchstem Nennstrom löst zuerst aus',
              'Nur Hauptschalter löst aus'],
     correct: 0,
-    explain: 'Selektivität: Im Fehlerfall trennt nur die unmittelbar dem Fehler vorgelagerte Schutzeinrichtung – Rest der Anlage bleibt versorgt.',
+    explain: 'Selektivität: Im Fehlerfall trennt nur die unmittelbar dem Fehler vorgelagerte Schutzeinrichtung, Rest der Anlage bleibt versorgt.',
     source: 'DIN VDE 0100-430 (Selektivität)'
   },
   {
-    id: 'm15', path: 'meister', category: 'Fachtheorie – Leistung',
+    id: 'm15', path: 'meister', category: 'Fachtheorie, Leistung',
     question: 'Was ist Blindleistung?',
     options: ['Wirklich verbrauchte Leistung in Wärme',
              'Leistung, die zwischen Erzeuger und Verbraucher hin- und herpendelt (Spulen/Kondensatoren)',
@@ -1077,7 +1077,7 @@ window.QUESTIONS = [
     source: 'Wechselstromtechnik (Blindleistung Q)'
   },
   {
-    id: 'm16', path: 'meister', category: 'Fachtheorie – Leistung',
+    id: 'm16', path: 'meister', category: 'Fachtheorie, Leistung',
     question: 'In welcher Einheit wird Blindleistung angegeben?',
     options: ['Watt (W)', 'Var (var)', 'Voltampere (VA)', 'Joule (J)'],
     correct: 1,
@@ -1085,7 +1085,7 @@ window.QUESTIONS = [
     source: 'SI-Einheiten (Var)'
   },
   {
-    id: 'm17', path: 'meister', category: 'Fachtheorie – Leistung',
+    id: 'm17', path: 'meister', category: 'Fachtheorie, Leistung',
     question: 'Was ist Wirkleistung?',
     options: ['Tatsächlich in Arbeit/Wärme umgesetzte Leistung (P, in W)',
              'Leistung, die zwischen Erzeuger und Verbraucher pendelt',
@@ -1096,7 +1096,7 @@ window.QUESTIONS = [
     source: 'Wechselstromtechnik (Wirkleistung P)'
   },
   {
-    id: 'm18', path: 'meister', category: 'Fachtheorie – Leistung',
+    id: 'm18', path: 'meister', category: 'Fachtheorie, Leistung',
     question: 'Was beschreibt die Scheinleistung S?',
     options: ['Differenz aus Blind- und Wirkleistung',
              'Geometrische Summe aus Wirk- und Blindleistung (S² = P² + Q²)',
@@ -1107,7 +1107,7 @@ window.QUESTIONS = [
     source: 'Wechselstromtechnik (Scheinleistung S² = P² + Q²)'
   },
   {
-    id: 'm19', path: 'meister', category: 'Fachtheorie – Leistung',
+    id: 'm19', path: 'meister', category: 'Fachtheorie, Leistung',
     question: 'Was sagt der Leistungsfaktor cos φ aus?',
     options: ['Verhältnis Wirk- zu Scheinleistung',
              'Verhältnis Spannung zu Strom',
@@ -1118,10 +1118,10 @@ window.QUESTIONS = [
     source: 'Wechselstromtechnik (cos φ)'
   },
   {
-    id: 'm20', path: 'meister', category: 'Recht – BGB',
+    id: 'm20', path: 'meister', category: 'Recht, BGB',
     question: 'Was regelt das BGB im Bereich Werkvertrag (§ 631 ff.)?',
     options: ['Arbeitsverhältnis zwischen AG und AN',
-             'Herstellung eines Werkes gegen Vergütung – Erfolg geschuldet',
+             'Herstellung eines Werkes gegen Vergütung, Erfolg geschuldet',
              'Mietverhältnisse', 'Versicherungsverträge'],
     correct: 1,
     explain: 'Werkvertrag (§§ 631 ff. BGB): Werkunternehmer schuldet einen Erfolg, nicht nur Tätigkeit. Standard für Handwerksleistungen.',
@@ -1146,7 +1146,7 @@ window.QUESTIONS = [
              'Erhöht die Spannung',
              'Verringert die Frequenz'],
     correct: 1,
-    explain: 'Mit Kompensationskondensatoren wird induktive Blindleistung lokal kompensiert – cos φ steigt, Netzbelastung und Verluste sinken.',
+    explain: 'Mit Kompensationskondensatoren wird induktive Blindleistung lokal kompensiert, cos φ steigt, Netzbelastung und Verluste sinken.',
     source: 'EnWG / Wechselstromtechnik (Blindstromkompensation)'
   },
   {
@@ -1247,17 +1247,17 @@ window.QUESTIONS = [
     explain: 'Aufwand kommt aus der Finanzbuchhaltung (auch betriebsfremder, außerordentlicher), Kosten aus der Kostenrechnung (nur sachzielbezogen).'
   },
   {
-    id: 'm33', path: 'meister', category: 'Recht – BBiG',
+    id: 'm33', path: 'meister', category: 'Recht, BBiG',
     question: 'Wann endet ein Berufsausbildungsverhältnis vorzeitig nach BBiG?',
     options: ['Mit Bestehen der Abschlussprüfung (auch vor vereinbartem Ende)',
              'Erst zum vereinbarten Vertragsende',
              'Mit dem 21. Geburtstag',
              'Niemals vorzeitig'],
     correct: 0,
-    explain: '§ 21 BBiG: Mit Bestehen der Abschlussprüfung endet das Ausbildungsverhältnis – auch vor dem vertraglichen Ende.'
+    explain: '§ 21 BBiG: Mit Bestehen der Abschlussprüfung endet das Ausbildungsverhältnis, auch vor dem vertraglichen Ende.'
   },
   {
-    id: 'm34', path: 'meister', category: 'Recht – BBiG',
+    id: 'm34', path: 'meister', category: 'Recht, BBiG',
     question: 'Welche Regelung gilt seit 2020 für die Vergütung in der dualen Berufsausbildung?',
     options: ['Frei verhandelbar ohne Untergrenze',
              'Es gibt eine gesetzliche Mindestausbildungsvergütung, jährlich gestaffelt nach Ausbildungsjahr',
@@ -1287,7 +1287,7 @@ window.QUESTIONS = [
     explain: 'Bilanz = Stichtagsbetrachtung (Bestandskonten). GuV = Periodenbetrachtung (Erfolgskonten). Beide gemeinsam Pflichtbestandteile des Jahresabschlusses (HGB).'
   },
   {
-    id: 'm37', path: 'meister', category: 'Recht – BGB',
+    id: 'm37', path: 'meister', category: 'Recht, BGB',
     question: 'Was unterscheidet einen Werkvertrag von einem Dienstvertrag?',
     options: ['Werkvertrag schuldet Erfolg, Dienstvertrag schuldet Tätigkeit',
              'Beide schulden Erfolg',
@@ -1297,14 +1297,14 @@ window.QUESTIONS = [
     explain: 'Werkvertrag (§ 631 ff. BGB): Werkunternehmer schuldet einen mangelfreien Erfolg. Dienstvertrag (§ 611 BGB): nur die Tätigkeit, keinen Erfolg.'
   },
   {
-    id: 'm38', path: 'meister', category: 'Recht – BGB',
+    id: 'm38', path: 'meister', category: 'Recht, BGB',
     question: 'Wie lange beträgt die regelmäßige Gewährleistungsfrist bei Werkleistungen am Bauwerk nach BGB?',
     options: ['1 Jahr', '2 Jahre', '5 Jahre', '10 Jahre'],
     correct: 2,
     explain: '§ 634a BGB: Werkleistungen an einem Bauwerk → 5 Jahre. Andere Werkverträge i. d. R. 2 Jahre.'
   },
   {
-    id: 'm39', path: 'meister', category: 'Recht – VOB',
+    id: 'm39', path: 'meister', category: 'Recht, VOB',
     question: 'Wie lange beträgt die Gewährleistungsfrist bei VOB-Bauverträgen für Bauleistungen?',
     options: ['2 Jahre', '4 Jahre', '5 Jahre', '10 Jahre'],
     correct: 1,
@@ -1314,7 +1314,7 @@ window.QUESTIONS = [
     id: 'm40', path: 'meister', category: 'Energie',
     question: 'Ab welcher Anlagengröße sind Erzeugungsanlagen (z. B. PV) beim Netzbetreiber typischerweise im vereinfachten Verfahren anschließbar?',
     options: ['Nur ab 100 kWp',
-             'Bis 30 kWp im vereinfachten Anschlussverfahren – jede Anlage ist aber anmeldepflichtig',
+             'Bis 30 kWp im vereinfachten Anschlussverfahren, jede Anlage ist aber anmeldepflichtig',
              'Nur ab 1 MW',
              'Nur Inselanlagen'],
     correct: 1,
@@ -1324,11 +1324,11 @@ window.QUESTIONS = [
     id: 'm41', path: 'meister', category: 'Energie',
     question: 'Wann ist nach GEG (Gebäudeenergiegesetz) ein Energieausweis vorzulegen?',
     options: ['Nur bei Neubau',
-             'Bei Verkauf, Vermietung oder Verpachtung von Gebäuden – unaufgefordert',
+             'Bei Verkauf, Vermietung oder Verpachtung von Gebäuden, unaufgefordert',
              'Nur bei öffentlichen Gebäuden',
              'Nur auf Anforderung der Bauaufsicht'],
     correct: 1,
-    explain: 'GEG § 80: Energieausweis muss bei Verkauf, Vermietung oder Verpachtung dem Interessenten unaufgefordert vorgelegt werden – Bedarfs- oder Verbrauchsausweis.'
+    explain: 'GEG § 80: Energieausweis muss bei Verkauf, Vermietung oder Verpachtung dem Interessenten unaufgefordert vorgelegt werden, Bedarfs- oder Verbrauchsausweis.'
   },
   {
     id: 'm42', path: 'meister', category: 'Fachtheorie',
@@ -1338,7 +1338,7 @@ window.QUESTIONS = [
              'Zwei NH-Sicherungen gleicher Größe in Reihe',
              'RCD vor LS gleicher Bemessungsgröße'],
     correct: 0,
-    explain: 'Selektivität: vorgelagert träge NH-Sicherung mit deutlich höherem Bemessungsstrom, nachgelagert flinker LS – nur der LS löst aus, NH bleibt drin. Verhältnis nach Herstellertabelle.'
+    explain: 'Selektivität: vorgelagert träge NH-Sicherung mit deutlich höherem Bemessungsstrom, nachgelagert flinker LS, nur der LS löst aus, NH bleibt drin. Verhältnis nach Herstellertabelle.'
   },
   {
     id: 'm43', path: 'meister', category: 'Anschluss',
@@ -1361,7 +1361,7 @@ window.QUESTIONS = [
     explain: 'AGG (Allgemeines Gleichbehandlungsgesetz) verbietet Diskriminierung bei Auswahl/Beschäftigung wegen Alter, Geschlecht, Religion etc. Stellenausschreibungen müssen neutral formuliert sein (z. B. m/w/d).'
   },
   {
-    id: 'm45', path: 'meister', category: 'Recht – HwO',
+    id: 'm45', path: 'meister', category: 'Recht, HwO',
     question: 'Was ist der Unterschied zwischen Innung und Handwerkskammer?',
     options: ['Es gibt keinen Unterschied',
              'Innung = freiwillige berufsständische Vereinigung eines Handwerks; HwK = öffentlich-rechtliche Körperschaft mit Pflichtmitgliedschaft aller Handwerksbetriebe',
@@ -1400,7 +1400,7 @@ window.QUESTIONS = [
     question: 'Wie verhält sich die verkettete Spannung zur Sternspannung im symmetrischen Drehstromnetz?',
     options: ['U_v = U_st (gleich)', 'U_v = √3 · U_st', 'U_v = 2 · U_st', 'U_v = 3 · U_st'],
     correct: 1,
-    explain: 'U_verkettet = √3 · U_Stern. 230 V · √3 ≈ 400 V – daher 230/400 V im Niederspannungsnetz.',
+    explain: 'U_verkettet = √3 · U_Stern. 230 V · √3 ≈ 400 V, daher 230/400 V im Niederspannungsnetz.',
     source: 'DIN VDE 0100-100 / Drehstromtechnik'
   },
   {
@@ -1464,7 +1464,7 @@ window.QUESTIONS = [
     question: 'Was ist ein Kurzschluss im engeren Sinne?',
     options: ['Niederohmige Verbindung zwischen zwei aktiven Leitern', 'Hoher Widerstand im Stromkreis', 'Verbindung Phase-Erde', 'Stromfluss durch den Körper'],
     correct: 0,
-    explain: 'Kurzschluss = sehr niederohmige Verbindung zwischen aktiven Leitern. Sehr hoher Strom – LS-Schalter löst sofort aus.',
+    explain: 'Kurzschluss = sehr niederohmige Verbindung zwischen aktiven Leitern. Sehr hoher Strom, LS-Schalter löst sofort aus.',
     source: 'DIN VDE 0100-430 (Schutz bei Überstrom)'
   },
   {
@@ -1488,7 +1488,7 @@ window.QUESTIONS = [
     question: 'Was bedeutet ein cos φ von 0,8 (induktiv)?',
     options: ['80 % Wirkungsgrad', 'Wirkleistung beträgt 80 % der Scheinleistung', '80 % des Stroms fließen', '80 % der Spannung'],
     correct: 1,
-    explain: 'cos φ = P/S. Bei cos φ = 0,8 ind. ist 80 % Wirkleistung, 60 % Blindleistung. Niedriger cos φ erhöht Verluste – Kompensationspflicht ab gewisser Größe.',
+    explain: 'cos φ = P/S. Bei cos φ = 0,8 ind. ist 80 % Wirkleistung, 60 % Blindleistung. Niedriger cos φ erhöht Verluste, Kompensationspflicht ab gewisser Größe.',
     source: 'Wechselstromtechnik / EnergieWG'
   },
   {
@@ -1588,7 +1588,7 @@ window.QUESTIONS = [
     source: '§ 121 SGB VII / BG ETEM'
   },
   {
-    id: 'm48', path: 'meister', category: 'AdA – Pädagogik',
+    id: 'm48', path: 'meister', category: 'AdA, Pädagogik',
     question: 'Aus welchen Teilen besteht die AdA-Prüfung nach AEVO?',
     options: ['Nur schriftliche Prüfung', 'Nur praktische Prüfung', 'Schriftlicher Teil (Multiple Choice + offene Fragen) und praktischer Teil (Präsentation oder Ausbildungssituation + Fachgespräch)', 'Keine Prüfung erforderlich'],
     correct: 2,
@@ -1596,11 +1596,11 @@ window.QUESTIONS = [
     source: 'AEVO § 4'
   },
   {
-    id: 'm49', path: 'meister', category: 'Recht – BGB',
+    id: 'm49', path: 'meister', category: 'Recht, BGB',
     question: 'Wer haftet bei einem Sachschaden, der durch Pflichtverletzung im Werkvertrag entsteht?',
-    options: ['Immer der Unternehmer (verschuldensunabhängig)', 'Der Unternehmer bei Verschulden (Vorsatz oder Fahrlässigkeit – wird vermutet)', 'Immer der Auftraggeber', 'Nur ein Subunternehmer'],
+    options: ['Immer der Unternehmer (verschuldensunabhängig)', 'Der Unternehmer bei Verschulden (Vorsatz oder Fahrlässigkeit, wird vermutet)', 'Immer der Auftraggeber', 'Nur ein Subunternehmer'],
     correct: 1,
-    explain: '§ 280 BGB: Schadensersatz bei Pflichtverletzung, wenn Verschulden vorliegt. Verschulden wird vermutet – der Unternehmer muss sich entlasten. Umfasst Vorsatz und (auch leichte) Fahrlässigkeit.',
+    explain: '§ 280 BGB: Schadensersatz bei Pflichtverletzung, wenn Verschulden vorliegt. Verschulden wird vermutet, der Unternehmer muss sich entlasten. Umfasst Vorsatz und (auch leichte) Fahrlässigkeit.',
     source: '§ 280 BGB / § 634 BGB'
   },
   {
@@ -1626,7 +1626,7 @@ window.QUESTIONS = [
     question: 'Welchen Rechtscharakter haben Unfallverhütungsvorschriften?',
     options: ['Reine Empfehlungen ohne Verbindlichkeit', 'Allgemeine Regeln der Technik', 'Autonomes Satzungsrecht der Berufsgenossenschaft mit verbindlicher Wirkung', 'Privatrechtliche Vereinbarungen'],
     correct: 2,
-    explain: 'UVV werden von der jeweiligen Berufsgenossenschaft als autonomes Satzungsrecht (§ 15 SGB VII) erlassen. Sie sind für die Mitglieder verbindlich – also rechtlich vergleichbar mit Verordnungen.',
+    explain: 'UVV werden von der jeweiligen Berufsgenossenschaft als autonomes Satzungsrecht (§ 15 SGB VII) erlassen. Sie sind für die Mitglieder verbindlich, also rechtlich vergleichbar mit Verordnungen.',
     source: '§ 15 SGB VII'
   },
   {
@@ -1640,7 +1640,7 @@ window.QUESTIONS = [
   {
     id: 'as004', path: 'lehrling-vde', category: 'Unterweisung',
     question: 'Wie häufig muss jeder Beschäftigte über Unfall- und Gesundheitsgefahren unterwiesen werden?',
-    options: ['Einmal beim Eintritt – das reicht für die Dauer des Arbeitsverhältnisses', 'Mindestens einmal jährlich, zusätzlich bei jeder neuen Tätigkeit oder Änderung', 'Nur bei einem Unfall im Betrieb', 'Alle 5 Jahre'],
+    options: ['Einmal beim Eintritt, das reicht für die Dauer des Arbeitsverhältnisses', 'Mindestens einmal jährlich, zusätzlich bei jeder neuen Tätigkeit oder Änderung', 'Nur bei einem Unfall im Betrieb', 'Alle 5 Jahre'],
     correct: 1,
     explain: 'DGUV V1 § 4 i. V. m. ArbSchG § 12: Unterweisung mindestens jährlich. Auszubildende: halbjährlich. Zusätzlich bei Einstellung, Tätigkeitswechsel, neuer Technik, nach Unfällen.',
     source: 'DGUV V1 § 4 / ArbSchG § 12'
@@ -1672,7 +1672,7 @@ window.QUESTIONS = [
   {
     id: 'as008', path: 'lehrling-vde', category: 'Arbeitsschutz-Praxis',
     question: 'Was sollte ein Beschäftigter tun, wenn er einen sicherheitstechnischen Mangel erkennt?',
-    options: ['Den Mangel sofort selbst beheben, sofern er dazu befugt ist – sonst unverzüglich der Vorgesetzten Person melden', 'Erst die laufende Arbeit beenden und dann den Betriebsrat informieren', 'Abwarten bis zur nächsten Sicherheitsbegehung', 'Nichts tun, da der Sicherheitsbeauftragte dafür allein zuständig ist'],
+    options: ['Den Mangel sofort selbst beheben, sofern er dazu befugt ist, sonst unverzüglich der Vorgesetzten Person melden', 'Erst die laufende Arbeit beenden und dann den Betriebsrat informieren', 'Abwarten bis zur nächsten Sicherheitsbegehung', 'Nichts tun, da der Sicherheitsbeauftragte dafür allein zuständig ist'],
     correct: 0,
     explain: 'ArbSchG § 16 und DGUV V1 § 16 verpflichten Beschäftigte, jede Gefahr unverzüglich zu beseitigen oder zu melden. Schweigen kann Mithaftung bedeuten.',
     source: 'ArbSchG § 16 / DGUV V1 § 16'
@@ -1680,7 +1680,7 @@ window.QUESTIONS = [
   {
     id: 'as009', path: 'lehrling-vde', category: 'Arbeitskleidung',
     question: 'Sind Schmuckstücke wie Ringe, Halsketten oder Armbänder bei der Arbeit am offenen elektrischen Stromkreis zulässig?',
-    options: ['Ja, wenn sie aus Edelmetall sind', 'Nur Eheringe sind erlaubt', 'Nein – wegen Verfangungs- und Kurzschlussgefahr abzulegen', 'Nur wenn sie unter Handschuhen verschwinden'],
+    options: ['Ja, wenn sie aus Edelmetall sind', 'Nur Eheringe sind erlaubt', 'Nein, wegen Verfangungs- und Kurzschlussgefahr abzulegen', 'Nur wenn sie unter Handschuhen verschwinden'],
     correct: 2,
     explain: 'DGUV V3 / DIN VDE 0105-100: Vor Arbeiten an unter Spannung stehenden Teilen sind metallische Gegenstände (Schmuck, Uhr, Brille mit Metallrand) abzulegen, da sie Lichtbögen oder Hängenbleiben verursachen können.',
     source: 'DIN VDE 0105-100 / DGUV V3 § 4'
@@ -1688,7 +1688,7 @@ window.QUESTIONS = [
   {
     id: 'as010', path: 'lehrling-vde', category: 'Arbeitskleidung',
     question: 'Spitze oder scharfkantige Werkzeuge dürfen lose in der Hosentasche getragen werden, weil…',
-    options: ['…sie immer griffbereit sind', '…dies nur bei kurzen Tätigkeiten verboten ist', '…eine schützende Werkzeughülle bzw. Werkzeugtasche ausreicht', 'Falsch – sie sind grundsätzlich nur in geeigneten Werkzeughaltern oder Taschen mit Schutz zu tragen'],
+    options: ['…sie immer griffbereit sind', '…dies nur bei kurzen Tätigkeiten verboten ist', '…eine schützende Werkzeughülle bzw. Werkzeugtasche ausreicht', 'Falsch, sie sind grundsätzlich nur in geeigneten Werkzeughaltern oder Taschen mit Schutz zu tragen'],
     correct: 3,
     explain: 'Lose getragene scharfe Werkzeuge können bei Stürzen schwere Stich- oder Schnittverletzungen verursachen. Geeignete Köcher, Halter oder Taschen sind Pflicht.',
     source: 'DGUV Information 209-082'
@@ -1696,7 +1696,7 @@ window.QUESTIONS = [
   {
     id: 'as011', path: 'lehrling-vde', category: 'Alkohol-Drogen',
     question: 'Eine Vorgesetzte stellt fest, dass ein Beschäftigter alkoholisiert zur Arbeit erscheint. Welche Pflicht hat sie?',
-    options: ['Sie muss ihn nach Hause schicken / die Arbeit untersagen, da er sich und andere gefährdet', 'Sie darf weiterarbeiten lassen, solange keine Maschine bedient wird', 'Nur Personalakte vermerken, kein weiteres Handeln', 'Nichts – Privatsache des Beschäftigten'],
+    options: ['Sie muss ihn nach Hause schicken / die Arbeit untersagen, da er sich und andere gefährdet', 'Sie darf weiterarbeiten lassen, solange keine Maschine bedient wird', 'Nur Personalakte vermerken, kein weiteres Handeln', 'Nichts, Privatsache des Beschäftigten'],
     correct: 0,
     explain: 'DGUV V1 § 7 verbietet, sich durch berauschende Mittel in einen Zustand zu versetzen, in dem man sich oder andere gefährden kann. Vorgesetzte müssen handeln (Beschäftigungsverbot, sicherer Heimweg).',
     source: 'DGUV V1 § 7'
@@ -1832,7 +1832,7 @@ window.QUESTIONS = [
   {
     id: 'as028', path: 'lehrling-vde', category: 'Schleifarbeit',
     question: 'In welchem Fall darf beim Schleifen auf eine Schutzbrille verzichtet werden?',
-    options: ['Bei kurzen Tätigkeiten unter 2 Minuten', 'Wenn man eine Korrekturbrille trägt', 'Niemals – Schutzbrille (oder Korrektionsschutzbrille) ist beim Schleifen Pflicht', 'Wenn die Schleifscheibe gekapselt ist'],
+    options: ['Bei kurzen Tätigkeiten unter 2 Minuten', 'Wenn man eine Korrekturbrille trägt', 'Niemals, Schutzbrille (oder Korrektionsschutzbrille) ist beim Schleifen Pflicht', 'Wenn die Schleifscheibe gekapselt ist'],
     correct: 2,
     explain: 'Wegfliegende Schleifpartikel verursachen schwere Augenverletzungen. Eine Schutzbrille (oder eine Korrektionsschutzbrille mit ausreichender Filterklasse) ist immer erforderlich.',
     source: 'DGUV Information 212-686 / TRGS 559'
@@ -1866,13 +1866,13 @@ window.QUESTIONS = [
     question: 'Wie groß ist der Strom durch einen Menschen mit 1000 Ω Körperwiderstand bei 230 V Berührungsspannung?',
     options: ['ca. 0,23 mA', 'ca. 23 mA', 'ca. 230 mA', 'ca. 2,3 A'],
     correct: 2,
-    explain: 'Ohmsches Gesetz: I = U / R = 230 V / 1000 Ω = 0,23 A = 230 mA. Werte ab ca. 30 mA können bereits zu Herzkammerflimmern führen – daher RCD 30 mA.',
+    explain: 'Ohmsches Gesetz: I = U / R = 230 V / 1000 Ω = 0,23 A = 230 mA. Werte ab ca. 30 mA können bereits zu Herzkammerflimmern führen, daher RCD 30 mA.',
     source: 'Ohmsches Gesetz / VDE 0100-410'
   },
   {
     id: 'as033', path: 'lehrling-vde', category: 'Elektrik-Unfall',
     question: 'Ist auch ein Niederspannungslichtbogen (z. B. bei 230 V) gefährlich?',
-    options: ['Ja – er kann schwere Verbrennungen, Augenschäden und Brände verursachen', 'Nein, nur Hochspannungs-Lichtbögen sind gefährlich', 'Nur in feuchten Räumen', 'Nur über 1000 V'],
+    options: ['Ja, er kann schwere Verbrennungen, Augenschäden und Brände verursachen', 'Nein, nur Hochspannungs-Lichtbögen sind gefährlich', 'Nur in feuchten Räumen', 'Nur über 1000 V'],
     correct: 0,
     explain: 'Lichtbogentemperaturen können > 4000 °C erreichen, auch bei Niederspannung. UV-/IR-Strahlung verursacht Augenschäden („Verblitzen"), Druckwelle kann Trommelfell schädigen.',
     source: 'DGUV Information 203-077'
@@ -1880,7 +1880,7 @@ window.QUESTIONS = [
   {
     id: 'as034', path: 'lehrling-vde', category: 'Schutzklasse',
     question: 'Was bedeutet das Doppelquadrat (▢▢) auf einem elektrischen Handgerät?',
-    options: ['Schutzkleinspannung', 'Schutzklasse I (mit Schutzleiter)', 'Schutzklasse II – schutzisoliert, kein Schutzleiter erforderlich', 'Erhöhter IP-Schutz'],
+    options: ['Schutzkleinspannung', 'Schutzklasse I (mit Schutzleiter)', 'Schutzklasse II, schutzisoliert, kein Schutzleiter erforderlich', 'Erhöhter IP-Schutz'],
     correct: 2,
     explain: 'Symbol „zwei ineinanderliegende Quadrate" = Schutzklasse II nach DIN EN 61140. Doppelte oder verstärkte Isolierung, daher kein Schutzleiteranschluss nötig.',
     source: 'DIN EN 61140'
@@ -1888,7 +1888,7 @@ window.QUESTIONS = [
   {
     id: 'as035', path: 'lehrling-vde', category: 'Prüfung',
     question: 'Müssen ortsfeste elektrische Anlagen regelmäßig geprüft werden?',
-    options: ['Nein, einmalige Abnahme reicht', 'Nur in Industriebauten', 'Ja – nach DGUV V3 in regelmäßigen, durch Gefährdungsbeurteilung festgelegten Intervallen', 'Nur, wenn der Versicherer es verlangt'],
+    options: ['Nein, einmalige Abnahme reicht', 'Nur in Industriebauten', 'Ja, nach DGUV V3 in regelmäßigen, durch Gefährdungsbeurteilung festgelegten Intervallen', 'Nur, wenn der Versicherer es verlangt'],
     correct: 2,
     explain: 'DGUV V3 § 5: Ortsfeste Anlagen werden wiederkehrend geprüft (Wohngebäude empfohlen 4 Jahre, gewerblich i. d. R. 1–4 Jahre nach Gefährdungsbeurteilung). Prüfung nur durch EFK.',
     source: 'DGUV V3 § 5 / TRBS 1201'
@@ -1944,7 +1944,7 @@ window.QUESTIONS = [
   {
     id: 'as042', path: 'lehrling-vde', category: 'GHS-Kennzeichnung',
     question: 'Welches GHS-Piktogramm kennzeichnet entzündbare Flüssigkeiten der Kategorie 1 / 2 / 3?',
-    options: ['GHS01 (Bombe)', 'GHS02 (Flamme – orange Raute mit schwarzer Flamme)', 'GHS06 (Totenkopf)', 'GHS09 (Umweltgefahr – Fisch und Baum)'],
+    options: ['GHS01 (Bombe)', 'GHS02 (Flamme, orange Raute mit schwarzer Flamme)', 'GHS06 (Totenkopf)', 'GHS09 (Umweltgefahr, Fisch und Baum)'],
     correct: 1,
     explain: 'GHS02 „Flamme" kennzeichnet entzündbare Stoffe (Flüssigkeiten, Gase, Aerosole, Feststoffe). Beispiel: Aceton, Benzin, Spiritus.',
     source: 'CLP-VO (EG) Nr. 1272/2008'
@@ -1967,7 +1967,7 @@ window.QUESTIONS = [
   },
   {
     id: 'as045', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
-    question: 'Welche Mindestmaßnahmen sind beim Umgang mit brennbaren Flüssigkeiten – auch in kleinen Mengen – zu treffen?',
+    question: 'Welche Mindestmaßnahmen sind beim Umgang mit brennbaren Flüssigkeiten, auch in kleinen Mengen, zu treffen?',
     options: ['Geeignete, dicht verschlossene Behälter aus zugelassenem Material', 'Zündquellen fernhalten (Funken, Flammen, heiße Oberflächen)', 'Ausreichende Lüftung am Arbeitsplatz', 'Zigarettenanzünder dürfen verwendet werden'],
     correct: [0, 1, 2],
     explain: 'TRGS 510 / TRGS 800: Geeignete Behälter, Zündquellen ausschließen, Lüftung, Mengenbegrenzung am Arbeitsplatz. Rauchen, offenes Feuer und Funken sind verboten.',
@@ -1984,7 +1984,7 @@ window.QUESTIONS = [
   {
     id: 'as047', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
     question: 'Dürfen brennbare Flüssigkeiten dauerhaft am Arbeitsplatz aufbewahrt werden?',
-    options: ['Ja, in unbegrenzter Menge', 'Ja, in jedem Behälter', 'Nein – nur die für eine Schicht / einen Arbeitsgang erforderliche Menge in geeigneten Behältern', 'Nein, niemals'],
+    options: ['Ja, in unbegrenzter Menge', 'Ja, in jedem Behälter', 'Nein, nur die für eine Schicht / einen Arbeitsgang erforderliche Menge in geeigneten Behältern', 'Nein, niemals'],
     correct: 2,
     explain: 'TRGS 510: Am Arbeitsplatz nur die zur Tagesarbeit nötige Menge in geeigneten Behältern. Größere Mengen im zugelassenen Lager (z. B. Sicherheitsschrank Typ 90).',
     source: 'TRGS 510'
@@ -2016,7 +2016,7 @@ window.QUESTIONS = [
   {
     id: 'as051', path: 'lehrling-vde', category: 'Explosion',
     question: 'Kann man die Konzentration eines explosionsfähigen Gas-Luft-Gemisches am Geruch zuverlässig erkennen?',
-    options: ['Ja, immer', 'Nein – Geruchsschwellen liegen oft weit über oder unter zündfähigen Konzentrationen', 'Nur bei Erdgas', 'Nur bei Stadtgas'],
+    options: ['Ja, immer', 'Nein, Geruchsschwellen liegen oft weit über oder unter zündfähigen Konzentrationen', 'Nur bei Erdgas', 'Nur bei Stadtgas'],
     correct: 1,
     explain: 'Geruchsschwellen sind kein verlässlicher Maßstab. Manche zündfähigen Konzentrationen sind geruchsneutral (z. B. Wasserstoff). Messung mit Gaswarngerät erforderlich.',
     source: 'TRGS 900 / DGUV Information 213-006'
@@ -2050,7 +2050,7 @@ window.QUESTIONS = [
     question: 'Welche Stoffe können bereits bei Raumtemperatur explosionsfähige Dampf-Luft-Gemische bilden?',
     options: ['Aceton (Flammpunkt -19 °C)', 'Benzin (Flammpunkt < -20 °C)', 'Ethanol (Flammpunkt 12 °C)', 'Wasser'],
     correct: [0, 1, 2],
-    explain: 'Stoffe mit Flammpunkt unter Raumtemperatur (~20 °C) können bei Normalbedingungen zündfähige Atmosphären bilden – Aceton, Benzin, Spiritus/Ethanol, Methanol. Wasser ist nicht brennbar.',
+    explain: 'Stoffe mit Flammpunkt unter Raumtemperatur (~20 °C) können bei Normalbedingungen zündfähige Atmosphären bilden, Aceton, Benzin, Spiritus/Ethanol, Methanol. Wasser ist nicht brennbar.',
     source: 'TRGS 200 / Sicherheitsdatenblätter'
   },
   {
@@ -2080,7 +2080,7 @@ window.QUESTIONS = [
   {
     id: 'as059', path: 'lehrling-vde', category: 'Brennbare Flüssigkeiten',
     question: 'Warum sollten leere Behälter brennbarer Flüssigkeiten nicht in Arbeitsräumen verbleiben?',
-    options: ['Sie nehmen Platz weg', 'Restdämpfe können sich entzünden oder explodieren – „leer" ist nicht „luftleer"', 'Sie verschlechtern den Geruch', 'Aus optischen Gründen'],
+    options: ['Sie nehmen Platz weg', 'Restdämpfe können sich entzünden oder explodieren, „leer" ist nicht „luftleer"', 'Sie verschlechtern den Geruch', 'Aus optischen Gründen'],
     correct: 1,
     explain: 'Leere Behälter enthalten oft noch Dampfreste in zündfähiger Konzentration → erhöhte Brand-/Explosionsgefahr. Entweder dampffrei spülen oder im Freien lagern.',
     source: 'TRGS 510 / 800'
@@ -2098,7 +2098,7 @@ window.QUESTIONS = [
     question: 'Für wen gilt die Gefahrstoffverordnung (GefStoffV)?',
     options: ['Nur für Großunternehmen', 'Für jeden Arbeitgeber, in dessen Betrieb Tätigkeiten mit Gefahrstoffen ausgeübt werden', 'Nur für Chemiebetriebe', 'Nur in Apotheken'],
     correct: 1,
-    explain: 'GefStoffV § 1: Gilt für jeden Arbeitgeber, der Tätigkeiten mit Gefahrstoffen ausübt – auch im Handwerk (Reinigungsmittel, Klebstoffe, Lacke …).',
+    explain: 'GefStoffV § 1: Gilt für jeden Arbeitgeber, der Tätigkeiten mit Gefahrstoffen ausübt, auch im Handwerk (Reinigungsmittel, Klebstoffe, Lacke …).',
     source: 'GefStoffV § 1'
   },
   {
@@ -2176,7 +2176,7 @@ window.QUESTIONS = [
   {
     id: 'as071', path: 'lehrling-vde', category: 'Erste Hilfe',
     question: 'Kann Milchtrinken bei einer Vergiftung als „Gegengift" dienen?',
-    options: ['Ja, wirkt immer als Antidot', 'Nein – Milch kann die Aufnahme einiger Stoffe sogar beschleunigen. Nichts geben, sofort 112!', 'Nur bei Säurevergiftung', 'Nur bei Alkohol'],
+    options: ['Ja, wirkt immer als Antidot', 'Nein, Milch kann die Aufnahme einiger Stoffe sogar beschleunigen. Nichts geben, sofort 112!', 'Nur bei Säurevergiftung', 'Nur bei Alkohol'],
     correct: 1,
     explain: 'Veraltete Annahme. Bei vielen Gefahrstoffen kann Milch die Resorption fettlöslicher Toxine beschleunigen. Richtig: nichts zu trinken geben (außer Wasser bei klarem ärztlichem Rat), Notruf 112, Giftnotruf.',
     source: 'DGUV Information 204-022 / Giftnotruf'
@@ -2216,7 +2216,7 @@ window.QUESTIONS = [
   {
     id: 'as076', path: 'lehrling-vde', category: 'Hautschutz',
     question: 'Welche Maßnahmen schützen die Haut vor Schädigung durch Gefahrstoffe?',
-    options: ['Geeignete Schutzhandschuhe (Material zum Stoff passend, Durchbruchszeit beachten)', 'Hautschutzplan: Schutz vor – Reinigung während – Pflege nach der Arbeit', 'Vermeidung direkten Kontakts (Spritzschutz, Werkzeuge)', 'Hände vor Arbeitsbeginn sauber lecken'],
+    options: ['Geeignete Schutzhandschuhe (Material zum Stoff passend, Durchbruchszeit beachten)', 'Hautschutzplan: Schutz vor, Reinigung während, Pflege nach der Arbeit', 'Vermeidung direkten Kontakts (Spritzschutz, Werkzeuge)', 'Hände vor Arbeitsbeginn sauber lecken'],
     correct: [0, 1, 2],
     explain: '3-Stufen-Hautschutzplan: Schutz (Creme, Handschuhe), Reinigung (mild!), Pflege (rückfettend). Handschuhmaterial nach Permeations-Tabelle wählen.',
     source: 'TRGS 401 / DGUV Regel 112-195'
@@ -2242,7 +2242,7 @@ window.QUESTIONS = [
     question: 'Wann muss der Arbeitgeber arbeitsmedizinische Angebotsvorsorge anbieten?',
     options: ['Bei Tätigkeiten mit Gefahrstoffen unterhalb der Pflichtgrenzen, wenn Gesundheitsbeeinträchtigung möglich', 'Bildschirmarbeit (Untersuchung der Augen)', 'Tätigkeiten an feuchten Händen länger als 2 h/Tag', 'Niemals'],
     correct: [0, 1, 2],
-    explain: 'ArbMedVV Anlage Teil 2: Angebotsvorsorge bei diversen Tätigkeiten – Beschäftigte können freiwillig annehmen. Pflichtvorsorge ist Voraussetzung der Tätigkeit, Angebotsvorsorge nicht.',
+    explain: 'ArbMedVV Anlage Teil 2: Angebotsvorsorge bei diversen Tätigkeiten, Beschäftigte können freiwillig annehmen. Pflichtvorsorge ist Voraussetzung der Tätigkeit, Angebotsvorsorge nicht.',
     source: 'ArbMedVV Anlage Teil 2'
   },
   {
@@ -2272,7 +2272,7 @@ window.QUESTIONS = [
   {
     id: 'as083', path: 'lehrling-vde', category: 'Klebstoffe',
     question: 'Was ist beim Umgang mit reaktiven 2-Komponenten-Klebstoffen / Methacrylaten zu beachten?',
-    options: ['Sensibilisierungsgefahr – Hautkontakt strikt vermeiden', 'Geruchsstark, daher gute Lüftung erforderlich', 'Ausgehärtete Reste sind i. d. R. unbedenklich, Bearbeitung von Stäuben aber Atemschutz', 'Nur bei Sonnenschein verwenden'],
+    options: ['Sensibilisierungsgefahr, Hautkontakt strikt vermeiden', 'Geruchsstark, daher gute Lüftung erforderlich', 'Ausgehärtete Reste sind i. d. R. unbedenklich, Bearbeitung von Stäuben aber Atemschutz', 'Nur bei Sonnenschein verwenden'],
     correct: [0, 1, 2],
     explain: 'Methacrylate (Acryl, Cyanacrylat) sind sensibilisierend (H317), reizen Atemwege. Schutzhandschuhe (Nitril, kein Latex), Lüftung, Augenschutz. Ausgehärtetes Material ist meist inert.',
     source: 'TRGS 401 / Sicherheitsdatenblatt'
@@ -2298,7 +2298,7 @@ window.QUESTIONS = [
     question: 'Sie sind in geselliger Runde und müssen mit dem Auto nach Hause. Wie verhalten Sie sich richtig?',
     options: ['Kein Alkohol, wenn Sie noch fahren wollen', 'Alternativen wählen (Taxi, ÖPNV, abholen lassen, Übernachtung)', 'Schon beim ersten Glas das Fahrzeug stehen lassen', 'Promillegrenze bis zur Hausschwelle ausreizen'],
     correct: [0, 1, 2],
-    explain: 'StVG / StGB: 0,5 ‰ ist Ordnungswidrigkeitsgrenze, ab 1,1 ‰ absolute Fahruntüchtigkeit (Straftat). Wegeunfälle sind versichert – nicht jedoch unter Alkoholeinfluss „aus eigener Schuld".',
+    explain: 'StVG / StGB: 0,5 ‰ ist Ordnungswidrigkeitsgrenze, ab 1,1 ‰ absolute Fahruntüchtigkeit (Straftat). Wegeunfälle sind versichert, nicht jedoch unter Alkoholeinfluss „aus eigener Schuld".',
     source: '§ 24a StVG / § 316 StGB'
   },
   {
@@ -2312,7 +2312,7 @@ window.QUESTIONS = [
   {
     id: 'as088', path: 'lehrling-vde', category: 'Wegesicherheit',
     question: 'Was ist bei Fahrten im Regen besonders zu beachten?',
-    options: ['Geschwindigkeit reduzieren, Bremsweg verlängert sich deutlich', 'Größeren Sicherheitsabstand einhalten (mind. doppelt)', 'Aquaplaning-Gefahr bei stehendem Wasser – sanft lenken/bremsen', 'Sonnenbrille hilft gegen Aquaplaning'],
+    options: ['Geschwindigkeit reduzieren, Bremsweg verlängert sich deutlich', 'Größeren Sicherheitsabstand einhalten (mind. doppelt)', 'Aquaplaning-Gefahr bei stehendem Wasser, sanft lenken/bremsen', 'Sonnenbrille hilft gegen Aquaplaning'],
     correct: [0, 1, 2],
     explain: 'StVO § 3 Abs. 1: Geschwindigkeit den Verhältnissen anpassen. Auf nasser Fahrbahn verdoppeln sich Bremswege, Aquaplaning ab 6–8 mm Wasserhöhe + zu hoher Geschwindigkeit.',
     source: 'StVO § 3 / § 4'
@@ -2328,7 +2328,7 @@ window.QUESTIONS = [
   {
     id: 'as090', path: 'lehrling-vde', category: 'Wegesicherheit',
     question: 'Was ist bei abgefahrenen Winterreifen (Profiltiefe < 4 mm) zu tun?',
-    options: ['Weiterfahren, gesetzlich erlaubt sind 1,6 mm', 'Reifen erneuern – Winterreifen verlieren ihre Funktion deutlich unter 4 mm', 'Reifen aufpumpen reicht', 'Frühlingsreifen aufziehen'],
+    options: ['Weiterfahren, gesetzlich erlaubt sind 1,6 mm', 'Reifen erneuern, Winterreifen verlieren ihre Funktion deutlich unter 4 mm', 'Reifen aufpumpen reicht', 'Frühlingsreifen aufziehen'],
     correct: 1,
     explain: 'Gesetzlich Mindesttiefe 1,6 mm, ADAC empfiehlt für Winterreifen ≥ 4 mm. Darunter Wintereigenschaften (Schnee, Matsch) stark eingeschränkt.',
     source: 'StVZO § 36 / ADAC-Empfehlung'
@@ -2336,7 +2336,7 @@ window.QUESTIONS = [
   {
     id: 'as091', path: 'lehrling-vde', category: 'Wegesicherheit',
     question: 'Was sollte beim Reifenluftdruck regelmäßig kontrolliert werden?',
-    options: ['Mindestens monatlich + vor langen Fahrten', 'Bei kalten Reifen messen', 'Herstellerempfehlung im Tankdeckel/Türholm beachten', 'Niemals selbst kontrollieren – nur beim TÜV'],
+    options: ['Mindestens monatlich + vor langen Fahrten', 'Bei kalten Reifen messen', 'Herstellerempfehlung im Tankdeckel/Türholm beachten', 'Niemals selbst kontrollieren, nur beim TÜV'],
     correct: [0, 1, 2],
     explain: 'Falscher Luftdruck verschlechtert Fahrverhalten, Bremsweg, Verbrauch und Reifenlebensdauer. Sollwert vom Hersteller, kalt messen, monatlich prüfen.',
     source: 'StVZO § 36 / Herstellervorgaben'
@@ -2378,7 +2378,7 @@ window.QUESTIONS = [
     question: 'Wie verbessern Motorradfahrer ihre Sichtbarkeit?',
     options: ['Helle, kontrastreiche Schutzkleidung (Warnweste optional)', 'Tagfahrlicht / Abblendlicht ständig eingeschaltet', 'Reflektierende Streifen an Helm/Anzug', 'Schwarze Komplettkleidung'],
     correct: [0, 1, 2],
-    explain: 'Motorradfahrer werden statistisch besonders oft übersehen. Helle Kleidung, Reflektoren, Licht an, in der Spur eher mittig fahren – alles verbessert die Erkennbarkeit.',
+    explain: 'Motorradfahrer werden statistisch besonders oft übersehen. Helle Kleidung, Reflektoren, Licht an, in der Spur eher mittig fahren, alles verbessert die Erkennbarkeit.',
     source: 'Verkehrserziehung / DGUV Information 214-046'
   },
   {
@@ -2394,7 +2394,7 @@ window.QUESTIONS = [
     question: 'Welche Beleuchtung ist bei „erheblicher Sichtbehinderung durch Niederschlag" einzuschalten?',
     options: ['Nur Standlicht', 'Abblendlicht', 'Fernlicht (immer)', 'Innenraumbeleuchtung'],
     correct: 1,
-    explain: 'StVO § 17 Abs. 1: Tagfahrlicht reicht NICHT. Bei erheblicher Sichtbehinderung Abblendlicht, ggf. Nebelschlussleuchte, wenn Sicht < 50 m – Höchstgeschwindigkeit dann 50 km/h.',
+    explain: 'StVO § 17 Abs. 1: Tagfahrlicht reicht NICHT. Bei erheblicher Sichtbehinderung Abblendlicht, ggf. Nebelschlussleuchte, wenn Sicht < 50 m, Höchstgeschwindigkeit dann 50 km/h.',
     source: 'StVO § 17'
   },
   {

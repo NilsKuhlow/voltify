@@ -241,7 +241,8 @@
           </div>
           <h2 class="card-question" id="card-question">Frage</h2>
           <div class="card-options" id="card-options"></div>
-          <div class="card-feedback hidden" id="card-feedback">
+          <div class="card-feedback hidden" id="card-feedback"
+               aria-live="polite" aria-atomic="true">
             <div class="feedback-header" id="feedback-header"></div>
             <p class="feedback-explain" id="feedback-explain"></p>
             <p class="feedback-source hidden" id="feedback-source"></p>
@@ -258,7 +259,7 @@
         <button class="icon-btn" data-nav="home" aria-label="Schließen">✕</button>
       </header>
       <main class="content results-content">
-        <div class="results-icon" aria-hidden="true">⚡</div>
+        <div class="results-icon" aria-hidden="true">Voltify</div>
         <h1 class="results-title">Session beendet!</h1>
         <p class="results-subtitle" id="results-subtitle"></p>
         <div class="results-grid">
@@ -557,16 +558,16 @@
       <div class="first-visit-card">
         <!-- STEP 1: Welcome / Datenschutz -->
         <div class="visit-step" data-step="1">
-          <div class="first-visit-icon" aria-hidden="true">⚡</div>
-          <h2 id="first-visit-title">Willkommen bei Voltify</h2>
+          <p class="first-visit-mark" aria-hidden="true">Voltify</p>
+          <h2 id="first-visit-title">Erst lesen, dann lernen</h2>
           <p>
-            Voltify speichert deinen Lernfortschritt
-            <strong>nur lokal in diesem Browser</strong> – kein Account,
-            kein Server, keine Werbung. Wenn du den Browser-Speicher
-            leerst, sind die Daten weg.
+            Der Lernfortschritt liegt
+            <strong>nur lokal in diesem Browser</strong>. Kein Account,
+            kein Server, keine Werbung. Wer den Browser-Speicher leert,
+            verliert die Daten.
           </p>
           <p class="small muted">
-            Mehr dazu unter <em>Einstellungen → Datenschutz</em>.
+            Mehr unter <em>Einstellungen, Datenschutz</em>.
           </p>
           <button class="btn primary big" id="visit-next-1">Weiter</button>
         </div>

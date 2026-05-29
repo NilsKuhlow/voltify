@@ -1,31 +1,36 @@
 // Voltify Service Worker
 // Cache-Strategie:
-// - App-Shell (HTML/CSS/JS/Icons/manifest): cache-first (Performance + Offline)
-// - data.js: stale-while-revalidate (Inhalts-Updates ohne Cache-Bump nötig)
-// - Cross-Origin (z.B. Schriften, CDN): kein Caching, network-first
+// - App-Shell (HTML/CSS/JS/Icons/manifest, data.js): cache-first im Pre-Cache.
+// - data.js zusätzlich: stale-while-revalidate (Inhalts-Updates ohne CACHE-Bump).
+// - Cross-Origin (z.B. Schriften, CDN): pass-through.
 
-const CACHE = 'voltify-v7';
+const CACHE = 'voltify-v8';
 
 const APP_SHELL = [
   './',
   './index.html',
   './styles.css',
   './app.js',
+  './data.js',
   './manifest.json',
   './icon.svg',
   './icons/icon-192.png',
   './icons/icon-512.png',
   './icons/apple-touch-180.png',
   './icons/apple-touch-152.png',
-  './icons/apple-touch-167.png'
-  // data.js wird beim ersten fetch in den Cache geschrieben (stale-while-revalidate)
+  './icons/apple-touch-167.png',
+  './fonts/crimson-pro-400.woff2',
+  './fonts/crimson-pro-600.woff2',
+  './fonts/crimson-pro-italic.woff2'
 ];
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(APP_SHELL))
+    caches.open(CACHE).then((c) =>
+      // .add() einzeln, damit ein fehlender Font nicht den ganzen Install kippt
+      Promise.all(APP_SHELL.map((u) => c.add(u).catch(() => null)))
+    )
   );
-  // Sofort aktivieren – Updates greifen schneller
   self.skipWaiting();
 });
 
@@ -37,7 +42,6 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Erlaubt der Seite, ein skipWaiting auszulösen ("Update verfügbar – jetzt laden")
 self.addEventListener('message', (event) => {
   if (event.data && event.data.type === 'SKIP_WAITING') {
     self.skipWaiting();
@@ -50,17 +54,13 @@ self.addEventListener('fetch', (event) => {
 
   let url;
   try { url = new URL(req.url); } catch (e) { return; }
-
-  // Cross-Origin (z. B. externe Bilder): pass-through
   if (url.origin !== self.location.origin) return;
 
-  // Frage-Inhalte: stale-while-revalidate
   if (url.pathname.endsWith('/data.js')) {
     event.respondWith(staleWhileRevalidate(req));
     return;
   }
 
-  // App-Shell und Icons: cache-first
   event.respondWith(cacheFirst(req));
 });
 
@@ -90,6 +90,5 @@ async function staleWhileRevalidate(request) {
       return resp;
     })
     .catch(() => cached);
-  // Sofort cached zurück, falls vorhanden – parallel updaten
   return cached || network;
 }

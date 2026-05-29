@@ -72,7 +72,22 @@ Question wording, distractors and explanations were independently authored
 to avoid copying protected formulations from commercial sources.
 
 ================================================================================
-4) APP ICONS, FEATURE GRAPHIC
+4) SCHRIFT: CRIMSON PRO
+================================================================================
+
+The Crimson Pro font files in `fonts/` are licensed under the
+SIL Open Font License 1.1 (OFL):
+
+    https://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL
+
+Copyright (c) 2010 Sebastian Kosch, with Reserved Font Name "Crimson".
+Sourced from Fontsource (https://fontsource.org/).
+
+The OFL allows redistribution and modification but requires that derived
+fonts using the Reserved Font Name "Crimson" are renamed.
+
+================================================================================
+5) APP ICONS, FEATURE GRAPHIC
 ================================================================================
 
 The Voltify wordmark, the lightning-bolt icon (`icon.svg`) and the derived
